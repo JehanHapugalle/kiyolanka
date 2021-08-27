@@ -1,0 +1,28 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Employee management system",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "Jehan Hapugalle",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.8",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsnh2000/ITP-FT-management-API.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jsnh2000/ITP-FT-management-API/issues"
+  },
+  "homepage": "https://github.com/jsnh2000/ITP-FT-management-API#readme"
+}
