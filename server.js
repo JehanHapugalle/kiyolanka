@@ -28,8 +28,10 @@ mongoose.connection.once('open', () => {
 });
 
 const employeeRouter = require("./routes/employees.js");
+const machineRouter = require("./routes/machine.js");
 
 app.use("/employee", employeeRouter);
+app.use("/machine", machineRouter);
 
 app.route('/').get((req, res) => {
     res.send('FactoryManagement System API');
