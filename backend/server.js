@@ -29,9 +29,11 @@ mongoose.connection.once('open', () => {
 
 const employeeRouter = require("./routes/employees.js");
 const machineRouter = require("./routes/machine.js");
+const productRouter = require("./routes/product.js");
 
 app.use("/employee", employeeRouter);
 app.use("/machine", machineRouter);
+app.use("/product", productRouter);
 
 app.route('/').get((req, res) => {
     res.send('FactoryManagement System API');
