@@ -5,6 +5,7 @@ router.route("/add").post((req,res)=>{
     const eid = req.body.eid;
     const name = req.body.name;
     const gender = req.body.gender;
+    const job_title = req.body.job_title;
     const date_joined = req.body.date_joined;
     const dob = req.body.dob;
     const contact = req.body.contact;
@@ -14,6 +15,7 @@ router.route("/add").post((req,res)=>{
         eid,
         name,
         gender,
+        job_title,
         date_joined,
         dob,
         contact,
@@ -37,12 +39,13 @@ router.route("/").get((req,res)=>{
 
 router.route("/update/:id").put(async(req,res)=>{
     let userId = req.params.id;
-    const {eid, name, gender, date_joined, dob, contact, address} = req.body;
+    const {eid, name, gender, job_title, date_joined, dob, contact, address} = req.body;
 
     const updateEmployee = {
         eid, 
         name, 
-        gender, 
+        gender,
+        job_title, 
         date_joined, 
         dob, 
         contact, 
