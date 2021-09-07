@@ -16,6 +16,10 @@ const employeeSchema = new Schema({
         type : String,
         required : true
     },
+    job_title : {
+        type : String,
+        required : true
+    },
     date_joined : {
         type : String,
         required : true
