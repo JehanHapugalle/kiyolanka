@@ -31,11 +31,13 @@ const employeeRouter = require("./routes/employees.js");
 const machineRouter = require("./routes/machine.js");
 const productRouter = require("./routes/product.js");
 const salaryRouter = require("./routes/salary.js");
+const supplierRouter = require("./routes/suppliers.js");
 
 app.use("/employee", employeeRouter);
 app.use("/machine", machineRouter);
 app.use("/product", productRouter);
 app.use("/salary", salaryRouter);
+app.use("/supplier", supplierRouter);
 
 app.route('/').get((req, res) => {
     res.send('FactoryManagement System API');
