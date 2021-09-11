@@ -1,6 +1,6 @@
 import React ,{useState} from "react";
-import employeeList from "./employeeList";
-import AddEmployee from "./addEmployee";
+import EmployeeList from "./EmployeeList";
+import AddEmployee from "./AddEmployee";
 
 export const Employee = () =>{
     return(
@@ -12,11 +12,11 @@ export const Employee = () =>{
 
 export const EmployeeOne = () =>{
     return(
-        <employeeList/>
+        <EmployeeList/>
     )
 }
 
-export const  EmployeeTwo= () =>{
+export const  EmployeeTwo = () =>{
     return(
        <AddEmployee/>
     )

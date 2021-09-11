@@ -1,38 +1,42 @@
 import React ,{useState} from "react";
-import './addEmployeeStyle.css'
+import axios from 'axios';
+import './AddEmployeeStyle.css'
 
 export default function AddEmployee(){
 
     const[eid, seteid]= useState("");
     const[name, setname]= useState("");
     const[gender, setgender]= useState("");
-    const[datejoined, setdatejoined]= useState("");
+    const[job_title, setjob_title]= useState("");
+    const[date_joined, setdate_joined]= useState("");
     const[dob, setdob]= useState("");
     const[contact, setcontact]= useState("");
-    const[jobtitle, setjobtitle]= useState("");
     const[address, setaddress]= useState("");
 
     function sendData(e){
        e.preventDefault();
-        alert("Employee Added");
 
         const newEmployee={
             eid,
             name,
             gender,
-            datejoined,
+            job_title,
+            date_joined,
             dob,
             contact,
-            jobtitle,
             address
         }
-        console.log(newEmployee);
+        axios.post("http://localhost:4000/employee/add", newEmployee).then (() => {
+            alert("Employee Created")
+        }).catch((err) =>{
+            alert(err)
+        })
     }
     return(
         
     <div className="container">
 
-    <div class="employee">
+    <div class="addemployee">
         <h1>Employee Managment</h1>
     </div>
      
@@ -70,7 +74,7 @@ export default function AddEmployee(){
             <div class="form-group">
 
             <label  for="JobTitle">Job Title</label>
-            <input type="text" class="form-control" id="jobtitle" placeholder="Enter Job Title" onChange={(e)=>{setjobtitle(e.target.value);}}/>
+            <input type="text" class="form-control" id="job_title" placeholder="Enter Job Title" onChange={(e)=>{setjob_title(e.target.value);}}/>
 
             </div>
 
@@ -81,7 +85,7 @@ export default function AddEmployee(){
             <div class="form-group">
 
             <label  for="DateJoined">Date Joined</label>
-            <input type="text" class="form-control" id="datejoined" placeholder="Enter Date Joined" onChange={(e)=>{setdatejoined(e.target.value);}}/>
+            <input type="text" class="form-control" id="date_joined" placeholder="Enter Date Joined" onChange={(e)=>{setdate_joined(e.target.value);}}/>
             
             </div>
             

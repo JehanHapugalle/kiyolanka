@@ -30,11 +30,6 @@ function App() {
 
       </Router>
 
-      
-
-   
-
-
   );
 }
 
