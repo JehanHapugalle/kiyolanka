@@ -61,6 +61,7 @@ export default function Viewmachine(){
                                 <h5> {val.status} </h5>
                                 
                             </div >
+                            
                                 <button className="Btn" onClick = {() =>{
                                     updateMachines (val.userId)
                                 }}> Edit </button>
