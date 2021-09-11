@@ -42,11 +42,6 @@ function App() {
 
       </Router>
 
-      
-
-   
-
-
   );
 }
 
