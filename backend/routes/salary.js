@@ -2,18 +2,20 @@
  let Salary = require("../models/Salary");
 
  router.route("/add").post((req, res) => {
-     const eid = req.body.eid;
-     const name = req.body.name;
-     const gender = req.body.gender;
-     const years_of_employment = req.body.years_of_employment;
-     const status = req.body.status;
+     const SalaryEmpId = req.body.SalaryEmpId;
+     const SalaryEmpName = req.body.SalaryEmpName;
+     const SalaryEmpGender = req.body.SalaryEmpGender;
+     const  SalaryEmpStatus = req.body. SalaryEmpStatus;
+     const  BasicSalary = req.body. BasicSalary;
+     const  SalaryBonus = req.body. SalaryBonus;
 
      const newSalary = new Salary({
-         eid,
-         name,
-         gender,
-         years_of_employment,
-         status
+        SalaryEmpId,
+        SalaryEmpName,
+        SalaryEmpGender,
+         SalaryEmpStatus,
+         BasicSalary,
+         SalaryBonus
 
      })
 
@@ -34,14 +36,15 @@
 
  router.route("/update/:id").put(async(req, res) => {
      let userId = req.params.id;
-     const { eid, name, gender, years_of_employment, status } = req.body;
+     const { SalaryEmpId, SalaryEmpName , SalaryEmpGender ,SalaryEmpStatus ,BasicSalary , SalaryBonus } = req.body;
 
      const updateSalary = {
-         eid,
-         name,
-         gender,
-         years_of_employment,
-         status,
+         SalaryEmpId,
+         SalaryEmpName,
+         SalaryEmpGender,
+         SalaryEmpStatus,
+         BasicSalary,
+          SalaryBonus
 
      }
 

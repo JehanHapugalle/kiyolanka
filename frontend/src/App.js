@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import { Machinery,MachineryOne,MachineryTwo,MachineryThree,MachineryFour} from './pages/Machinery';
+import { Salary,SalaryOne,SalaryTwo,SalaryThree} from './pages/SalaryEmployee';
 
 
 import {Product,ProductOne,ProductTwo,ProductThree} from './pages/Product';
@@ -27,10 +28,19 @@ function App() {
          <Route path='/machine/analysis1' exact component={MachineryFour} />
 
          
+         <Route path='/home' exact component={Home} />
+         <Route path='/salary' exact component={Salary} />
+         <Route path='/salary/addemployees' exact component={SalaryOne} />
+         <Route path='/salary/salarydetails' exact component={SalaryTwo} />
+         <Route path='/salary/analysis' exact component={SalaryThree} />
+
+           
+         
          <Route path='/stock' exact component={Product} />
          <Route path='/stock/addstock' exact component={ProductOne} />
          <Route path='/stock/viewstock' exact component={ProductTwo} />
          <Route path='/stock/analysis' exact component={ProductThree} />
+
 
 
          <Route path='/employee' exact component={Employee} />
