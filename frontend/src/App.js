@@ -12,11 +12,17 @@ import {Product,ProductOne,ProductTwo,ProductThree} from './pages/Product';
 import { Employee, EmployeeOne, EmployeeTwo, EmployeeThree} from './pages/Employee';
 
 
+
 function App() {
   return (
 
       <Router>
       <Sidebar/>
+ 
+      
+    
+
+
 
         <switch>
 
@@ -26,6 +32,11 @@ function App() {
          <Route path='/machine/viewmachine' exact component={MachineryTwo} />
          <Route path='/machine/expenses' exact component={MachineryThree} />
          <Route path='/machine/analysis1' exact component={MachineryFour} />
+   
+
+ 
+   
+        </switch>
 
          
         
@@ -40,6 +51,7 @@ function App() {
          <Route path='/stock/addstock' exact component={ProductOne} />
          <Route path='/stock/viewstock' exact component={ProductTwo} />
          <Route path='/stock/analysis' exact component={ProductThree} />
+
 
 
 
