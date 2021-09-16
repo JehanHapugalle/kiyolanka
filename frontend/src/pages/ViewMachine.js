@@ -18,24 +18,44 @@ export default function Viewmachine(){
         getmachines();
     }, [])
     
+    const updateMachines = (_id) => {
+        const newEmp = prompt("Enter New Employee: ")
+        const newStatus = prompt("Enter New Status: ")
+
+        axios.put(`http://localhost:4000/machine/update/${_id}`, 
+            {
+                newEmp : newEmp,
+                newStatus : newStatus,
+                
+            }).then (() => {
+            alert("Machine Updated")
+            setmachines(machines.map((val) => {
+                return val._id == _id ? 
+                {
+                    _id: _id,
+                    Mnum: val.Mnum, 
+                    Mname: val.Mname, 
+                    employee :newEmp, 
+                    status : newStatus, 
+                } : val
+            }))
+        })
+    };
+
+
     const deleteMachines = (_id) => {
-        alert(_id);
-        axios.delete("http://localhost:4000/machine/delete/:id").then (() => {
-            console.log(_id);
+        axios.delete(`http://localhost:4000/machine/delete/${_id}`).then ((res) => {
+            alert("Machine Deleted")
+            setmachines(
+                machines.filter((val) => {
+                    return val._id != _id;
+                })
+            )
         }).catch((err) =>{
             alert(err.message);
         })
     }
 
-    const updateMachines = (userId) => {
-        const name = prompt("Enter new Machine Name: ");
-        
-        axios.put("http://localhost:4000/machine/update/:id", {name: name, userId:userId}).then(() =>{
-            setmachines(machines.map((val) => {
-                return val.userId === userId ? {userId: userId, name: name} : val
-            }))
-        })
-    } 
 
     return(
             

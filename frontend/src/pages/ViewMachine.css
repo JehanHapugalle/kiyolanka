@@ -13,8 +13,7 @@
 
 .Btn{
     margin-top: 10px;
-    margin-right: 50px;
-    margin-left: 50px;
+    margin-left: 200px;
   background-color: #75c500;
   border:none;
   border-color: #333333;
@@ -29,7 +28,7 @@
 }
 .Btn2{
     margin-top: 10px;
-    margin-right: 10px;
+    margin-left: 50px;
   background-color: #75c500;
   border:none;
   border-color: #333333;

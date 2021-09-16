@@ -25,7 +25,6 @@ function App() {
          <Route path='/machine/analysis1' exact component={MachineryFour} />
    
 
-   
         </switch>
 
       </Router>
