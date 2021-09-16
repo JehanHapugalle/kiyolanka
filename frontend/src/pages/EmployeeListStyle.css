@@ -30,7 +30,6 @@
     font-size: 11px;
 }
 
-
 .list{
     margin-bottom: 230px;
     margin-left: 10px;
@@ -50,11 +49,13 @@
     display: flex;
     padding-top: 10px;
     margin-left: 20px;
+    margin-left: 30px;
     height: 60px;
 }
 
 .row h5{
     margin-left: 30px;
+    margin-left: 20px;
     text-align: center;
 }
 
@@ -67,6 +68,7 @@
     margin-top: 1px;
     margin-bottom: 20px;
     margin-left: 40px;
+    margin-left: 10px;
 }
 
 button{
@@ -79,3 +81,4 @@ button{
     color: white;
     cursor:pointer;
 }
+
