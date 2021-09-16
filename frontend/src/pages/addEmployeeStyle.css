@@ -5,21 +5,20 @@
     align-items: center;
 }
 
-.employee{
+.addemployee{
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
     justify-content: center;
-    margin-right: -100px;
+    margin-right: -50px;
     margin-top: 50px;
 }
 
 .add{
-    margin-top: 30px;
-    margin-right: -180px;
+    margin-top: 35px;
+    margin-right: -150px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-  
 }
 
 .form{
@@ -29,7 +28,7 @@
 }
 
 form{
-    margin-top: 200px;
+    margin-top: 220px;
     margin-bottom: 230px;
     margin-left: 10px;
     background-color:white;
@@ -37,7 +36,7 @@ form{
     border-radius: 20px;
     padding-top: 40px;
     padding-bottom: 40px;
-    padding-left: 78px;
+    padding-left: 160px;
     transform: scale(2);
   }
   
@@ -45,7 +44,8 @@ form{
     margin-top:10px;
     margin-bottom:25px;
     margin-left:44px;
-    padding-bottom: 3px;
+    padding-top: 2px;
+    padding-bottom: 4px;
     padding-left:10px;
     border: none;
     border-radius: 7px;
@@ -56,7 +56,8 @@ form{
     margin-top:10px;
     margin-bottom:25px;
     margin-left:20px;
-    padding-bottom: 3px;
+    padding-top: 2px;
+    padding-bottom: 4px;
     padding-left:10px;
     border: none;
     border-radius: 7px;
@@ -67,19 +68,28 @@ form{
     margin-top:10px;
     margin-bottom:25px;
     margin-left:80px;
-    padding-bottom: 3px;
-    padding-left:10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 15px;
     border: none;
     border-radius: 7px;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-right: 30px;
+    margin-right: 40px;
+    color: #75c500;
+    padding-right: 51px;
+    font-size: 11px;
   }
 
-  #jobtitle{
+  option {
+    font-size: 20px;
+  }
+
+  #job_title{
     margin-top:10px;
     margin-bottom:25px;
     margin-left:72px;
-    padding-bottom: 3px;
+    padding-top: 2px;
+    padding-bottom: 4px;
     padding-left:10px;
     border: none;
     border-radius: 7px;
@@ -87,11 +97,12 @@ form{
     margin-right: 30px;
   }
 
-  #datejoined{
+  #date_joined{
     margin-top:10px;
     margin-bottom:25px;
     margin-left:33px;
-    padding-bottom: 3px;
+    padding-top: 2px;
+    padding-bottom: 4px;
     padding-left:10px;
     border-radius: 7px;
     border: none;
@@ -104,7 +115,8 @@ form{
     margin-bottom:25px;
     padding-left:10px;
     margin-left:23px;
-    padding-bottom: 3px;
+    padding-top: 2px;
+    padding-bottom: 4px;
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
   }
@@ -115,7 +127,8 @@ form{
     margin-bottom:25px;
     padding-left:10px;
     margin-left:60px;
-    padding-bottom: 3px;
+    padding-top: 2px;
+    padding-bottom: 4px;
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
     margin-right: 30px;
@@ -125,7 +138,8 @@ form{
     margin-top:10px;
     border-radius: 7px;
     margin-left:60px;
-    padding-bottom: 3px;
+    padding-top: 2px;
+    padding-bottom: 4px;
     padding-left:10px;
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
@@ -136,17 +150,17 @@ form{
       margin-top: 35px;
       margin-left: 135px;
       background-color: #75c500;
-      border-color: #333333;
-      border-style: solid;
-      padding-left:12px;
-      padding-right: 14px;
+      border: 3px solid #333333;
+      padding-left:15px;
+      padding-right: 15px;
       padding-top: 5px;
       padding-bottom: 5px;
       color: white;
+      cursor:pointer;
   }
 
   ::placeholder {
     color: #75c500;
     padding-left: 10px;
-    font-size: 10px;
+    font-size: 11px;
   }
