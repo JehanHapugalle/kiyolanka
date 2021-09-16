@@ -18,9 +18,18 @@
     margin-top: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    margin-bottom: 170px;
+    margin-bottom: 200px;
     margin-left: 30px;
 }
+
+.search {
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    padding: 5px;
+    font-size: 11px;
+}
+
 
 .list{
     margin-bottom: 230px;
@@ -40,12 +49,12 @@
 .row{
     display: flex;
     padding-top: 10px;
-    margin-left: 30px;
+    margin-left: 20px;
     height: 60px;
 }
 
 .row h5{
-    margin-left: 20px;
+    margin-left: 30px;
     text-align: center;
 }
 
@@ -62,8 +71,7 @@
 
 button{
     background-color: #75c500;
-    border-color: #333333;
-    border-style: solid;
+    border: 3px solid #333333;
     padding-left:15px;
     padding-right: 15px;
     padding-top: 5px;
@@ -71,4 +79,3 @@ button{
     color: white;
     cursor:pointer;
 }
-
