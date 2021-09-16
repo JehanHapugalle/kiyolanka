@@ -79,7 +79,7 @@ export default function AddEmployee(){
 
             <label  for="JobTitle">Job Title</label>
             <input type="text" class="form-control" id="job_title" placeholder="Enter Job Title" onChange={(e)=>{setjob_title(e.target.value);}} required/>
-
+       
             </div>
 
         </div>
@@ -89,8 +89,9 @@ export default function AddEmployee(){
             <div class="form-group">
 
             <label  for="DateJoined">Date Joined</label>
+
             <input type="text" class="form-control" id="date_joined" placeholder="Enter Date Joined" onChange={(e)=>{setdate_joined(e.target.value);}} required/>
-            
+
             </div>
             
             <div class="form-group">

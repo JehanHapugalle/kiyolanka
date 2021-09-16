@@ -1,5 +1,6 @@
 import React ,{useState} from "react";
 import './AddMachineStyle.css'
+import axios from "axios";
 
 
   export default function AddMachine(){
@@ -8,6 +9,7 @@ import './AddMachineStyle.css'
     const[Mname, setMname]= useState("");
     const[employee, setEmp]= useState("");
     const[status, setStatus]= useState("");
+    
 
     function sendData(e){
        e.preventDefault();
@@ -19,7 +21,13 @@ import './AddMachineStyle.css'
             employee,
             status
         }
-        console.log(newMachine);
+        axios.post("http://localhost:4000/machine/add", newMachine).then(()=>{
+            alert("Machine Added")
+
+    }).catch((err)=>{
+        alert(err)
+    })
+        
     }
     return(
         
@@ -70,7 +78,7 @@ import './AddMachineStyle.css'
     </div>
     
     
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="button">Submit</button>
     </div>
     </form>
         </div>
