@@ -1,11 +1,11 @@
-.container{
+.pcontainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.employeelist{
+.viewproduct{
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
@@ -14,23 +14,15 @@
     margin-top: 50px;
 }
 
-.retrieve{
+.pretrieve{
     margin-top: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    margin-bottom: 200px;
+    margin-bottom: 170px;
     margin-left: 30px;
 }
 
-.search {
-    margin-top: 10px;
-    margin-left: 50px;
-    margin-bottom: 30px;
-    padding: 5px;
-    font-size: 11px;
-}
-
-.list{
+.plist{
     margin-bottom: 230px;
     margin-left: 10px;
     background-color:white;
@@ -45,21 +37,19 @@
     flex-direction: column;
 }
 
-.row{
+.prow{
     display: flex;
     padding-top: 10px;
-    margin-left: 20px;
     margin-left: 30px;
     height: 60px;
 }
 
-.row h5{
-    margin-left: 30px;
+.prow h5{
     margin-left: 20px;
     text-align: center;
 }
 
-.displayContainer{
+.pdisplayContainer{
     display: flex;
     flex-direction: row;
 }
@@ -68,12 +58,12 @@
     margin-top: 1px;
     margin-bottom: 20px;
     margin-left: 40px;
-    margin-left: 10px;
 }
 
 button{
     background-color: #75c500;
-    border: 3px solid #333333;
+    border-color: #333333;
+    border-style: solid;
     padding-left:15px;
     padding-right: 15px;
     padding-top: 5px;
@@ -81,4 +71,3 @@ button{
     color: white;
     cursor:pointer;
 }
-

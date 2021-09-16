@@ -1,5 +1,6 @@
 import React ,{useState} from "react";
 import AddProduct from "./AddProduct.js";
+import Viewproduct from "./ViewProduct.js";
 
 export const Product = () =>{
     return(
@@ -16,9 +17,7 @@ export const  ProductOne= () =>{
 }
 export const ProductTwo = () =>{
     return(
-        <div className="product">
-            <h1>viewproduct</h1>
-        </div>
+        <Viewproduct/>
     )
 }
 export const ProductThree = () =>{
