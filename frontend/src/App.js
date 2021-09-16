@@ -4,7 +4,7 @@ import Sidebar from './components/Sidebar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import { Machinery,MachineryOne,MachineryTwo,MachineryThree,MachineryFour} from './pages/Machinery';
-import { Salary,SalaryOne,SalaryTwo,SalaryThree} from './pages/SalaryEmployee';
+import { Salary,SalaryOne,SalaryTwo,SalaryThree, SalaryFour} from './pages/SalaryEmployee';
 
 
 import {Product,ProductOne,ProductTwo,ProductThree} from './pages/Product';
@@ -39,7 +39,7 @@ function App() {
         </switch>
 
          
-         <Route path='/home' exact component={Home} />
+        
          <Route path='/salary' exact component={Salary} />
          <Route path='/salary/addemployees' exact component={SalaryOne} />
          <Route path='/salary/salarydetails' exact component={SalaryTwo} />
