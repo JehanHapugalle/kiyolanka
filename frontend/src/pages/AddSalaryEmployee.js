@@ -7,25 +7,25 @@ import axios from "axios";
 
     const[SalaryEmpId, setSalaryEmployeeId]= useState("");
     const[SalaryEmpName, setSalaryEmployeeName]= useState("");
-    const[SalaryEmpGender, setSalaryEmpGender]= useState("");
+    const[SalaryEmpACCno, setSalaryEmpACCno]= useState("");
     const[SalaryEmpStatus, setSalaryEmpStatus]= useState("");
     const[BasicSalary, setBasicSalary]= useState("");
     const[SalaryBonus, setSalaryBonus]= useState(""); 
 
     function sendData(e){
        e.preventDefault();
-        alert("SalaryEmployee Added");
+       
 
         const newSalaryEmployee={
             SalaryEmpId,
             SalaryEmpName,
-            SalaryEmpGender,
+            SalaryEmpACCno,
             SalaryEmpStatus,
             BasicSalary,
             SalaryBonus
         }
         axios.post("http://localhost:4000/salary/add", newSalaryEmployee).then(()=>{
-            alert("Student Added")
+            alert("Salary Employee Added")
         }).catch((err)=>{
             alert(err)
         })
@@ -75,9 +75,9 @@ import axios from "axios";
     <div class="form-group">
 
 
-    <label  for="SalaryEmpGender">Employee Gender</label>
-    <input type="text" class="form-control" id="SalaryEmpGender" placeholder="Enter Salary Employee Gender" onChange={(e)=>{
-        setSalaryEmpGender(e.target.value);
+    <label  for="SalaryEmpACCno">Account No</label>
+    <input type="text" class="form-control" id="SalaryEmpACCno" placeholder="Enter Salary Account Number" onChange={(e)=>{
+        setSalaryEmpACCno(e.target.value);
         }}/>
     </div>
     

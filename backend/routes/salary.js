@@ -4,7 +4,7 @@
  router.route("/add").post((req, res) => {
      const SalaryEmpId = req.body.SalaryEmpId;
      const SalaryEmpName = req.body.SalaryEmpName;
-     const SalaryEmpGender = req.body.SalaryEmpGender;
+     const SalaryEmpACCno = req.body.SalaryEmpACCno;
      const  SalaryEmpStatus = req.body. SalaryEmpStatus;
      const  BasicSalary = req.body. BasicSalary;
      const  SalaryBonus = req.body. SalaryBonus;
@@ -12,7 +12,7 @@
      const newSalary = new Salary({
         SalaryEmpId,
         SalaryEmpName,
-        SalaryEmpGender,
+        SalaryEmpACCno,
          SalaryEmpStatus,
          BasicSalary,
          SalaryBonus
@@ -36,12 +36,12 @@
 
  router.route("/update/:id").put(async(req, res) => {
      let userId = req.params.id;
-     const { SalaryEmpId, SalaryEmpName , SalaryEmpGender ,SalaryEmpStatus ,BasicSalary , SalaryBonus } = req.body;
+     const { SalaryEmpId, SalaryEmpName , SalaryEmpACCno ,SalaryEmpStatus ,BasicSalary , SalaryBonus } = req.body;
 
      const updateSalary = {
          SalaryEmpId,
          SalaryEmpName,
-         SalaryEmpGender,
+         SalaryEmpACCno,
          SalaryEmpStatus,
          BasicSalary,
           SalaryBonus
