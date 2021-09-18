@@ -10,6 +10,8 @@ import {Product,ProductOne,ProductTwo,ProductThree} from './pages/Product';
 
 import { Employee, EmployeeOne, EmployeeTwo, EmployeeThree} from './pages/Employee';
 
+import { Sale, SaleOne, SaleTwo, SaleThree, SaleFour } from './pages/Sale';
+
 
 function App() {
   return (
@@ -37,6 +39,12 @@ function App() {
          <Route path='/employee/employeelist' exact component={EmployeeOne} />
          <Route path='/employee/addemployee' exact component={EmployeeTwo} />
          <Route path='/employee/attendance' exact component={EmployeeThree} />
+
+         <Route path='/sales' exact component={Sale} />
+         <Route path='/sales/calbill' exact component={SaleOne} />
+         <Route path='/sales/addsales' exact component={SaleTwo} />
+         <Route path='/sales/saleshistory' exact component={SaleThree} />
+         <Route path='/sales/analysis5' exact component={SaleFour} />
 
         </switch>
 
