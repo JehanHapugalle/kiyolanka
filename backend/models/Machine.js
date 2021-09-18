@@ -19,14 +19,6 @@ const machineSchema = new Schema({
     status : {
         type : String,
         required : true
-    },
-    expenses : {
-        type : String,
-        required : true
-    },
-	date : {
-        type : String,
-        required : true
     }
 })
 

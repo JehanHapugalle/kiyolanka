@@ -1,4 +1,4 @@
-.pcontainer{
+.salcontainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,25 +6,25 @@
   
 }
 
-.product{
-    font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-    align-items: center;
-    justify-content: center;
-    padding-top: 5%;
-    padding-right: 5%;
-    
-    
+.salary{
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+  padding-right: 5%;
+  
+  
 }
 
-.pform{
+.Salform{
     align-items: left;
     justify-content: left;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     
 }
-.padd{
-    padding-top:10px;
+.saladd{
+    padding-top:5px;
     padding-right: 4.5%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
@@ -32,8 +32,8 @@
 
 
 
-.pform{
-    margin-top: 150px;
+.Salform{
+    margin-top: 90px;
     margin-left: -50px;
     background-color:white;
     box-shadow: 02px 2px 10px rgb(102, 102, 102);
@@ -42,49 +42,56 @@
     transform: scale(2);
     
   }
-  #weight{
-    margin-bottom:15px;
+  #SalaryEmpGender{
+    margin-bottom:5px;
     border-radius: 7px;
       border: none;
       box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-      margin-left: 74px;
+      margin-left: 60px;
      
   }
 
-  #pid{
-    margin-bottom:5px;
+  #SalaryEmployeeId{
+      margin-bottom:5px;
     border: none;
     border-radius: 7px;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
     margin-left: 50px;
     
   }
-  #pname{
+  #SalaryEmployeeName{
     border-radius: 7px;
     margin-bottom:5px;
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
     margin-left: 24px;
   }
+  #SalaryEmpStatus{
+    border-radius: 7px;
+    margin-bottom:5px;
+    border: none;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-left: 70px;
+  }
 
-  #date{
+  #BasicSalary{
     border-radius: 7px;
     margin-bottom:5px;
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
     margin-left: 100px;
   }
-  #nop{
+
+  #SalaryBonus{
     border-radius: 7px;
-    margin-bottom:10px;
+    margin-bottom:5px;
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 28px;
+    margin-left: 35px;
   }
-
   button{
-    margin-top: 10px;
-    margin-left: 200px;
+      margin-top: 10px;
+      margin-left: 10px;
     background-color: #75c500;
     border:none;
     border-color: #333333;
@@ -97,8 +104,10 @@
       color: white;
   }
 
-  ::pplaceholder {
+  ::placeholder {
     color: #75c500;
     padding-left: 10px;
     font-size: 10px;
   }
+  
+  

@@ -236,7 +236,7 @@ export const SidebarData = [
       
       {
         title: 'Analysis',
-        path: '/sales/analaysis6',
+        path: '/transport/analaysis6',
         icon: <AiIcons.AiFillCaretRight/>
       },
     ]
