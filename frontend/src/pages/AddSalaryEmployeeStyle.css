@@ -42,12 +42,12 @@
     transform: scale(2);
     
   }
-  #SalaryEmpGender{
+  #SalaryEmpACCno{
     margin-bottom:5px;
     border-radius: 7px;
       border: none;
       box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-      margin-left: 60px;
+      margin-left: 95px;
      
   }
 
@@ -71,7 +71,7 @@
     margin-bottom:5px;
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 70px;
+    margin-left: 65px;
   }
 
   #BasicSalary{
