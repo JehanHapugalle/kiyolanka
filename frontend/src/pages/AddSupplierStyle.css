@@ -1,0 +1,174 @@
+.supcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.supplier{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-right: 5%;
+}
+
+.configure{
+    align-items: left;
+    justify-content: left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+
+.supadd{
+    padding-top:20px;
+    padding-right: 4.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+
+
+.supform{
+    margin-top: 120px;
+    margin-left: -50px;
+    background-color:white;
+    box-shadow: 02px 2px 10px rgb(102, 102, 102);
+    border-radius: 25px;
+    padding :20px;
+    transform: scale(2);
+  }
+
+  .select{
+    font-size: 11px;
+  }
+
+  #name{
+    margin-bottom:10px;
+    border-radius: 7px;
+    border: none;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-left: 5px;
+  }
+
+  #nic_no{
+      margin-bottom:5px;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-left: 55px;
+  }
+
+  #address{
+    border-radius: 7px;
+    margin-bottom:5px;
+    border: none;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-left: 50px;
+  }
+
+  #contact_no{
+    border-radius: 7px;
+    margin-bottom:5px;
+    border: none;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-left: 27px;
+  }
+
+  #email{
+    margin-bottom:5px;
+    border-radius: 7px;
+    border: none;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-left: 68px;
+     
+  }
+
+  #date_of_birth{
+    margin: bottom 5px;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-left: 20px;
+    color: #75c500;
+  }
+
+  #supply_scale{
+    border-radius: 7px;
+    margin: bottom 5px;
+    border: none;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-left: 24px;
+    margin-top: 10px;
+    color: #75c500;
+  }
+
+  .select1{
+    text-emphasis-style: bold;
+    text-size-adjust: 100p;
+  }
+
+  .select2{
+    text-emphasis-style: bold;
+  }
+  
+  #payment_type{
+    border-radius: 10px;
+    margin: bottom 5px;
+    border: none;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-left: 13px;
+    margin-top: 10px;
+  }
+
+  #bank{
+    border-radius: 7px;
+    margin-bottom:5px;
+    border: none;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-left: 75px;
+    margin-top: 10px;
+    
+  }
+
+  #account_no{
+    border-radius: 7px;
+    margin-bottom:-10px;
+    border: none;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-left: 28px;
+  }
+
+
+  button{
+      margin-top: 15px;
+      margin-left: 185px;
+      background-color: #75c500;
+      border:none;
+      border-color: #333333;
+      border-style: solid;
+      border-radius: 25px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      color: white;
+  }
+
+  ::placeholder {
+    color: #75c500;
+    padding-left: 10px;
+    font-size: 10px;
+  }
+
+  .imag1{
+    padding-top:50px;
+    padding-right: 90px;
+    padding-left: 5px;
+  }
+
+  
+

@@ -43,29 +43,30 @@ router.route("/").get((req,res)=>{
 })
 
 router.route("/update/:id").put(async(req,res)=>{
-    let userId = req.params.id;
-    const {name, nic_no, address, contact_no, email, date_of_birth, supply_scale, payment_type, bank, account_no} = req.body;
 
-    const updateSupplier = {
-        name,
-        nic_no,
-        address,
-        contact_no,
-        email,
-        date_of_birth,
-        supply_scale,
-        payment_type,
-        bank,
-        account_no
+    let userId = req.params.id;
+    const {address, contact_no, email, supply_scale, payment_type, bank, account_no } = req.body;
+    console.log(address, contact_no, email, supply_scale, payment_type, bank, account_no, userId)
+
+    try{
+        await Supplier.findById(userId, (error, updateSupplier) => {
+            updateSupplier.address = (address);
+            updateSupplier.contact_no = (contact_no);
+            updateSupplier.email = (email);
+            updateSupplier.supply_scale = (supply_scale);
+            updateSupplier.payment_type = (payment_type);
+            updateSupplier.bank = (bank);
+            updateSupplier.account_no = (account_no);
+            updateSupplier.save();
+        });
+    } catch (err) {
+        console.log(err);
     }
 
-    const update = await Supplier.findByIdAndUpdate(userId, updateSupplier).then(()=>{
-        res.status(200).send({status: "Supplier updated"})
-    }).catch((err)=>{
-        console.log(err.message);
-        res.status(500).send({status: "Error with updating data", error: err.message});
-    })
+    res.send("Supplier Updated");
 })
+
+
 
 router.route("/delete/:id").delete(async(req, res)=>{
     let userId = req.params.id;
