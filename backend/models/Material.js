@@ -4,14 +4,15 @@ const Schema = mongoose.Schema;
 
 const materialSchema = new Schema({
 
-    mid : {
-        type : String,
-        required : true
-    },
-    type : {
-        type : String,
-        required : true
-    },
+    mid:{
+        type: String,
+        required:true
+     },
+   
+    type:{
+      type: String,
+      required:true
+   },
     uprice : {
         type : String,
         required : true
@@ -24,14 +25,7 @@ const materialSchema = new Schema({
         type : String,
         required : true
     },
-	usedamount : {
-        type : String,
-        required : true
-    },
-    supid : {
-        type : String,
-        required : true
-    }
+   
 })
 
 const Material = mongoose.model("material", materialSchema);

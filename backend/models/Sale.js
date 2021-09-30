@@ -2,26 +2,31 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const machineSchema = new Schema({
+const saleSchema = new Schema({
 
-    Mnum : {
+    scus_name : {
         type : String,
         required : true
     },
-    Mname : {
+    scon_number : {
         type : String,
         required : true
     },
-    employee : {
+    ssale_id : {
         type : String,
         required : true
     },
-    status : {
+    s_email : {
+        type : String,
+        required : true
+    },
+    s_amount : {
         type : String,
         required : true
     }
+	
 })
 
-const Machine = mongoose.model("machine", machineSchema);
+const Sale = mongoose.model("sale", saleSchema);
 
-module.exports = Machine;
+module.exports = Sale;
