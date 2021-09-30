@@ -10,15 +10,16 @@
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
     justify-content: center;
-    margin-right: -50px;
+    /* margin-right: -50px; */
     margin-top: 50px;
+    padding-top: 10px;
 }
 
 .pretrieve{
     margin-top: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    margin-bottom: 170px;
+    margin-bottom: 200px;
     margin-left: 30px;
 }
 
@@ -40,27 +41,36 @@
 .prow{
     display: flex;
     padding-top: 10px;
-    margin-left: 30px;
+    margin-left: 60px;
     height: 60px;
+}
+
+th{
+    margin-left: 70px;
+    text-align: center;
 }
 
 .prow h5{
     margin-left: 20px;
     text-align: center;
+    padding-left: 50px;
 }
 
 .pdisplayContainer{
     display: flex;
     flex-direction: row;
+    margin-right: -50px;
+    background-color: gainsboro;
 }
 
-.displayContainer button{
+.pdisplayContainer button{
     margin-top: 1px;
     margin-bottom: 20px;
-    margin-left: 40px;
+    margin-left: 30px;
+    background-color: #75c500;
 }
 
-button{
+/* button{
     background-color: #75c500;
     border-color: #333333;
     border-style: solid;
@@ -70,4 +80,60 @@ button{
     padding-bottom: 5px;
     color: white;
     cursor:pointer;
+} */
+
+.PBtn{
+    background-color: #75c500;
+    border-color: #333333;
+    border-style: solid;
+    padding-left:15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+    cursor:pointer;
+    margin-bottom: 10px;
+    /*margin-top: 10px;
+    margin-right: 50px;
+    margin-left: 50px;
+  background-color: #75c500;
+  border:none;
+  border-color: #333333;
+  border-style: solid;
+    border-radius: 25px;
+    padding-left:15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white; */
+
 }
+.PBtn2{
+    background-color: #75c500;
+    border-color: #333333;
+    border-style: solid;
+    padding-left:15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+    cursor:pointer;
+    margin-bottom: 10px;
+    /*margin-top: 10px;
+    margin-right: 10px;
+  background-color: #75c500;
+  border:none;
+  border-color: #333333;
+  border-style: solid;
+    border-radius: 25px;
+    padding-left:10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white; */
+
+}
+.pimag{
+    padding-top:50px;
+    padding-right: 70px;
+  }
