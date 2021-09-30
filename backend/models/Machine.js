@@ -19,6 +19,14 @@ const machineSchema = new Schema({
     status : {
         type : String,
         required : true
+    },
+    Mdate : {
+        type : String,
+        required : true
+    },
+    Mhrs : {
+        type : String,
+        required : true
     }
 })
 
