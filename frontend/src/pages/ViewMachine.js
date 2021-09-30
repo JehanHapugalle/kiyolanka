@@ -1,11 +1,13 @@
 import React ,{useState, useEffect} from "react";
 import axios from 'axios';
 import './ViewMachine.css'
+import Logo from './image/logo.jpeg'
 
 
 export default function Viewmachine(){
 
     const [machines, setmachines] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('')
 
     useEffect(() => {
         function getmachines(){
@@ -18,14 +20,25 @@ export default function Viewmachine(){
         getmachines();
     }, [])
     
-    const updateMachines = (_id) => {
-        const newEmp = prompt("Enter New Employee: ")
-        const newStatus = prompt("Enter New Status: ")
-
+    const updateMachines = (_id) => {  
+        const employee = prompt("Enter New Employee: ")
+        if (employee === null) {
+            return; 
+        }
+        const status = prompt("Enter New Status: ")
+        if (status === null) {
+            return; 
+        }
+        const Mhrs = prompt("Enter New Active Hours: ")
+        if (Mhrs === null) {
+            return; 
+        }
         axios.put(`http://localhost:4000/machine/update/${_id}`, 
             {
-                newEmp : newEmp,
-                newStatus : newStatus,
+                employee : employee,
+                status : status,
+                Mhrs : Mhrs,
+                _id :_id
                 
             }).then (() => {
             alert("Machine Updated")
@@ -35,12 +48,25 @@ export default function Viewmachine(){
                     _id: _id,
                     Mnum: val.Mnum, 
                     Mname: val.Mname, 
-                    employee :newEmp, 
-                    status : newStatus, 
+                    employee :employee, 
+                    status : status, 
+                    Mdate:val.Mdate,
+                    Mhrs:Mhrs,
                 } : val
             }))
         })
     };
+        function ConfirmDelete(id)
+
+       {
+        var x = window.confirm("Are you sure you want to delete this Machine?");
+
+        if (x)
+            deleteMachines(id);
+         else
+           return;
+
+    }
 
 
     const deleteMachines = (_id) => {
@@ -60,40 +86,93 @@ export default function Viewmachine(){
     return(
             
         <div className="container">
-
+        <div class="imag" >
+          <img src = {Logo} width = "150" alt="logo"/></div>
             <div class="machine">
-                <h1>Machinery Managment</h1>
+                  <h1>Machinery Managment</h1>
             </div>
             
-            <div class="retrieve">
-                <h2>Machine List</h2>
+            <div class="Mretrieve">
+                  <h2>Machine List</h2>
             </div>
 
             <div className="list" style={{width: "45%"}}>
-                {machines.map((val) => {
+            <div>
+                    <input 
+                        type = "text" 
+                        class = "search" 
+                        placeholder = "Search" 
+                        style={{width: "25%"}} 
+                        onChange = {event => {
+                            setSearchTerm(event.target.value);
+                        }}
+                    />
+
+               <table>
+
+                <tr className = "Mrow">
+
+                <th>MID</th>
+
+                <th>NAME</th>
+
+                <th>EMPLOYEE</th>
+
+                <th>STATUS</th>
+
+                <th>Date</th>
+
+                <th>Hours</th>
+
+
+                </tr>
+
+                </table>
+                    {machines.filter((val) => {
+                        if (searchTerm == "") {
+                            return val
+                        } else if (val.Mnum.toLowerCase().includes(searchTerm.toLowerCase())){
+                            return val
+                        } else if (val.Mname.toLowerCase().includes(searchTerm.toLowerCase())){
+                            return val
+                        } else if (val.employee.toLowerCase().includes(searchTerm.toLowerCase())){
+                            return val
+                        } else if (val.status.toLowerCase().includes(searchTerm.toLowerCase())){
+                            return val
+                        } 
+                          else if (val.Mdate.toLowerCase().includes(searchTerm.toLowerCase())){
+                            return val
+                        }
+                          else if (val.Mhrs.toLowerCase().includes(searchTerm.toLowerCase())){
+                            return val
+                          }
+                    }).map((val, key) => {
                     return(
-                        <div className = "displayContainer">
-                            <div className = "row">
+                        <div className = "displayContainer" style={{width: "100%"}} key = {key}>
+                        <div className = "Mrow" style={{width: "80%"}}>
                                 {""}
                                 <h5> {val.Mnum} </h5>
                                 <h5> {val.Mname} </h5>
                                 <h5> {val.employee} </h5>
                                 <h5> {val.status} </h5>
+                                <h5> {val.Mdate} </h5>
+                                <h5> {val.Mhrs} </h5>
                                 
                             </div >
                             
                                 <button className="Btn" onClick = {() =>{
-                                    updateMachines (val.userId)
+                                    updateMachines (val._id)
                                 }}> Edit </button>
                                 <button className="Btn2" onClick = {() =>{
-                                    deleteMachines(val._id)
+                                    ConfirmDelete(val._id)
                                 }}> Delete </button>
                         </div>
                     )
                 })}
+                </div>
 
             </div>
 
         </div>
     );
-}
+}  

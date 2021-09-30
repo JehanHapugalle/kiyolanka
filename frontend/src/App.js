@@ -15,10 +15,12 @@ import { Employee, EmployeeOne, EmployeeTwo, EmployeeThree} from './pages/Employ
 
 function App() {
   return (
-
+      
+  
       <Router>
       <Sidebar/>
- 
+     
+     
         <switch>
 
          <Route path='/home' exact component={Home} />
@@ -46,9 +48,10 @@ function App() {
          <Route path='/employee/attendance' exact component={EmployeeThree} />
 
         </switch>
-
+        
       </Router>
-
+      
+      
   );
 }
 
