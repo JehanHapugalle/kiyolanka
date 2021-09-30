@@ -1,4 +1,4 @@
-.salcontainer{
+.container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,34 +6,34 @@
   
 }
 
-.salary{
-  font-size: 25px;
-  font-family: Arial, Helvetica, sans-serif;
-  align-items: center;
-  justify-content: center;
-  padding-top: 5%;
-  padding-right: 5%;
-  
-  
+.transport{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+    padding-right: 5%;
+    
+    
 }
 
-.Salform{
+.Tform{
     align-items: left;
     justify-content: left;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     
 }
-.saladd{
+.add{
     padding-top:5px;
     padding-right: 4.5%;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 
 
-.Salform{
-    margin-top: 90px;
+form{
+    margin-top: 110px;
     margin-left: -50px;
     background-color:white;
     box-shadow: 02px 2px 10px rgb(102, 102, 102);
@@ -42,56 +42,77 @@
     transform: scale(2);
     
   }
-  #SalaryEmpACCno{
+  #transport{
     margin-bottom:5px;
     border-radius: 7px;
       border: none;
       box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-      margin-left: 95px;
+      margin-left: 60px;
      
   }
 
-  #SalaryEmployeeId{
-      margin-bottom:5px;
+  #did{
+      margin-bottom:10px;
     border: none;
     border-radius: 7px;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 50px;
+    margin-left: 60px;
     
   }
-  #SalaryEmployeeName{
-    border-radius: 7px;
-    margin-bottom:5px;
-    border: none;
-    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 24px;
-  }
-  #SalaryEmpStatus{
-    border-radius: 7px;
-    margin-bottom:5px;
-    border: none;
-    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 65px;
-  }
-
-  #BasicSalary{
-    border-radius: 7px;
-    margin-bottom:5px;
-    border: none;
-    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 100px;
-  }
-
-  #SalaryBonus{
-    border-radius: 7px;
-    margin-bottom:5px;
+  #dname{
+    border-radius: 5px;
+    margin-bottom:10px;
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
     margin-left: 35px;
   }
+  #date{
+    border-radius: 5px;
+    margin-bottom:10px;
+    border: none;
+    box-shadow: 01px 0.5px 01px rgb(102, 102, 102);
+    margin-left: 90px;
+    color: #75c500;
+  }
+
+#licence_no{
+  border-radius: 7px;
+  margin-bottom:10px;
+  border: none;
+  box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+  margin-left: 10px;
+}
+
+#vehicle_no{
+  border-radius: 7px;
+  margin-bottom:10px;
+  border: none;
+  box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+  margin-left: 20px;
+}
+
+
+#month{
+  border-radius: 7px;
+  margin-bottom:10px;
+  border: none;
+  box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+  margin-left: 85px;
+
+
+}
+
+#time{
+    border-radius: 7px;
+    margin-bottom:10px;
+    border: none;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-left: 98px;
+  }
+
   button{
       margin-top: 10px;
-      margin-left: 10px;
+      margin-left: 200px;
     background-color: #75c500;
     border:none;
     border-color: #333333;
@@ -109,5 +130,17 @@
     padding-left: 10px;
     font-size: 10px;
   }
-  
-  
+  .imag{
+
+    padding-top:50px;
+
+    padding-right: 70px;
+
+}
+th{
+
+  margin-left: 67px;
+
+  text-align: center;
+
+}
