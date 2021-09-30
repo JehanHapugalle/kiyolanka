@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
-
 const Schema = mongoose.Schema;
-
 const supplierSchema = new Schema({
 
     name : {
@@ -9,7 +7,7 @@ const supplierSchema = new Schema({
         required : true
     },
     nic_no : {
-        type : String,
+        type : Number,
         required : true
     },
     address : {
@@ -17,7 +15,7 @@ const supplierSchema = new Schema({
         required : true
     },
     contact_no : {
-        type : String,
+        type : Number,
         required : true
     },
     email : {
@@ -41,7 +39,7 @@ const supplierSchema = new Schema({
         required : true
     },
     account_no : {
-        type : String,
+        type : Number,
         required : true
     }
 })

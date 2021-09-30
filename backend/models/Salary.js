@@ -12,8 +12,8 @@ const salarySchema = new Schema({
         type: String,
         required: true
     },
-    SalaryEmpGender: {
-        type: String,
+    SalaryEmpACCno: {
+        type: Number,
         required: true
     },
     
@@ -22,11 +22,11 @@ const salarySchema = new Schema({
         required: true
     },
     BasicSalary: {
-        type: String,
+        type: Number,
         required: true
     },
     SalaryBonus: {
-        type: String,
+        type: Number,
         required: true
     }
 

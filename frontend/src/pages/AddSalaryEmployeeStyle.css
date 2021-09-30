@@ -3,16 +3,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  
+    
 }
 
 .salary{
   font-size: 25px;
-  font-family: Arial, Helvetica, sans-serif;
-  align-items: center;
-  justify-content: center;
-  padding-top: 5%;
-  padding-right: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
   
   
 }
@@ -24,10 +25,14 @@
     
 }
 .saladd{
-    padding-top:5px;
-    padding-right: 4.5%;
+  margin-top: 5px;
+  margin-right: 4.5px;
+    padding-top:10px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
+    margin-bottom: 100px;
+    margin-left: 1px;
+    
 }
 
 
@@ -42,52 +47,78 @@
     transform: scale(2);
     
   }
-  #SalaryEmpGender{
-    margin-bottom:5px;
+  #SalaryEmpACCno{
+    margin-top:10px;
+    margin-bottom:25px;
+    margin-left:10px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    padding-left:1px;
     border-radius: 7px;
-      border: none;
-      box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-      margin-left: 60px;
-     
+    border: none;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
   }
 
   #SalaryEmployeeId{
-      margin-bottom:5px;
+    margin-top:10px;
+    margin-bottom:25px;
+    margin-left:50px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    padding-left:10px;
     border: none;
     border-radius: 7px;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 50px;
-    
   }
   #SalaryEmployeeName{
-    border-radius: 7px;
-    margin-bottom:5px;
+    margin-top:10px;
+    margin-bottom:25px;
+    margin-left:20px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    padding-left:10px;
     border: none;
+    border-radius: 7px;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 24px;
   }
   #SalaryEmpStatus{
+    margin-top:10px;
+    margin-bottom:25px;
     border-radius: 7px;
-    margin-bottom:5px;
+    margin-left:10px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    padding-left:10px;
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 70px;
+    margin-right: 50px;
+    color: #75c500;
+    font-size: 11px;
   }
 
   #BasicSalary{
+    margin-top:10px;
     border-radius: 7px;
-    margin-bottom:5px;
+    margin-left:40px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    padding-left:10px;
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 100px;
+    margin-right: 30px;
   }
 
+
   #SalaryBonus{
+    margin-top:5px;
     border-radius: 7px;
-    margin-bottom:5px;
+    margin-left:35px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    padding-left:10px;
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 35px;
+    margin-right: 30px;
   }
   button{
       margin-top: 10px;
@@ -109,5 +140,13 @@
     padding-left: 10px;
     font-size: 10px;
   }
+  
+
+
+.imag{
+  padding-top:50px;
+  padding-right: 70px;  
+
+}
   
   

@@ -82,7 +82,7 @@
     margin-left: 28px;
   }
 
-  button{
+  psubmitbutton{
     margin-top: 10px;
     margin-left: 200px;
     background-color: #75c500;
@@ -101,4 +101,9 @@
     color: #75c500;
     padding-left: 10px;
     font-size: 10px;
+  }
+
+  .pimag{
+    padding-top:50px;
+    padding-right: 70px;
   }

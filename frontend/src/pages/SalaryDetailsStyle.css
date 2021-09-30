@@ -1,18 +1,22 @@
-.container{
+.salcontainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+   
 }
-.Mrow{
+.salrow{
     display: flex;
-    padding-top: 5px;
+    padding-top: 10px;
     margin-left: 30px;
     height: 60px;
-    font-size: 14px;
 
 }
 
+th{
+    margin-left: 50px;
+    text-align: center;
+}
 .Btn{
     margin-top: 10px;
     margin-left: 200px;
@@ -21,7 +25,7 @@
   border-color: #333333;
   border-style: solid;
     border-radius: 25px;
-    padding-left:40px;
+    padding-left:15px;
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -36,20 +40,17 @@
   border-color: #333333;
   border-style: solid;
     border-radius: 25px;
-    padding-left:30px;
+    padding-left:10px;
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
     color: white;
 
 }
-.Mrow h5{
-    margin-left: 20px;
+.row h5{
+    margin-left: 30px;
     text-align: center;
-    padding-left: 48px;
-    font-size:12px;
-    
-    
+    padding-left: 3%;
 }
 
 .displayContainer{
@@ -57,7 +58,6 @@
     flex-direction: row;
     margin-right: -50px;
     background-color: gainsboro;
-
 }
 .displayContainer button{
     margin-top: 1px;
@@ -88,33 +88,24 @@ button{
     display: flex;
     flex-direction: column;
 }
-.machine{
+.salary{
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 50px;
 }
 
-.Mretrieve{
-    
+.salretrieve{
+    margin-top: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    margin-bottom: 150px;
+    margin-bottom: 250px;
     margin-left: 30px;
-    padding-right: 110px;
-    padding-bottom: 30PX;
-    padding-top: 20px;
-}
-th{
-
-    margin-left: 65px;
-
-    text-align: center;
-
 }
 .imag{
-    padding-top:40px;
-    padding-right: 70px;
-    
+    padding-top:50px;
+    padding-right: 70px;  
+  
   }
+    

@@ -1,34 +1,35 @@
-.container{
+.tracontainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.Mrow{
+.trarow{
     display: flex;
-    padding-top: 5px;
-    margin-left: 30px;
+    padding-top: 10px;
+    margin-left: 50px;
     height: 60px;
-    font-size: 14px;
-
+    /*padding-right: 60px;
+    padding-left: 1px;*/
+    
 }
 
-.Btn{
-    margin-top: 10px;
-    margin-left: 200px;
+.traBtn{
+    margin-top: 30px;
+    margin-left: 50px;
   background-color: #75c500;
   border:none;
   border-color: #333333;
   border-style: solid;
-    border-radius: 25px;
-    padding-left:40px;
+    border-radius: 35px;
+    padding-left:15px;
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
     color: white;
 
 }
-.Btn2{
+.traBtn2{
     margin-top: 10px;
     margin-left: 50px;
   background-color: #75c500;
@@ -36,85 +37,93 @@
   border-color: #333333;
   border-style: solid;
     border-radius: 25px;
-    padding-left:30px;
+    padding-left:10px;
     padding-right: 10px;
     padding-top: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     color: white;
 
 }
-.Mrow h5{
+.trarow h5{
     margin-left: 20px;
     text-align: center;
-    padding-left: 48px;
-    font-size:12px;
-    
     
 }
 
-.displayContainer{
+.tradisplayContainer{
     display: flex;
     flex-direction: row;
     margin-right: -50px;
     background-color: gainsboro;
-
 }
-.displayContainer button{
+.tradisplayContainer button{
     margin-top: 1px;
     margin-bottom: 20px;
-    margin-left: 10px;
+    margin-left: 30px;
 }
 button{
     background-color: #75c500;
     border-color: #333333;
     border-style: solid;
-    padding-left:15px;
-    padding-right: 15px;
+    padding-left:45px;
+    padding-right: 25px;
     padding-top: 5px;
     padding-bottom: 5px;
     color: white;
     cursor:pointer;
 }
-.list{
+.tralist{
     margin-bottom: 230px;
     margin-left: 10px;
     background-color:white;
     box-shadow: 02px 2px 10px rgb(102, 102, 102);
     border-radius: 20px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 20px;
     transform: scale(2);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: flex;
     flex-direction: column;
 }
-.machine{
-    font-size: 25px;
+.transport{
+    font-size: 35px;
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
-.Mretrieve{
-    
+.traretrieve{
+    margin-top: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    margin-bottom: 150px;
+    margin-bottom: 200px;
     margin-left: 30px;
-    padding-right: 110px;
-    padding-bottom: 30PX;
-    padding-top: 20px;
 }
 th{
 
-    margin-left: 65px;
+    margin-left: 10px;
 
     text-align: center;
 
 }
 .imag{
-    padding-top:40px;
+
+    padding-top:50px;
+
     padding-right: 70px;
-    
-  }
+
+}
+.trasearch {
+
+    margin-top: 20px;
+
+    margin-left: 70px;
+
+    margin-bottom: 30px;
+
+    padding: 5px;
+
+    font-size: 11px;
+
+}
