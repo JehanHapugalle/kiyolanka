@@ -1,23 +1,21 @@
 const router = require("express").Router();
 let Material = require("../models/Material");
 
+
 router.route("/add").post((req,res)=>{
     const mid = req.body.mid;
     const type = req.body.type;
     const uprice = req.body.uprice;
     const date_received = req.body.date_received;
     const receivedamount = req.body.receivedamount;
-    const usedamount = req.body.usedamount;
-    const supid = req.body.supid;
+
 
     const newMaterial = new Material({
         mid,
         type,
         uprice,
         date_received,
-        receivedamount,
-        usedamount,
-        supid
+        receivedamount
     })
 
     newMaterial.save().then(()=>{
@@ -37,7 +35,7 @@ router.route("/").get((req,res)=>{
 
 router.route("/update/:id").put(async(req,res)=>{
     let userId = req.params.id;
-    const {mid, type, uprice, date_received, receivedamount, usedamount, supid} = req.body;
+    const {mid, type, uprice, date_received, receivedamount, usedamount} = req.body;
 
     const updateMaterial = {
         mid,
@@ -45,8 +43,8 @@ router.route("/update/:id").put(async(req,res)=>{
         uprice,
         date_received,
         receivedamount,
-        usedamount,
-        supid
+        usedamount
+        
     }
 
     const update = await Material.findByIdAndUpdate(userId, updateMaterial).then(()=>{
