@@ -22,16 +22,12 @@ import { Sale, SaleOne, SaleTwo, SaleThree, SaleFour } from './pages/Sale';
 function App() {
     
   return (
-
-    
-      <Router>
-        
-      <Sidebar/> 
       
-    
-
-
-
+  
+      <Router>
+      <Sidebar/>
+     
+     
 
         <switch>
 
@@ -73,22 +69,18 @@ function App() {
  
    
 
-         
+
         
          <Route path='/salary' exact component={Salary} />
          <Route path='/salary/addemployees' exact component={SalaryOne} />
          <Route path='/salary/salarydetails' exact component={SalaryTwo} />
          <Route path='/salary/analysis' exact component={SalaryThree} />
 
-           
-         
+    
          <Route path='/stock' exact component={Product} />
          <Route path='/stock/addstock' exact component={ProductOne} />
          <Route path='/stock/viewstock' exact component={ProductTwo} />
          <Route path='/stock/analysis' exact component={ProductThree} />
-
-
-
 
          <Route path='/employee' exact component={Employee} />
          <Route path='/employee/employeelist' exact component={EmployeeOne} />
@@ -102,9 +94,10 @@ function App() {
          <Route path='/sales/analysis5' exact component={SaleFour} />
 
         </switch>
-
+        
       </Router>
-
+      
+      
   );
 }
 
