@@ -39,25 +39,20 @@ router.route("/").get((req,res)=>{
 
 router.route("/update/:id").put(async(req,res)=>{
     let userId = req.params.id;
-    const {eid, name, gender, job_title, date_joined, dob, contact, address} = req.body;
-
-    const updateEmployee = {
-        eid, 
-        name, 
-        gender,
-        job_title, 
-        date_joined, 
-        dob, 
-        contact, 
-        address
+    const {name, job_title, contact, address} = req.body;
+    console.log(name, job_title, contact, address, userId)
+    try{
+        await Employee.findById(userId, (error, updateEmployee) => {
+            updateEmployee.name = (name);
+            updateEmployee.job_title = (job_title);
+            updateEmployee.contact = (contact);
+            updateEmployee.address = (address);
+            updateEmployee.save();
+        });
+    } catch (err) {
+        console.log(err);
     }
-
-    const update = await Employee.findByIdAndUpdate(userId, updateEmployee).then(()=>{
-        res.status(200).send({status: "User updated"})
-    }).catch((err)=>{
-        console.log(err.message);
-        res.status(500).send({status: "Error with updating data", error: err.message});
-    })
+    res.send("Employee Updated");
 })
 
 router.route("/delete/:id").delete(async(req, res)=>{

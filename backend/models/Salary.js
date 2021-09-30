@@ -4,26 +4,32 @@ const Schema = mongoose.Schema;
 
 const salarySchema = new Schema({
 
-    eid: {
+    SalaryEmpId: {
         type: String,
         required: true
     },
-    name: {
+    SalaryEmpName: {
         type: String,
         required: true
     },
-    gender: {
+    SalaryEmpACCno: {
         type: String,
         required: true
     },
-    years_of_employment: {
+    
+    SalaryEmpStatus: {
         type: String,
         required: true
     },
-    status: {
+    BasicSalary: {
+        type: String,
+        required: true
+    },
+    SalaryBonus: {
         type: String,
         required: true
     }
+
 })
 
 const Salary = mongoose.model("salary", salarySchema);

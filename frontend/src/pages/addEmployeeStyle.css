@@ -1,0 +1,166 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.addemployee{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    justify-content: center;
+    margin-right: -50px;
+    margin-top: 50px;
+}
+
+.add{
+    margin-top: 35px;
+    margin-right: -150px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.form{
+  align-items: left;
+  justify-content: left;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+form{
+    margin-top: 220px;
+    margin-bottom: 230px;
+    margin-left: 10px;
+    background-color:white;
+    box-shadow: 02px 2px 10px rgb(102, 102, 102);
+    border-radius: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 160px;
+    transform: scale(2);
+  }
+  
+  #eid{
+    margin-top:10px;
+    margin-bottom:25px;
+    margin-left:44px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    padding-left:10px;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+  }
+
+  #name{
+    margin-top:10px;
+    margin-bottom:25px;
+    margin-left:20px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    padding-left:10px;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+  }
+
+  #gender{
+    margin-top:10px;
+    margin-bottom:25px;
+    margin-left:80px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 15px;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-right: 40px;
+    color: #75c500;
+    padding-right: 51px;
+    font-size: 11px;
+  }
+
+  option {
+    font-size: 20px;
+  }
+
+  #job_title{
+    margin-top:10px;
+    margin-bottom:25px;
+    margin-left:72px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    padding-left:10px;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-right: 30px;
+  }
+
+  #date_joined{
+    margin-top:10px;
+    margin-bottom:25px;
+    margin-left:33px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    padding-left:10px;
+    border-radius: 7px;
+    border: none;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+  }
+
+  #dob{
+    margin-top:10px;
+    border-radius: 7px;
+    margin-bottom:25px;
+    padding-left:10px;
+    margin-left:23px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    border: none;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+  }
+
+  #contact{
+    margin-top:10px;
+    border-radius: 7px;
+    margin-bottom:25px;
+    padding-left:10px;
+    margin-left:60px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    border: none;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-right: 30px;
+  }
+
+  #address{
+    margin-top:10px;
+    border-radius: 7px;
+    margin-left:60px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    padding-left:10px;
+    border: none;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-right: 30px;
+  }
+
+  button{
+      margin-top: 35px;
+      margin-left: 135px;
+      background-color: #75c500;
+      border: 3px solid #333333;
+      padding-left:15px;
+      padding-right: 15px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color: white;
+      cursor:pointer;
+  }
+
+  ::placeholder {
+    color: #75c500;
+    padding-left: 10px;
+    font-size: 11px;
+  }
