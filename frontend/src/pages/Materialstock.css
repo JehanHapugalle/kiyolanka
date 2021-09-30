@@ -1,0 +1,107 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.employeelist{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    justify-content: center;
+    margin-right: -50px;
+    margin-top: 50px;
+}
+
+.retrieve{
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-bottom: 200px;
+    margin-left: 30px;
+}
+
+.search {
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    padding: 5px;
+    font-size: 11px;
+}
+
+.list{
+    margin-bottom: 230px;
+    margin-left: 10px;
+    background-color:white;
+    box-shadow: 02px 2px 10px rgb(102, 102, 102);
+    border-radius: 20px;
+    padding-top: 30px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+    transform: scale(2);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    padding-top: 10px;
+    margin-left: 20px;
+    margin-left: 30px;
+    height: 60px;
+}
+
+.row h5{
+    margin-left: 30px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.displayContainer{
+    display: flex;
+    flex-direction: row;
+    background-color: gainsboro;
+}
+
+.displayContainer button{
+    margin-top: 1px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    margin-left: 10px;
+}
+
+button{
+    background-color: #75c500;
+    border: 3px solid #333333;
+    padding-left:15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+    cursor:pointer;
+}
+
+.Matrow{
+    display: flex;
+    padding-top: 5px;
+    margin-left: 20px;
+    height: 60px;
+    font-size: 14px;
+
+}
+
+th{
+
+    margin-left: 35px;
+
+    text-align: center;
+
+}
+
+.imag{
+    padding-top:40px;
+    padding-right: 50px;
+    
+}

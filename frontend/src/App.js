@@ -1,9 +1,12 @@
 import './App.css';
 import Sidebar from './components/Sidebar';
-
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import { Machinery,MachineryOne,MachineryTwo,MachineryThree,MachineryFour} from './pages/Machinery';
+import { Transport,TransportOne,TransportTwo,TransportThree,} from './pages/Transport';
+import { Materials,MaterialOne,MaterialTwo,MaterialThree,MaterialFour} from './pages/Material';
+import { Supplier, SupplierOne, SupplierTwo, SupplierThree, SupplierFour} from './pages/Supplier';
+import React, { useState } from 'react';
 import { Salary,SalaryOne,SalaryTwo,SalaryThree, SalaryFour} from './pages/SalaryEmployee';
 
 
@@ -15,14 +18,18 @@ import { Sale, SaleOne, SaleTwo, SaleThree, SaleFour } from './pages/Sale';
 
 
 
+
 function App() {
+    
   return (
 
+    
       <Router>
-      <Sidebar/>
- 
+        
+      <Sidebar/> 
       
     
+
 
 
 
@@ -34,6 +41,37 @@ function App() {
          <Route path='/machine/viewmachine' exact component={MachineryTwo} />
          <Route path='/machine/expenses' exact component={MachineryThree} />
          <Route path='/machine/analysis1' exact component={MachineryFour} />
+   
+
+         
+
+         
+         <Route path='/transport' exact component={Transport} />
+         <Route path='/transport/addtransport' exact component={TransportOne} />
+         <Route path='/transport/maintenance' exact component={TransportTwo} />
+         <Route path='/transport/analysis6' exact component={TransportThree} />
+        
+
+         <Route path='/materials' exact component={Materials} />
+         <Route path='/materials/addmaterials' exact component={MaterialOne} />
+         <Route path='/materials/materialstock' exact component={MaterialTwo} />
+         <Route path='/materials/usedmaterials' exact component={MaterialThree} />
+         <Route path='/materials/analaysis3' exact component={MaterialFour} />
+
+
+         
+         <Route path='/home' exact component={Home} />
+         <Route path='/supplier' exact component={Supplier} />
+         <Route path='/supplier/addsupplier' exact component={SupplierOne} />
+         <Route path='/supplier/viewsupplier' exact component={SupplierTwo} />
+         <Route path='/supplier/payment' exact component={SupplierThree} />
+         <Route path='/supplier/analysis2' exact component={SupplierFour} />
+         
+
+
+
+ 
+   
 
          
         
