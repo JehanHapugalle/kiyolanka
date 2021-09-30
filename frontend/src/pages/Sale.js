@@ -1,11 +1,11 @@
 import React ,{useState} from "react";
 import AddSale from "./AddSale.js";
+import SalesHistory from "./SalesHistory.js";
+import Home from "./Home.js";
 
 export const Sale = () =>{
     return(
-        <div className="sale">
-            <h1></h1>
-        </div>
+        <Home/>
     )
 }
 export const SaleOne = () =>{
@@ -22,9 +22,7 @@ export const  SaleTwo= () =>{
 }
 export const SaleThree = () =>{
     return(
-        <div className="sale">
-            <h1>saleshistory</h1>
-        </div>
+        <SalesHistory/>
     )
 }
 export const SaleFour = () =>{
