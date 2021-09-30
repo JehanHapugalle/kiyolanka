@@ -32,8 +32,7 @@ function App() {
 
  
    
-      
-
+  
          
         
          <Route path='/salary' exact component={Salary} />
@@ -42,12 +41,11 @@ function App() {
          <Route path='/salary/analysis' exact component={SalaryThree} />
 
            
-         
+
          <Route path='/stock' exact component={Product} />
          <Route path='/stock/addstock' exact component={ProductOne} />
          <Route path='/stock/viewstock' exact component={ProductTwo} />
          <Route path='/stock/analysis' exact component={ProductThree} />
-
 
 
 
