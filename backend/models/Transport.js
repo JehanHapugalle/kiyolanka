@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const employeeSchema = new Schema({
+const transportSchema = new Schema({
 
-    eid : {
+    vid : {
         type : String,
         required : true
     },
@@ -12,32 +12,28 @@ const employeeSchema = new Schema({
         type : String,
         required : true
     },
-    gender : {
+    date : {
         type : String,
         required : true
     },
-    job_title : {
+    licence_no : {
         type : String,
         required : true
     },
-    date_joined : {
+    vehicle_no : {
         type : String,
         required : true
     },
-    dob : {
+	month : {
         type : String,
         required : true
     },
-	contact : {
-        type : Number,
-        required : true
-    },
-    address : {
+    time : {
         type : String,
         required : true
     }
 })
 
-const Employee = mongoose.model("employee", employeeSchema);
+const Transport = mongoose.model("transport", transportSchema);
 
-module.exports = Employee;
+module.exports = Transport;

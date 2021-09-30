@@ -1,4 +1,4 @@
-.container{
+.salcontainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,24 +6,24 @@
   
 }
 
-.machine{
-    font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-    align-items: center;
-    justify-content: center;
-    padding-top: 5%;
-    padding-right: 5%;
-    
-    
+.salary{
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+  padding-right: 5%;
+  
+  
 }
 
-.form{
+.Salform{
     align-items: left;
     justify-content: left;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     
 }
-.add{
+.saladd{
     padding-top:5px;
     padding-right: 4.5%;
     font-family: Arial, Helvetica, sans-serif;
@@ -32,17 +32,17 @@
 
 
 
-.form{
+.Salform{
     margin-top: 90px;
     margin-left: -50px;
     background-color:white;
     box-shadow: 02px 2px 10px rgb(102, 102, 102);
     border-radius: 25px;
     padding :20px;
-    transform: scale(1.8);
+    transform: scale(2);
     
   }
-  #employee{
+  #SalaryEmpGender{
     margin-bottom:5px;
     border-radius: 7px;
       border: none;
@@ -51,32 +51,47 @@
      
   }
 
-  #Mnum{
+  #SalaryEmployeeId{
       margin-bottom:5px;
     border: none;
     border-radius: 7px;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 10px;
+    margin-left: 50px;
     
   }
-  #Mname{
+  #SalaryEmployeeName{
     border-radius: 7px;
     margin-bottom:5px;
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
     margin-left: 24px;
   }
-  #status{
+  #SalaryEmpStatus{
     border-radius: 7px;
     margin-bottom:5px;
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 85px;
+    margin-left: 70px;
   }
 
-  .button{
+  #BasicSalary{
+    border-radius: 7px;
+    margin-bottom:5px;
+    border: none;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-left: 100px;
+  }
+
+  #SalaryBonus{
+    border-radius: 7px;
+    margin-bottom:5px;
+    border: none;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-left: 35px;
+  }
+  button{
       margin-top: 10px;
-      margin-left: 215px;
+      margin-left: 10px;
     background-color: #75c500;
     border:none;
     border-color: #333333;
@@ -94,3 +109,5 @@
     padding-left: 10px;
     font-size: 10px;
   }
+  
+  
