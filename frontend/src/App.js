@@ -77,7 +77,6 @@ function App() {
    
   
 
-
         
          <Route path='/salary' exact component={Salary} />
          <Route path='/salary/addemployees' exact component={SalaryOne} />
@@ -90,7 +89,7 @@ function App() {
          <Route path='/stock' exact component={Product} />
          <Route path='/stock/addstock' exact component={ProductOne} />
          <Route path='/stock/viewstock' exact component={ProductTwo} />
-         <Route path='/stock/analysis' exact component={ProductThree} />
+         <Route path='/stock/analysis4' exact component={ProductThree} />
 
 
 
