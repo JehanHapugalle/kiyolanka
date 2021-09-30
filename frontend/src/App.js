@@ -8,6 +8,7 @@ import { Materials,MaterialOne,MaterialTwo,MaterialThree,MaterialFour} from './p
 import { Supplier, SupplierOne, SupplierTwo, SupplierThree, SupplierFour} from './pages/Supplier';
 import React, { useState } from 'react';
 import { Salary,SalaryOne,SalaryTwo,SalaryThree, SalaryFour} from './pages/SalaryEmployee';
+import { Salary,SalaryOne,SalaryTwo,SalaryThree} from './pages/SalaryEmployee';
 
 
 import {Product,ProductOne,ProductTwo,ProductThree} from './pages/Product';
@@ -31,10 +32,6 @@ function App() {
 
  
       
-    
-
-
-
         <switch>
 
          <Route path='/home' exact component={Home} />
@@ -77,6 +74,8 @@ function App() {
 
  
    
+
+  
 
          
         
