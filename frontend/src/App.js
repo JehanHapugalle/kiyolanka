@@ -3,6 +3,7 @@ import Sidebar from './components/Sidebar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import { Machinery,MachineryOne,MachineryTwo,MachineryThree,MachineryFour} from './pages/Machinery';
+import { Transport,TransportOne,TransportTwo,TransportThree,} from './pages/Transport';
 import { Materials,MaterialOne,MaterialTwo,MaterialThree,MaterialFour} from './pages/Material';
 import { Supplier, SupplierOne, SupplierTwo, SupplierThree, SupplierFour} from './pages/Supplier';
 import React, { useState } from 'react';
@@ -24,10 +25,11 @@ function App() {
 
     
       <Router>
-      <Sidebar/>
- 
+        
+      <Sidebar/> 
       
     
+
 
 
 
@@ -40,6 +42,15 @@ function App() {
          <Route path='/machine/expenses' exact component={MachineryThree} />
          <Route path='/machine/analysis1' exact component={MachineryFour} />
    
+
+         
+
+         
+         <Route path='/transport' exact component={Transport} />
+         <Route path='/transport/addtransport' exact component={TransportOne} />
+         <Route path='/transport/maintenance' exact component={TransportTwo} />
+         <Route path='/transport/analysis6' exact component={TransportThree} />
+        
 
          <Route path='/materials' exact component={Materials} />
          <Route path='/materials/addmaterials' exact component={MaterialOne} />
