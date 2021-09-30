@@ -6,16 +6,17 @@ router.route("/add").post((req,res)=>{
     const Mname = req.body.Mname;
     const employee = req.body.employee;
     const status = req.body.status;
-    const expenses = req.body.expenses;
-    const date = req.body.date;
+    const Mdate = req.body.Mdate;
+    const Mhrs = req.body.Mhrs;
+   
 
     const newMachine = new Machine({
         Mnum,
         Mname,
         employee,
         status,
-        expenses,
-        date
+        Mdate,
+        Mhrs
     })
 
     newMachine.save().then(()=>{
@@ -33,26 +34,24 @@ router.route("/").get((req,res)=>{
     })
 })
 
+
 router.route("/update/:id").put(async(req,res)=>{
     let userId = req.params.id;
-    const {Mnum, Mname, employee, status, expenses, date} = req.body;
-
-    const updateMachine = {
-        Mnum,
-        Mname,
-        employee,
-        status,
-        expenses,
-        date
+    const {employee, status,Mhrs} = req.body;
+    console.log(employee, status,Mhrs,userId)
+    try{
+        await Machine.findById(userId, (error, updateMachine) => {
+            updateMachine.employee = (employee);
+            updateMachine.status = (status);
+            updateMachine.Mhrs = (Mhrs);
+            updateMachine.save();
+        });
+    } catch (err) {
+        console.log(err);
     }
-
-    const update = await Machine.findByIdAndUpdate(userId, updateMachine).then(()=>{
-        res.status(200).send({status: "User updated"})
-    }).catch((err)=>{
-        console.log(err.message);
-        res.status(500).send({status: "Error with updating data", error: err.message});
-    })
+    res.send("Machine Details Updated");
 })
+
 
 router.route("/delete/:id").delete(async(req, res)=>{
     let userId = req.params.id;
