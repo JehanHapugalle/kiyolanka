@@ -33,9 +33,23 @@ router.route("/").get((req,res)=>{
 
 router.route("/update/:id").put(async(req,res)=>{
     let userId = req.params.id;
-    const {scus_name, scon_number, ssale_id, s_email, s_amount} = req.body;
+    const {scus_name, scon_number, s_email, s_amount} = req.body;
+    console.log(scus_name, scon_number, s_email, s_amount, userId)
+    try{
+        await Sale.findById(userId, (error, updateSale) => {
+            updateSale.scus_name = (scus_name);
+            updateSale.scon_number = (scon_number);
+            updateSale.s_email = (s_email);
+            updateSale.s_amount = (s_amount);
+            updateSale.save();
+        });
+    } catch (err) {
+        console.log(err);
+    }
+    res.send("Sale Updated");
+})
 
-    const updateSale = {
+    /*const updateSale = {
         scus_name,
         scon_number,
         ssale_id,
@@ -49,7 +63,7 @@ router.route("/update/:id").put(async(req,res)=>{
         console.log(err.message);
         res.status(500).send({status: "Error with updating data", error: err.message});
     })
-})
+})*/
 
 router.route("/delete/:id").delete(async(req, res)=>{
     let userId = req.params.id;
