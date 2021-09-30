@@ -1,6 +1,7 @@
 import React ,{useState} from "react";
 import axios from "axios";
 import './AddSaleStyle.css'
+import Logo from './image/logo.jpeg'
 
 
   export default function AddSale(){
@@ -35,6 +36,10 @@ import './AddSaleStyle.css'
         
         <div className="salecontainer">
 
+    <div class="saleimag" >
+    <img src = {Logo} width = "150" alt="logo"/>
+    </div>
+
     <div class="sale"><h1>Sales Managment
     </h1></div>
      
@@ -50,40 +55,40 @@ import './AddSaleStyle.css'
       <div class="saleform-group">
       
     <label for="Customer'sName">Customer's Name</label>
-    <input type="text" class="saleform-control" id="scus_name" saleplaceholder="Enter Customer's Name" onChange={(e)=>{
-        setcus_name(e.target.value);}}/>
+    <input type="text" class="saleform-control" id="scus_name" placeholder="Enter Customer's Name" onChange={(e)=>{
+        setcus_name(e.target.value);}} required/>
     
      </div>
 
      <div class="saleform-group">
 
     <label  for="ContactNumber">Contact Number</label>
-    <input type="text" class="saleform-control" id="scon_number" saleplaceholder="Enter Contact Number" onChange={(e)=>{
+    <input type="tel" pattern="[0-9]{10}" class="saleform-control" id="scon_number" placeholder="Enter Contact Number" onChange={(e)=>{
         setcon_number(e.target.value);
-        }}/>
+        }}required/>
     </div>
     </div>
     <div style={{width:"50%"}}>
     <div class="saleform-group">
 
     <label  for="SalesID">Sales ID</label>
-    <input type="text" class="saleform-control" id="ssale_id" saleplaceholder="Enter Sales ID" onChange={(e)=>{
+    <input type="text" class="saleform-control" id="ssale_id" placeholder="Enter Sales ID" onChange={(e)=>{
         setssale_id(e.target.value);
-        }}/>
+        }}required/>
     </div>
     
     <div class="saleform-group">
     <label  for="E-mail">E-mail</label>
-    <input type="text" class="saleform-control" id="s_email" saleplaceholder="Enter e-mail" onChange={(e)=>{
+    <input type="email" class="saleform-control" id="s_email" placeholder="Enter e-mail" onChange={(e)=>{
         sets_email(e.target.value);
-        }}/>
+        }}required/>
     </div>
 
     <div class="saleform-group">
       
     <label for="TotalAmount">Total Amount</label>
-    <input type="text" class="saleform-control" id="s_amount" saleplaceholder="Enter Total Amount" onChange={(e)=>{
-        sets_amount(e.target.value);}}/>
+    <input type="text" class="saleform-control" id="s_amount" placeholder="Enter Total Amount" onChange={(e)=>{
+        sets_amount(e.target.value);}}required/>
     
      </div>
     

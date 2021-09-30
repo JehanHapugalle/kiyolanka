@@ -32,11 +32,15 @@ function App() {
 
 
 
+
+
   
       <Router>
       <Sidebar/>
      
+
      
+
 
 
 
@@ -49,6 +53,7 @@ function App() {
          <Route path='/machine/expenses' exact component={MachineryThree} />
          <Route path='/machine/analysis1' exact component={MachineryFour} />
    
+
 
 
          
@@ -66,9 +71,10 @@ function App() {
          <Route path='/materials/usedmaterials' exact component={MaterialThree} />
          <Route path='/materials/analaysis3' exact component={MaterialFour} />
 
+
  
    
-  
+
 
          
          <Route path='/home' exact component={Home} />
@@ -85,7 +91,6 @@ function App() {
    
   
 
-
         
          <Route path='/salary' exact component={Salary} />
          <Route path='/salary/addemployees' exact component={SalaryOne} />
@@ -94,7 +99,6 @@ function App() {
 
 
            
-
 
     
 
