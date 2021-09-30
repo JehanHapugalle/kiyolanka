@@ -1,12 +1,12 @@
 import React ,{useState} from "react";
 import EmployeeList from "./EmployeeList";
 import AddEmployee from "./AddEmployee";
+import Home from "./Home";
+import Attendance from "./Attendance";
 
 export const Employee = () =>{
     return(
-        <div className="employee">
-            <h1></h1>
-        </div>
+        <Home/>
     )
 }
 
@@ -24,9 +24,7 @@ export const  EmployeeTwo = () =>{
 
 export const EmployeeThree = () =>{
     return(
-        <div className="employee">
-            <h1>Attendance</h1>
-        </div>
+        <Attendance/>
     )
 }
 

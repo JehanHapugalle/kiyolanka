@@ -44,6 +44,9 @@ function App() {
 
 
 
+
+
+     
         <switch>
 
          <Route path='/home' exact component={Home} />
@@ -85,12 +88,6 @@ function App() {
          <Route path='/supplier/analysis2' exact component={SupplierFour} />
          
 
-
-
- 
-   
-  
-
         
          <Route path='/salary' exact component={Salary} />
          <Route path='/salary/addemployees' exact component={SalaryOne} />
@@ -106,8 +103,6 @@ function App() {
          <Route path='/stock/addstock' exact component={ProductOne} />
          <Route path='/stock/viewstock' exact component={ProductTwo} />
          <Route path='/stock/analysis4' exact component={ProductThree} />
-
-
 
 
          <Route path='/employee' exact component={Employee} />
