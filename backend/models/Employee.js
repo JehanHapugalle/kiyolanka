@@ -21,11 +21,11 @@ const employeeSchema = new Schema({
         required : true
     },
     date_joined : {
-        type : String,
+        type : Date,
         required : true
     },
     dob : {
-        type : String,
+        type : Date,
         required : true
     },
 	contact : {
