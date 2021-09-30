@@ -21,7 +21,7 @@ const productSchema = new Schema({
         required : true
     },
     nop : {
-        type : String,
+        type : Number,
         required : true
     }
 })

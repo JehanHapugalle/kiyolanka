@@ -1,12 +1,11 @@
 import React ,{useState} from "react";
 import AddSalaryEmployee from "./AddSalaryEmployee";
 import SalaryDetails from "./SalaryDetails";
+import Home from "./Home";
 
 export const Salary = () =>{
     return(
-        <div className="salaryEmployee">
-            <h1></h1>
-        </div>
+       <Home/>
     )
 }
 

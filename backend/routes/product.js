@@ -33,23 +33,41 @@ router.route("/").get((req,res)=>{
 
 router.route("/update/:id").put(async(req,res)=>{
     let userId = req.params.id;
-    const {pid, pname, date, weight, nop} = req.body;
-
-    const updateProduct = {
-        pid,
-        pname,
-        date,
-        weight,
-        nop
+    const {pname, weight, date, nop} = req.body;
+    console.log(pname, weight, date, nop, userId)
+    try{
+        await Product.findById(userId, (error, updateProduct) => {
+            updateProduct.pname = (pname);
+            updateProduct.weight = (weight);
+            updateProduct.date = (date);
+            updateProduct.nop = (nop);
+            updateProduct.save();
+        });
+    } catch (err) {
+        console.log(err);
     }
-
-    const update = await Product.findByIdAndUpdate(userId, updateProduct).then(()=>{
-        res.status(200).send({status: "Product updated"})
-    }).catch((err)=>{
-        console.log(err.message);
-        res.status(500).send({status: "Error with updating data", error: err.message});
-    })
+    res.send("Product Updated");
 })
+
+// router.route("/update/:id").put(async(req,res)=>{
+//     let userId = req.params.id;
+//     const {pid, pname, date, weight, nop} = req.body;
+
+//     const updateProduct = {
+//         pid,
+//         pname,
+//         date,
+//         weight,
+//         nop
+//     }
+
+//     const update = await Product.findByIdAndUpdate(userId, updateProduct).then(()=>{
+//         res.status(200).send({status: "Product updated"})
+//     }).catch((err)=>{
+//         console.log(err.message);
+//         res.status(500).send({status: "Error with updating data", error: err.message});
+//     })
+// })
 
 router.route("/delete/:id").delete(async(req, res)=>{
     let userId = req.params.id;
