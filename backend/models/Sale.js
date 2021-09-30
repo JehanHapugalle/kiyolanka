@@ -9,11 +9,11 @@ const saleSchema = new Schema({
         required : true
     },
     scon_number : {
-        type : String,
+        type : Number,
         required : true
     },
     ssale_id : {
-        type : String,
+        type : Number,
         required : true
     },
     s_email : {

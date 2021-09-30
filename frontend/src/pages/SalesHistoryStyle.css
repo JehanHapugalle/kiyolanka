@@ -1,33 +1,28 @@
-.container{
+.salecontainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.eimage{
-    margin-top: 50px;
-    margin-left: 25px;
-}
-
-.employeelist{
+.sale{
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
     justify-content: center;
     margin-right: -50px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
-.retrieve{
-    margin-top: 40px;
+.saleadd{
+    margin-top: 35px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    margin-bottom: 280px;
+    margin-bottom: 200px;
     margin-left: 30px;
 }
 
-.search {
+.salesearch {
     margin-top: 10px;
     margin-left: 50px;
     margin-bottom: 30px;
@@ -35,49 +30,46 @@
     font-size: 11px;
 }
 
-th{
-    margin-left: 45px;
-    text-align: center;
-}
-
-.list{
+.salelist{
     margin-bottom: 230px;
     margin-left: 10px;
     background-color:white;
     box-shadow: 02px 2px 10px rgb(102, 102, 102);
     border-radius: 20px;
-    padding-top: 40px;
+    padding-top: 30px;
+    padding-right: 50px;
+    padding-bottom: 30px;
     transform: scale(2);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: flex;
     flex-direction: column;
 }
 
-.row{
+.salerow{
     display: flex;
     padding-top: 10px;
-    margin-left: 19px;
+    margin-left: 20px;
+    margin-left: 30px;
     height: 60px;
 }
 
-.row h5{
-    margin-left: 30px;
-    padding-right: 17px;
+.salerow h5{
+    margin-left: 65px;
+    padding-left: 2px;
     text-align: center;
 }
 
-.displayContainer{
+.saledisplayContainer{
     display: flex;
-    flex-direction: row;
     background-color: gainsboro;
-    padding-top: 10px;
+    flex-direction: row;
 }
 
-.displayContainer button{
+.saledisplayContainer button{
     margin-top: 1px;
     margin-bottom: 20px;
-    margin-right: 40px;
-    margin-left: -20px;
+    margin-left: 40px;
+    margin-left: 10px;
 }
 
 button{
@@ -90,4 +82,14 @@ button{
     color: white;
     cursor:pointer;
 }
+th{
 
+    margin-left: 60px;
+    text-align: center;
+
+}
+.saleimag{
+    padding-top:50px;
+    padding-right: 70px;
+
+  }
