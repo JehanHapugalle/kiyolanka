@@ -36,6 +36,7 @@ function App() {
       <Sidebar/>
 
  
+
       
 
      
@@ -48,6 +49,7 @@ function App() {
          <Route path='/machine/viewmachine' exact component={MachineryTwo} />
          <Route path='/machine/expenses' exact component={MachineryThree} />
          <Route path='/machine/analysis1' exact component={MachineryFour} />
+
    
 
          
@@ -67,6 +69,8 @@ function App() {
 
 
         
+         
+
          <Route path='/home' exact component={Home} />
          <Route path='/supplier' exact component={Supplier} />
          <Route path='/supplier/addsupplier' exact component={SupplierOne} />
@@ -83,15 +87,15 @@ function App() {
          <Route path='/salary/salarydetails' exact component={SalaryTwo} />
          <Route path='/salary/analysis' exact component={SalaryThree} />
 
+
            
 
     
+
          <Route path='/stock' exact component={Product} />
          <Route path='/stock/addstock' exact component={ProductOne} />
          <Route path='/stock/viewstock' exact component={ProductTwo} />
          <Route path='/stock/analysis4' exact component={ProductThree} />
-
-
 
 
          <Route path='/employee' exact component={Employee} />
