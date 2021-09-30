@@ -2,8 +2,8 @@ const router = require("express").Router();
 let Transport = require("../models/Transport");
 
 router.route("/add").post((req,res)=>{
-    const vid = req.body.vid;
-    const name = req.body.name;
+    const did = req.body.did;
+    const dname = req.body.dname;
     const date= req.body.date;
     const licence_no = req.body.licence_no;
     const vehicle_no = req.body.vehicle_no;
@@ -11,8 +11,8 @@ router.route("/add").post((req,res)=>{
     const time = req.body.time;
 
     const newTransport = new Transport({
-        vid,
-        name,
+        did,
+        dname,
         date,
         licence_no,
         vehicle_no,
@@ -36,25 +36,37 @@ router.route("/").get((req,res)=>{
 })
 
 router.route("/update/:id").put(async(req,res)=>{
-    let userId = req.params.id;
-    const {vid, name, date, licence_no, vehicle_no, month, time} = req.body;
 
-    const updateTransport = {
-        vid, 
-        name, 
-        date, 
-        licence_no, 
-        vehicle_no, 
-        month,  
-        time
+    let userId = req.params.id;
+
+    const {did, dname, licence_no, vehicle_no} = req.body;
+
+    console.log(did, dname, licence_no, vehicle_no,  userId)
+
+    try{
+
+        await Transport.findById(userId, (error, updateTransport) => {
+
+            updateTransport.did = (did);
+
+            updateTransport.dname = (dname);
+
+            updateTransport.licence_no = (licence_no);
+
+            updateTransport.vehicle_no = (vehicle_no);
+
+            updateTransport.save();
+
+        });
+
+    } catch (err) {
+
+        console.log(err);
+
     }
 
-    const update = await Transport.findByIdAndUpdate(userId, updateTransport).then(()=>{
-        res.status(200).send({status: "User updated"})
-    }).catch((err)=>{
-        console.log(err.message);
-        res.status(500).send({status: "Error with updating data", error: err.message});
-    })
+    res.send("Transport Updated");
+
 })
 
 router.route("/delete/:id").delete(async(req, res)=>{
