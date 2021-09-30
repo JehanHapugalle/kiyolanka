@@ -34,11 +34,6 @@ function App() {
          <Route path='/machine/viewmachine' exact component={MachineryTwo} />
          <Route path='/machine/expenses' exact component={MachineryThree} />
          <Route path='/machine/analysis1' exact component={MachineryFour} />
-   
-
- 
-   
-        </switch>
 
          
         
