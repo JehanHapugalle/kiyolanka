@@ -12,7 +12,7 @@ const salarySchema = new Schema({
         type: String,
         required: true
     },
-    SalaryEmpGender: {
+    SalaryEmpACCno: {
         type: String,
         required: true
     },
