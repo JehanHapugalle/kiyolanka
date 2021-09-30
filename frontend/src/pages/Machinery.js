@@ -1,5 +1,7 @@
 import React ,{useState} from "react";
 import AddMachine from "./AddMachine";
+import ViewMachine from "./ViewMachine";
+
 
 export const Machinery = () =>{
     return(
@@ -16,9 +18,7 @@ export const  MachineryOne= () =>{
 }
 export const MachineryTwo = () =>{
     return(
-        <div className="machinery">
-            <h1>viewmachine</h1>
-        </div>
+        <ViewMachine/>
     )
 }
 export const MachineryThree = () =>{
