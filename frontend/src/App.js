@@ -3,12 +3,14 @@ import Sidebar from './components/Sidebar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import { Machinery,MachineryOne,MachineryTwo,MachineryThree,MachineryFour} from './pages/Machinery';
+import { Salary,SalaryOne,SalaryTwo,SalaryThree} from './pages/SalaryEmployee';
 import { Transport,TransportOne,TransportTwo,TransportThree,} from './pages/Transport';
 import { Materials,MaterialOne,MaterialTwo,MaterialThree,MaterialFour} from './pages/Material';
 import { Supplier, SupplierOne, SupplierTwo, SupplierThree, SupplierFour} from './pages/Supplier';
 import React, { useState } from 'react';
 import { Salary,SalaryOne,SalaryTwo,SalaryThree, SalaryFour} from './pages/SalaryEmployee';
 import { Salary,SalaryOne,SalaryTwo,SalaryThree} from './pages/SalaryEmployee';
+
 
 
 import {Product,ProductOne,ProductTwo,ProductThree} from './pages/Product';
@@ -23,15 +25,24 @@ import { Sale, SaleOne, SaleTwo, SaleThree, SaleFour } from './pages/Sale';
 function App() {
     
   return (
+      
+
 
     
+
+
+
+  
       <Router>
+
 
         
       <Sidebar/> 
 
  
       
+     
+
         <switch>
 
          <Route path='/home' exact component={Home} />
@@ -60,7 +71,6 @@ function App() {
          <Route path='/materials/analaysis3' exact component={MaterialFour} />
 
 
-
          
          <Route path='/home' exact component={Home} />
          <Route path='/supplier' exact component={Supplier} />
@@ -77,7 +87,6 @@ function App() {
 
   
 
-         
         
          <Route path='/salary' exact component={Salary} />
          <Route path='/salary/addemployees' exact component={SalaryOne} />
@@ -85,11 +94,12 @@ function App() {
          <Route path='/salary/analysis' exact component={SalaryThree} />
 
            
-         
+
+    
          <Route path='/stock' exact component={Product} />
          <Route path='/stock/addstock' exact component={ProductOne} />
          <Route path='/stock/viewstock' exact component={ProductTwo} />
-         <Route path='/stock/analysis' exact component={ProductThree} />
+         <Route path='/stock/analysis4' exact component={ProductThree} />
 
 
 
@@ -106,9 +116,10 @@ function App() {
          <Route path='/sales/analysis5' exact component={SaleFour} />
 
         </switch>
-
+        
       </Router>
-
+      
+      
   );
 }
 
