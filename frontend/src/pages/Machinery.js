@@ -1,13 +1,12 @@
 import React ,{useState} from "react";
 import AddMachine from "./AddMachine";
 import ViewMachine from "./ViewMachine";
+import Home from "./Home";
 
 
 export const Machinery = () =>{
     return(
-        <div className="machinery">
-            <h1></h1>
-        </div>
+       <Home/>
     )
 }
 
