@@ -4,11 +4,11 @@ const Schema = mongoose.Schema;
 
 const transportSchema = new Schema({
 
-    vid : {
+    did : {
         type : String,
         required : true
     },
-    name : {
+    dname : {
         type : String,
         required : true
     },
@@ -24,7 +24,7 @@ const transportSchema = new Schema({
         type : String,
         required : true
     },
-	month : {
+    month : {
         type : String,
         required : true
     },

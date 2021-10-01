@@ -34,27 +34,25 @@
      })
  })
 
- router.route("/update/:id").put(async(req, res) => {
-     let userId = req.params.id;
-     const { SalaryEmpId, SalaryEmpName , SalaryEmpACCno ,SalaryEmpStatus ,BasicSalary , SalaryBonus } = req.body;
+ router.route("/update/:id").put(async(req,res)=>{
+    let userId = req.params.id;
+    const { SalaryEmpACCno, BasicSalary, SalaryBonus } = req.body;
+    console.log(SalaryEmpACCno, BasicSalary, SalaryBonus, userId)
+    try{
+        await Salary.findById(userId, (error, updateSalary) => {
+            updateSalary.SalaryEmpACCno = (SalaryEmpACCno);
+            updateSalary.BasicSalary = (BasicSalary);
+            updateSalary.SalaryBonus = (SalaryBonus);
+            updateSalary.save();
+        });
+    } catch (err) {
+        console.log(err);
+    }
+    res.send("Salary Updated");
+})
 
-     const updateSalary = {
-         SalaryEmpId,
-         SalaryEmpName,
-         SalaryEmpACCno,
-         SalaryEmpStatus,
-         BasicSalary,
-          SalaryBonus
 
-     }
 
-     const update = await Salary.findByIdAndUpdate(userId, updateSalary).then(() => {
-         res.status(200).send({ status: "Salary updated" })
-     }).catch((err) => {
-         console.log(err.message);
-         res.status(500).send({ status: "Error with updating data", error: err.message });
-     })
- })
 
  router.route("/delete/:id").delete(async(req, res) => {
      let userId = req.params.id;
