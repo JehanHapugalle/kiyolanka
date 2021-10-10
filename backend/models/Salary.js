@@ -17,7 +17,7 @@ const salarySchema = new Schema({
         required: true
     },
     
-    SalaryEmpStatus: {
+    SalaryEmpMonth: {
         type: String,
         required: true
     },

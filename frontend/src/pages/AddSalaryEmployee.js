@@ -9,7 +9,7 @@ import Logo from './image/logo.jpeg'
     const[SalaryEmpId, setSalaryEmployeeId]= useState("");
     const[SalaryEmpName, setSalaryEmployeeName]= useState("");
     const[SalaryEmpACCno, setSalaryEmpACCno]= useState("");
-    const[SalaryEmpStatus, setSalaryEmpStatus]= useState("");
+    const[SalaryEmpMonth, setSalaryEmpMonth]= useState("");
     const[BasicSalary, setBasicSalary]= useState("");
     const[SalaryBonus, setSalaryBonus]= useState(""); 
 
@@ -21,7 +21,7 @@ import Logo from './image/logo.jpeg'
             SalaryEmpId,
             SalaryEmpName,
             SalaryEmpACCno,
-            SalaryEmpStatus,
+            SalaryEmpMonth,
             BasicSalary,
             SalaryBonus
         }
@@ -52,7 +52,7 @@ import Logo from './image/logo.jpeg'
       <div class="form-group">
       
     <label for="SalaryEmployeeId"> Employee Id</label>
-    <input type="text" class="form-control" id="SalaryEmployeeId" pattern="[D,M,S]{1}[0-9]{4}" placeholder="Format: [D,M,S]{1}[0-9]{4}" placeholder="Enter salary employee id" onChange={(e)=>{
+    <input type="text" class="form-control" id="SalaryEmployeeId" pattern="[S]{1}[0-9]{4}" placeholder="Format: [D,M,S]{1}[0-9]{4}" placeholder="Enter salary employee id" onChange={(e)=>{
         setSalaryEmployeeId(e.target.value);}}required/>
      </div>
 
@@ -85,12 +85,22 @@ import Logo from './image/logo.jpeg'
     </div>
     
     <div class="form-group">
-    <label  for="SalaryEmpStatus">Employee Status</label>
-            <select class="form-control" id="SalaryEmpStatus" onChange={(e)=>{setSalaryEmpStatus(e.target.value);}} required>
-                <option value="" disabled selected hidden> Select Status </option>
-                <option value="Staff" class = "select">Staff Member </option>
-                <option value="Machinist"> Machine Employee </option>
-                <option value="Driver "> Driver </option>
+    <label  for="BonusT">Select Month</label>
+            <select class="form-control" id="BonusT" onChange={(e)=>{setSalaryEmpMonth(e.target.value);}} required>
+                <option value="" disabled selected hidden> Month </option>
+                <option value="January" >January </option>
+                <option value="February"> February</option>
+                <option value="March"> March </option>
+                <option value="April"> April </option>
+                <option value="May"> May </option>
+                <option value="June"> June </option>
+                <option value="July"> July </option>
+                <option value="August"> August </option>
+                <option value="September"> September </option>
+                <option value="October"> October </option>
+                <option value="November"> November </option>
+                <option value="December"> December </option>
+
 
             </select>
 
