@@ -11,7 +11,70 @@ import React from 'react';
 //          <h2 className="topic2">with more than 30 years of experience</h2>
 //          <h2 className="topic2"> in the coco peat industry"</h2>
 //        </div>
+import Logo from './image/logo.jpeg'
+
+
+
+
+import { Redirect } from "react-router-dom";
+
+   </div>
+  )
+}
+export default Home;
+
+
+
+function Home () {
+
+
+
+      
+
+  return (
+
+
+
+   <div className="Home">
+
+
+
+     <div className ="Hlogo" style={{backgroundImage:`url(${BannerImage})`}}>
+
+
+
+         <img src={Logo} width = "200"/>
+
+
+
+         <h1 className="topic" 
+
+
+
+         >Kiyo Lanka CoCo Products PVT LTD </h1>
+
+
+
+         <h2 className="topic2">"We are a proudly family operated and owned business"</h2>
+
+
+
+         <h2 className="topic2">with more than 30 years of experience</h2>
+
+
+
+         <h2 className="topic2"> in the coco peat industry"</h2>
+
+
+
+       </div>
+
+
+
        
+
+
+
       
 
 //    </div>
@@ -22,8 +85,17 @@ import React from 'react';
 
 
 
+   </div>
 
 
+
+  )
+
+
+
+}
+
+export default Home;
 import Logo from './image/logo.jpeg'
 import BannerImage from './image/homebg.jpg'
 import { useHistory } from "react-router-dom";
@@ -61,7 +133,6 @@ function Home (){
       </div>
     </>
   )
-}
+  }
 
-export default Home;
 

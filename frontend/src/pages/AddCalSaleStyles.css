@@ -1,0 +1,239 @@
+/* .scalexform{
+    margin-top: 90px;
+    margin-left: -50px;
+    background-color:white;
+    box-shadow: 02px 2px 10px rgb(255, 255, 255);
+    border-radius: 25px;
+    padding :20px;
+    transform: scale(1);
+} */
+.scalexform{
+margin-top: 200px;
+margin-bottom: 100px;
+margin-left: -50px;
+background-color:white;
+box-shadow: 02px 2px 10px rgb(102, 102, 102);
+border-radius: 25px;
+padding :30px;
+transform: scale(2);
+}
+
+/* #submit{
+    margin-left: 20px;
+    margin-top: 10px;
+    background-color: #75c500;
+    border:none;
+    border-color: #333333;
+    border-style: solid;
+    border-radius: 25px;
+      padding-left:10px;
+      padding-right: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color: white;
+} */
+.subbutton{
+    margin-top: 50px;
+    margin-left: 80px;
+   background-color: #75c500;
+   border:none;
+   border-color: #333333;
+   border-style: solid;
+    border-radius: 25px;
+    padding-left:10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+}
+.imag{
+    padding-top:50px;
+    padding-right: 70px;
+    margin-left: 890px;
+}
+#date{
+   margin-right: 500px;
+}
+.form-inner {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	transition: 0.4s;
+	border-radius: 8px;
+    
+}
+.total-expense{
+    margin-left: 1000px;
+    font-size: 20px;
+    padding-top: 20px;
+}
+.Ex-topic{
+    margin-left: 850px;
+}
+.imag{
+    margin-top: 10px;
+    margin-right:1000px;
+    padding-top:50px;
+    padding-right: 70px;
+}
+.scalEx{
+    margin-top: 70px;
+    margin-right: 100px;
+}
+
+.Eprice{
+    margin-right: 500px;
+}
+.Edate{
+    margin-right: 200px;
+}
+.desc{
+    margin-left: 300px;
+
+}
+.scaltotal-expense{
+    margin-bottom:5px;
+    margin-top: 100px;
+    font-size: 60px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 01px 0.5px 02px rgb(114, 129, 102);
+    background: #75c500;
+    margin-left: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #050702;
+    
+}
+.scalbutton-area{
+    margin-left: 500px;
+
+}
+.body { 
+    font-family: Roboto, sans-serif;
+ }
+.scalretrieve{
+    margin-bottom: 250px;
+    margin-right: 100px;
+}
+.form-groupp{
+    margin-top: 2px;
+}
+.scalsearch{
+    margin-bottom: 2000px;
+}
+.Mrow h5{
+    margin-left: 20px;
+    text-align: center;
+    padding-left: 48px;
+    font-size:12px;
+    flex:1 1 100%;
+
+   
+}
+.scalrow {
+     margin-left: 580px;
+     /* text-align: center; */
+     margin-left: 500px;
+     flex: 2 2 100%;  
+     display: flex;
+     padding-top: 10px;
+     padding-right: 10px;
+     margin-left: 10px;
+     height: 60px; 
+}
+.scalrow th{
+    padding-right: 25px;
+    margin-left: 100px;
+    margin-right: 10px;
+    text-align: center; 
+}
+
+.EdisplayContainer{
+    display: flex;
+    flex-direction: row;
+    margin-right: -50px;
+    margin-top: 10px;
+    height: 50px;
+    background-color: gainsboro;
+}
+.scalcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex:1 1 100%;
+}
+.scalBtnEx{
+    margin-top: 5px;
+    margin-left: 80px;
+   background-color: #75c500;
+   border:none;
+   border-color: #333333;
+   border-style: solid;
+    border-radius: 25px;
+    height: 35px;
+    padding-left:10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+   
+
+}
+.EdisplayContainer button{
+    margin-top: 1px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+}
+
+#s_qty{
+    margin-bottom:15px;
+    margin-top: -35px;
+    border-radius: 7px;
+    border: none;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-left: 70px;
+     
+}
+#s_productname{
+    margin-bottom:15px;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-left: 10px;
+    color: #75c500;
+    
+}
+#s_eachprice{
+    border-radius: 7px;
+    margin-bottom:5px;
+    border: none;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-left: 30px;
+}
+#sl_date{
+    margin-bottom:15px;
+    border: none;
+    color: #75c500;
+    border-radius: 7px;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-left: 79px;
+}
+
+.salecal{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-right: 5%;
+        
+}
+.salecaladd{
+    padding-top: 10px;
+    padding-right: 4.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}

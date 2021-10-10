@@ -1,4 +1,4 @@
-.container{
+.Mcontainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,7 +18,7 @@
     
 }
 
-.form{
+.Mform{
     align-items: left;
     justify-content: left;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -34,7 +34,7 @@
 
 
 
-.form{
+.Mform{
     margin-top: 90px;
     margin-left: -50px;
     background-color:white;

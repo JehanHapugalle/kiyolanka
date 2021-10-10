@@ -37,7 +37,7 @@ import Logo from './image/logo.jpeg'
     
      return(
         
-      <div className="container">
+      <div className="Mcontainer">
          <div class="imag" >
           <img src = {Logo} width = "150" alt="logo"/></div>
 
@@ -49,7 +49,7 @@ import Logo from './image/logo.jpeg'
 
             
 
-      <form className="form" onSubmit={sendData} style={{width:"40%",display:"flex"}}>
+      <form className="Mform" onSubmit={sendData} style={{width:"40%",display:"flex"}}>
         <div style={{width:"50%"}}>
       
       

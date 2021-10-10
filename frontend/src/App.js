@@ -2,6 +2,8 @@ import './App.css';
 import Header from './components/Header';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import { Machinery,MachineryOne,MachineryTwo,MachineryThree} from './pages/Machinery';
+import { Salary,SalaryOne,SalaryTwo,SalaryThree} from './pages/SalaryEmployee';
 import { Machinery,MachineryOne,MachineryTwo,MachineryThree,MachineryFour} from './pages/Machinery';
 import { Salary,SalaryOne,SalaryTwo,SalaryThree,} from './pages/SalaryEmployee';
 import { Transport,TransportOne,TransportTwo,TransportThree,} from './pages/Transport';
@@ -10,6 +12,17 @@ import { Supplier, SupplierOne, SupplierTwo, SupplierThree, SupplierFour} from '
 import React, { useState } from 'react';
 import {Product,ProductOne,ProductTwo,ProductThree} from './pages/Product';
 import { Employee, EmployeeOne, EmployeeTwo, EmployeeThree} from './pages/Employee';
+
+import { Sale, SaleOne, SaleTwo, SaleThree} from './pages/Sale';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
+import {Product,ProductOne,ProductTwo,ProductThree} from './pages/Product';
+
+import { Employee, EmployeeOne, EmployeeTwo, EmployeeThree} from './pages/Employee';
+
 import { Sale, SaleOne, SaleTwo, SaleThree, SaleFour } from './pages/Sale';
 import Login from './pages/Login';
 
@@ -19,6 +32,9 @@ function App() {
 
 
 
+
+
+function App() {
     
 
 
@@ -31,6 +47,14 @@ function App() {
     return (
       <>
       <Router>
+
+ 
+      
+     
+
+
+      <Sidebar/>
+
       <Header/>
      
         <switch>
@@ -42,12 +66,28 @@ function App() {
          <Route path='/machine/addmachine' exact component={MachineryOne} />
          <Route path='/machine/viewmachine' exact component={MachineryTwo} />
          <Route path='/machine/expenses' exact component={MachineryThree} />
+        
          <Route path='/machine/analysis1' exact component={MachineryFour} />
    
 
 
 
+   
+
+
          
+
+         
+         
+          <Route path='/home' exact component={() => <Home authorized={false} />} />
+          <Route path='/transport' exact component={Transport} />
+          <Route path='/transport/addtransport' exact component={TransportOne} />
+          <Route path='/transport/maintenance' exact component={TransportTwo} />
+          <Route path='/transport/analysis6' exact component={TransportThree} />
+
+
+        
+
 
          <Route path='/transport' exact component={Transport} />
          <Route path='/transport/addtransport' exact component={TransportOne} />
@@ -72,6 +112,11 @@ function App() {
          <Route path='/supplier/viewsupplier' exact component={SupplierTwo} />
          <Route path='/supplier/payment' exact component={SupplierThree} />
          <Route path='/supplier/analysis2' exact component={SupplierFour} />
+
+ 
+   
+       
+         
 
          <Route path='/salary' exact component={Salary} />
          <Route path='/salary/addemployees' exact component={SalaryOne} />
@@ -98,9 +143,17 @@ function App() {
          <Route path='/sales/calbill' exact component={SaleOne} />
          <Route path='/sales/addsales' exact component={SaleTwo} />
          <Route path='/sales/saleshistory' exact component={SaleThree} />
-         <Route path='/sales/analysis5' exact component={SaleFour} />
+         {/* <Route path='/sales/analysis5' exact component={SaleFour} /> */}
 
         </switch>
+        
+      </Router>
+      );
+    };
+      
+      
+  
+export default App;
       
       </Router>
       </>
