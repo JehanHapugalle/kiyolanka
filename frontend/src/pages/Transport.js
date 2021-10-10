@@ -1,7 +1,7 @@
 import React ,{useState} from "react";
 import AddTransport from "./AddTransport";
 import Maintenance from "./Maintenance";
-
+import TraAnalysis from "./TraAnalysis"
 
 export const Transport = () =>{
     return(
@@ -24,9 +24,9 @@ export const TransportTwo = () =>{
 }
 export const TransportThree = () =>{
     return(
-        <div className="transport">
-            <h1>analysis</h1>
-        </div>
+        <TraAnalysis/>
+
+       
     )
 }
 

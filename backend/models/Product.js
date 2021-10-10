@@ -17,7 +17,7 @@ const productSchema = new Schema({
         required : true
     },
     weight : {
-        type : String,
+        type : Number,
         required : true
     },
     nop : {
