@@ -2,14 +2,12 @@ import React from 'react';
 
 import Logo from './image/logo.jpeg'
 
-import BannerImage from './image/greenCoCo.jpg'
-
-import './Home.css'
 
 
 
 
-import Logo from './image/logo.jpeg'
+
+
 import BannerImage from './image/homebg.jpg'
 import { useHistory } from "react-router-dom";
 import './Home.css'
@@ -46,8 +44,7 @@ function Home (){
       </div>
     </>
   )
-}
+  }
 
-export default Home;
 
 export default Home;

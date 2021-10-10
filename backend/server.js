@@ -37,6 +37,7 @@ const materialRouter = require("./routes/materials.js");
 const transportRouter = require("./routes/transports.js");
 const saleRouter = require("./routes/sales.js");
 
+
 app.use("/employee", employeeRouter);
 app.use("/attendance", attendanceRouter);
 app.use("/machine", machineRouter);
@@ -46,6 +47,7 @@ app.use("/supplier", supplierRouter);
 app.use("/material", materialRouter);
 app.use("/transport", transportRouter);
 app.use("/sale", saleRouter);
+;
 
 app.route('/').get((req, res) => {
     res.send('FactoryManagement System API');
