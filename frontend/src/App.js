@@ -10,6 +10,11 @@ import { Supplier, SupplierOne, SupplierTwo, SupplierThree, SupplierFour} from '
 import React, { useState } from 'react';
 import {Product,ProductOne,ProductTwo,ProductThree} from './pages/Product';
 import { Employee, EmployeeOne, EmployeeTwo, EmployeeThree} from './pages/Employee';
+
+import { Sale, SaleOne, SaleTwo, SaleThree} from './pages/Sale';
+
+
+
 import { Sale, SaleOne, SaleTwo, SaleThree, SaleFour } from './pages/Sale';
 import Login from './pages/Login';
 
@@ -98,7 +103,7 @@ function App() {
          <Route path='/sales/calbill' exact component={SaleOne} />
          <Route path='/sales/addsales' exact component={SaleTwo} />
          <Route path='/sales/saleshistory' exact component={SaleThree} />
-         <Route path='/sales/analysis5' exact component={SaleFour} />
+         {/* <Route path='/sales/analysis5' exact component={SaleFour} /> */}
 
         </switch>
       

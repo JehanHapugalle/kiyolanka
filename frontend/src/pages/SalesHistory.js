@@ -1,12 +1,21 @@
-import React ,{useState, useEffect} from "react";
+import React ,{useState, useEffect,useRef} from "react";
 import axios from 'axios';
 import './SalesHistoryStyle.css'
 import Logo from './image/logo.jpeg'
+
+import { PDFExport, savePDF } from "@progress/kendo-react-pdf";
+import {Button,} from "@progress/kendo-react-buttons";
+import '@progress/kendo-theme-default/dist/all.css';
 
 export default function SalesHistory(){
 
     const [sale, setsale] = useState([]);
     const [searchTerm, setSearchTerm] = useState('')
+
+    const pdfExportComponent = useRef (null);
+    const handleExportWithComponent = (event) => {
+    pdfExportComponent .current.save();
+   };
 
     useEffect(() => {
         function getsale(){
@@ -28,10 +37,10 @@ export default function SalesHistory(){
         if (scon_number === null) {
             return; 
         }
-        const s_email = prompt("Enter New E-mail: ")
-        if (s_email === null) {
-            return; 
-        }
+        // const s_email = prompt("Enter New E-mail: ")
+        // if (s_email === null) {
+        //     return; 
+        // }
         const s_amount = prompt("Enter the Correct Amount: ")
         if (s_amount === null) {
             return; 
@@ -41,7 +50,7 @@ export default function SalesHistory(){
             {
                 scus_name : scus_name,
                 scon_number : scon_number,
-                s_email : s_email,
+                // s_email : s_email,
                 s_amount : s_amount,
                 _id : _id
             }).then (() => {
@@ -52,7 +61,7 @@ export default function SalesHistory(){
                         scus_name : scus_name,
                         scon_number : scon_number,
                         ssale_id : val.ssale_id,
-                        s_email : s_email,
+                        // s_email : s_email,
                         s_amount : s_amount
                     } : val;
                 }))
@@ -83,8 +92,9 @@ export default function SalesHistory(){
     }
 
     return(
-            
-        <div className="salecontainer">
+     
+    <PDFExport ref={pdfExportComponent}margin={{top: 50, right: 50}} >
+    <div className="salecontainer">
     <div class="saleimag" >
     <img src = {Logo} width = "150" alt="logo"/>
     </div>
@@ -99,6 +109,9 @@ export default function SalesHistory(){
             <div className="salelist" style={{width: "45%"}}>
 
                 <div>
+                <div className="scalbutton-area">
+           <Button primary={true} onClick={handleExportWithComponent}>Generate Report</Button>
+         </div>
                     <input 
                         type = "text" 
                         class = "salesearch" 
@@ -114,8 +127,8 @@ export default function SalesHistory(){
 
                             <th>NAME</th>
                             <th>TEL NO</th>
+                            <th>DATE</th>
                             <th>SALE ID</th>
-                            <th>E-MAIL</th>
                             <th>AMOUNT</th>
 
                         </tr>
@@ -127,15 +140,20 @@ export default function SalesHistory(){
                             return val
                         } else if (val.scus_name.toLowerCase().includes(searchTerm.toLowerCase())){
                             return val
-                        } else if (val.s_email.toLowerCase().includes(searchTerm.toLowerCase())){
-                            return val
-                        } else if (val.s_amount.toLowerCase().includes(searchTerm.toLowerCase())){
-                            return val
+                        // } else if (val.s_date.toLowerCase().includes(searchTerm.toLowerCase())){
+                        //     return val
+                        }
+                        // } else if (val.s_email.toLowerCase().includes(searchTerm.toLowerCase())){
+                        //     return val
+                        // } else if (val.s_amount.toLowerCase().includes(searchTerm.toLowerCase())){
+                        //     return val
+                        // } else if (val.s_date.toLowerCase().includes(searchTerm.toLowerCase())){
+                        //     return val
                         /*} else if (val.scon_number.toLowerCase().includes(searchTerm.toLowerCase())){
                             return val
                         } else if (val.ssale_id.toLowerCase().includes(searchTerm.toLowerCase())){
                             return val*/
-                        } 
+                        
                     }).map((val, key) => {
                         return(
                             <div className = "saledisplayContainer" style={{width: "100%"}} key = {key}>
@@ -143,8 +161,9 @@ export default function SalesHistory(){
                                     {""}
                                     <h5> {val.scus_name} </h5>
                                     <h5> {val.scon_number} </h5>
+                                    <h5> {val.s_date} </h5>
                                     <h5> {val.ssale_id} </h5>
-                                    <h5> {val.s_email} </h5>
+                                    {/* <h5> {val.s_email} </h5> */}
                                     <h5> {val.s_amount} </h5>
                                 </div>
                                     <button onClick = {() =>{
@@ -161,5 +180,6 @@ export default function SalesHistory(){
             </div>
 
         </div>
+        </PDFExport>
     );
 }

@@ -11,6 +11,7 @@ import Logo from './image/logo.jpeg'
     const[ssale_id, setssale_id]= useState("");
     const[s_email, sets_email]= useState("");
     const[s_amount, sets_amount]= useState("");
+    const[s_date, sets_date]= useState("");
 
     function sendData(e){
        e.preventDefault();
@@ -21,7 +22,8 @@ import Logo from './image/logo.jpeg'
             scon_number,
             ssale_id,
             s_email,
-            s_amount
+            s_amount,
+            s_date
         }
         axios.post("http://localhost:4000/sale/add", newSale).then(()=>{
             alert("Sale Added")
@@ -67,6 +69,11 @@ import Logo from './image/logo.jpeg'
         setcon_number(e.target.value);
         }}required/>
     </div>
+    <div class="saleform-group">
+
+      <label  for="date">Date</label>
+      <input type="date" class="form-control" id="s_date"placeholder="Enter the Date"  onChange={(e)=>{sets_date(e.target.value);}}required/>
+      </div>
     </div>
     <div style={{width:"50%"}}>
     <div class="saleform-group">
@@ -91,7 +98,6 @@ import Logo from './image/logo.jpeg'
         sets_amount(e.target.value);}}required/>
     
      </div>
-    
     
     <button type="submit" class="btn btn-primary">Submit</button>
     </div>
