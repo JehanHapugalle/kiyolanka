@@ -1,10 +1,20 @@
-import React ,{useState, useEffect} from "react";
+import React ,{useState, useRef, useEffect} from "react";
 import axios from 'axios';
-import './ViewSupplierListStyle.css'
+import './SupAnalysisStyle.css'
 import Logo from './image/logo.jpeg'
+import { PDFExport, savePDF } from "@progress/kendo-react-pdf";
+import '@progress/kendo-theme-default/dist/all.css';
+
+import { Button } from "@progress/kendo-react-buttons";
 
 export default function SupplierList(){
+    const PDFExportComponent = useRef(null);
 
+    const handledExportWithComponent = (event) => {
+
+        PDFExportComponent.current.save();
+
+    };
     const [suppliers, setsuppliers] = useState([]);
     const [searchTerm, setSearchTerm] = useState('')
     useEffect(() => {
@@ -19,7 +29,6 @@ export default function SupplierList(){
     }, [])
 
     const update = (_id) => {
-
     
         const newContact = prompt("Enter New Contact: ")
         if (newContact === null) {
@@ -60,8 +69,7 @@ export default function SupplierList(){
                 newUnitPrice : newUnitPrice,
                 newBank : newBank,
                 newAccountNo : newAccountNo,
-                _id : _id 
-
+                _id : _id
         
             }).then (() => {
             alert("Supplier Updated")
@@ -71,43 +79,45 @@ export default function SupplierList(){
                     _id: _id,
                     sid : val.sid, 
                     name : val.name, 
-                    
                     contact_no : newContact, 
                     email : newEmail,
                     supply_amount : newSupplyAmount,
                     unit_price : newUnitPrice, 
                     bank : newBank,
                     account_no : newAccountNo
-                } : val;
+                } : val
             }))
         })
     };
-
-    function ConfirmDelete(id)
-    {
-       var x = window.confirm("Are you sure you want to delete this supplier?");
-             if (x)
-             deleteSupplier(id);
-             else
-                 return;
+    
+    function Calcpayment(x,y){
+        return x*y;
     }
+    // function ConfirmDelete(id)
+    // {
+    //    var x = window.confirm("Are you sure you want to delete this supplier?");
+    //          if (x)
+    //          deleteSupplier(id);
+    //          else
+    //              return;
+    // }
 
     
-    const deleteSupplier = (_id) => {
-        axios.delete(`http://localhost:4000/supplier/delete/${_id}`).then ((res) => {
-            alert("Supplier Deleted")
-            setsuppliers(
-                suppliers.filter((val) => {
-                    return val._id != _id;
-                })
-            )
-        }).catch((err) =>{
-            alert(err.message);
-        })
-    }
+    // const deleteSupplier = (_id) => {
+    //     axios.delete(`http://localhost:4000/supplier/delete/${_id}`).then ((res) => {
+    //         alert("Supplier Deleted")
+    //         setsuppliers(
+    //             suppliers.filter((val) => {
+    //                 return val._id != _id;
+    //             })
+    //         )
+    //     }).catch((err) =>{
+    //         alert(err.message);
+    //     })
+    // }
 
     return(
-            
+        <PDFExport ref={PDFExportComponent}>    
         <div className="supcontainer">
 
         <div class="imag" >
@@ -121,9 +131,14 @@ export default function SupplierList(){
             <div class="supretrieve">
                 <h2>Supplier List</h2>
             </div>
-
+            
             <div className="suplist" style={{width: "45%"}}>
             <div>
+            <div className="supbutton-area">
+
+                <Button primary={true} onClick={handledExportWithComponent}>Generate Report</Button>
+
+                </div>
                     <input 
                         type = "text" 
                         class = "supsearch" 
@@ -137,14 +152,12 @@ export default function SupplierList(){
                 <table>
                     <tr className = "suprow">
                         <th>SID</th>
-                        <th>Name</th>
-
-                        <th>Con No</th>
-                        <th>Email</th>
+                        <th>Name</th>                
                         <th>Supply Amount</th>
                         <th>Unit Price</th>
                         <th>Bank</th>
                         <th>Acc No</th>
+                        <th>Payment</th>
                     </tr>
                 </table>
 
@@ -166,20 +179,18 @@ export default function SupplierList(){
                                 {""}
                                 <h5> {val.sid} </h5>
                                 <h5> {val.name} </h5>
-
-                                <h5> {val.contact_no} </h5>
-                                <h5> {val.email} </h5>
                                 <h5> {val.supply_amount} </h5>
                                 <h5> {val.unit_price} </h5>
                                 <h5> {val.bank} </h5>
                                 <h5> {val.account_no} </h5>
+                                <h5> {Calcpayment (val.supply_amount, val.unit_price )} </h5>
                             </div>
-                                <button className = "btn1" onClick = {() =>{
+                                {/* <button className = "btn1" onClick = {() =>{
                                     update(val._id)
                                 }}> Edit </button>
                                 <button className = "btn2" onClick  = {() =>{
                                     ConfirmDelete(val._id)
-                                }}> Delete </button>
+                                }}> Delete </button> */}
                         </div>
                     )
                 })}
@@ -189,5 +200,6 @@ export default function SupplierList(){
           </div>  
 
         </div>
+        </PDFExport>
     );
 }

@@ -2,27 +2,25 @@ const router = require("express").Router();
 let Supplier = require("../models/Supplier");
 
 router.route("/add").post((req,res)=>{
+    const sid = req.body.sid;
     const name = req.body.name;
-    const nic_no = req.body.nic_no;
-    const address = req.body.address;
+
     const contact_no = req.body.contact_no;
     const email = req.body.email;
-    const date_of_birth = req.body.date_of_birth;
-    const supply_scale = req.body.supply_scale;
-    const payment_type = req.body.payment_type;
+    const supply_amount = req.body.supply_amount;
+    const unit_price = req.body.unit_price;
     const bank = req.body.bank;
     const account_no = req.body.account_no;
      
 
     const newSupplier = new Supplier({
+        sid,
         name,
-        nic_no,
-        address,
+        
         contact_no,
         email,
-        date_of_birth,
-        supply_scale,
-        payment_type,
+        supply_amount,
+        unit_price,
         bank,
         account_no
     })
@@ -45,16 +43,16 @@ router.route("/").get((req,res)=>{
 router.route("/update/:id").put(async(req,res)=>{
 
     let userId = req.params.id;
-    const {address, contact_no, email, supply_scale, payment_type, bank, account_no } = req.body;
-    console.log(address, contact_no, email, supply_scale, payment_type, bank, account_no, userId)
+    const {contact_no, email, supply_amount, unit_price, bank, account_no } = req.body;
+    console.log(contact_no, email, supply_amount, unit_price, bank, account_no, userId)
 
     try{
         await Supplier.findById(userId, (error, updateSupplier) => {
-            updateSupplier.address = (address);
+
             updateSupplier.contact_no = (contact_no);
             updateSupplier.email = (email);
-            updateSupplier.supply_scale = (supply_scale);
-            updateSupplier.payment_type = (payment_type);
+            updateSupplier.supply_amount = (supply_amount);
+            updateSupplier.unit_price = (unit_price);
             updateSupplier.bank = (bank);
             updateSupplier.account_no = (account_no);
             updateSupplier.save();
