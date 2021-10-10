@@ -202,11 +202,11 @@ export const SidebarData = [
         path: '/sales/saleshistory',
         icon: <AiIcons.AiFillCaretRight/>
       },
-      {
-        title: 'Analysis',
-        path: '/sales/analaysis5',
-        icon: <AiIcons.AiFillCaretRight/>
-      }
+      // {
+      //   title: 'Analysis',
+      //   path: '/sales/analaysis5',
+      //   icon: <AiIcons.AiFillCaretRight/>
+      // }
     ]
   },
   {
@@ -230,7 +230,7 @@ export const SidebarData = [
       
       {
         title: 'Analysis',
-        path: '/transport/analaysis6',
+        path: '/transport/analysis6',
         icon: <AiIcons.AiFillCaretRight/>
       },
     ]

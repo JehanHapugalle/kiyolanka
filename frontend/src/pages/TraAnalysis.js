@@ -1,10 +1,21 @@
-import React ,{useState, useEffect} from "react";
+import React ,{useState, useRef, useEffect} from "react";
 import axios from 'axios';
 import './MaintenanceListStyle.css'
 import Logo from './image/logo.jpeg'
+import { PDFExport, savePDF } from "@progress/kendo-react-pdf";
 
+import '@progress/kendo-theme-default/dist/all.css';
+
+
+
+import { Button } from "@progress/kendo-react-buttons";
 export default function TransportList(){
+    const PDFExportComponent = useRef(null);
 
+    const handledExportWithComponent = (event) => {
+        
+        PDFExportComponent.current.save();
+    };
 
     const [transports, settransports] = useState([]); 
     const [searchTerm, setSearchTerm] = useState('')
@@ -35,7 +46,6 @@ export default function TransportList(){
         if ( newVehicleNo === null) {
             return; 
         }
-
         const newVehiclePayment = prompt("Enter New vehicle payment: ")
         if ( newVehiclePayment === null) {
             return; 
@@ -45,7 +55,6 @@ export default function TransportList(){
         if ( newDriverPayment === null) {
             return; 
         }
-
 
         axios.put(`http://localhost:4000/transport/update/${_id}`, 
             {
@@ -74,23 +83,27 @@ export default function TransportList(){
         })
     };
 
+    function Calctotal(x,y){
 
-    const deletetransports = (_id) => {
-        axios.delete(`http://localhost:4000/transport/delete/${_id}`).then ((res) => {
-            alert("Transport Deleted")
-            settransports(
-                transports.filter((val) => {
-                    return val._id != _id;
-                })
-            )
-        }).catch((err) =>{
-            alert(err.message);
-        })
+        return x+y;
+
     }
+    // const deletetransports = (_id) => {
+    //     axios.delete(`http://localhost:4000/transport/delete/${_id}`).then ((res) => {
+    //         alert("Transport Deleted")
+    //         settransports(
+    //             transports.filter((val) => {
+    //                 return val._id != _id;
+    //             })
+    //         )
+    //     }).catch((err) =>{
+    //         alert(err.message);
+    //     })
+    // }
 
 
     return(
-            
+        <PDFExport ref={PDFExportComponent} paperSize="A0">      
         <div className="tracontainer">
 
             <div class="imag" >
@@ -109,6 +122,10 @@ export default function TransportList(){
 
             <div className="tralist" style={{width: "45%"}}>
             <div>
+            <div className="trabutton-area">
+           
+                  <Button primary={true} onClick={handledExportWithComponent}>GENERATE REPORT</Button>
+            </div>
                     <input 
                         type = "text" 
                         class = "trasearch" 
@@ -126,19 +143,20 @@ export default function TransportList(){
 
 
 
-    <th>Did</th>
 
     <th>Dname</th>
 
-    <th>Vehicle maintaince Payment</th>
+    <th>vehicl maintaince payment</th>
 
     <th>Date</th>
 
-    <th>vehicle No</th>
-
     <th>Licence No</th>
 
-    <th>driver Payment</th>
+    <th>driver payment</th>
+
+    <th>vehicle No</th>
+
+    <th>total payment</th>
 
     
 
@@ -165,22 +183,22 @@ export default function TransportList(){
                         <div className = "tradisplayContainer" style={{width: "100%"}} key = {key}>
                         <div className = "trarow" style={{width: "80%"}}>
                                 {""}
-                                <h5> {val.did} </h5>
                                 <h5> {val.dname} </h5>
                                 <h5> {val.vehicle_payment} </h5>
                                 <h5> {val.date} </h5>
                                 <h5> {val.licence_no} </h5>
+                                <h5> {val.driver_payment} </h5>
                                 <h5> {val.vehicle_no} </h5>
-                                <h5> {val.driver_payment} </h5> 
+                                <h5> {Calctotal (val.driver_payment, val.vehicle_payment )} </h5>
                                 
                             </div >
                             
-                                <button className="traBtn" onClick = {() =>{
+                                {/* <button className="traBtn" onClick = {() =>{
                                     updateTransports (val._id)
                                 }}> Edit </button>
                                 <button className="traBtn2" onClick = {() =>{
                                     deletetransports (val._id)
-                                }}> Delete </button>
+                                }}> Delete </button> */}
                         </div>
                     )
                 })}
@@ -189,5 +207,6 @@ export default function TransportList(){
             </div>
 
         </div>
+        </PDFExport>
     );
 }
