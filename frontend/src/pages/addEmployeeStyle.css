@@ -7,7 +7,11 @@
 
 .eimage{
     margin-top: 50px;
+
     margin-left: 25px;
+
+    margin-left: -10px;
+
 }
 
 .addemployee{
@@ -15,16 +19,26 @@
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
     justify-content: center;
+
     margin-right: -50px;
+
+    margin-right: 10px;
+
     margin-top: 30px;
 }
 
 .addsub{
     margin-top: 40px;
+
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     margin-bottom: 220px;
     margin-left: 30px;
+
+    margin-bottom: 126px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+
 }
 
 form{
@@ -140,6 +154,7 @@ form{
 
   #address{
     margin-top:10px;
+    margin-bottom:30px;
     border-radius: 7px;
     margin-left:60px;
     padding-top: 2px;
@@ -150,9 +165,8 @@ form{
     margin-right: 30px;
   }
 
-  button{
+  button {
       margin-top: 35px;
-      margin-left: 135px;
       background-color: #75c500;
       border: 3px solid #333333;
       padding-left:15px;

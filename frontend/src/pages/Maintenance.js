@@ -6,7 +6,7 @@ import Logo from './image/logo.jpeg'
 export default function TransportList(){
 
 
-    const [transports, settransports] = useState([]);
+    const [transports, settransports] = useState([]); 
     const [searchTerm, setSearchTerm] = useState('')
     
     useEffect(() => {
@@ -21,30 +21,39 @@ export default function TransportList(){
     }, [])
     
     const updateTransports = (_id) => {  
-        const did = prompt("Enter driver id: ")
-        if ( did === null) {
+        
+        const newDname = prompt("Enter New driver name: ")
+        if ( newDname === null) {
             return; 
         }
-        const dname = prompt("Enter New driver name: ")
-        if ( dname === null) {
-            return; 
-        }
-        const licence_no = prompt("Enter New licence number: ")
-        if ( licence_no === null) {
+        const newLicenceNo = prompt("Enter New licence number: ")
+        if ( newLicenceNo === null) {
             return; 
         }
 
-        const vehicle_no = prompt("Enter New vehicle number: ")
-        if ( vehicle_no === null) {
+        const newVehicleNo = prompt("Enter New vehicle number: ")
+        if ( newVehicleNo === null) {
             return; 
         }
+
+        const newVehiclePayment = prompt("Enter New vehicle payment: ")
+        if ( newVehiclePayment === null) {
+            return; 
+        }
+
+        const newDriverPayment = prompt("Enter New driver payment: ")
+        if ( newDriverPayment === null) {
+            return; 
+        }
+
 
         axios.put(`http://localhost:4000/transport/update/${_id}`, 
             {
-                did : did,
-                dname : dname,
-                licence_no : licence_no,
-                vehicle_no : vehicle_no,
+                newDname : newDname,
+                newLicenceNo : newLicenceNo,
+                newvehicleNo : newVehicleNo,
+                newVehiclePayment : newVehiclePayment,
+                newDriverPayment : newDriverPayment,
                 _id : _id
                 
             }).then (() => {
@@ -53,13 +62,13 @@ export default function TransportList(){
                 return val._id == _id ? 
                 {
                     _id: _id,
-                    did: did,
-                    dname: dname, 
+                    did: val.did,
+                    dname: newDname, 
                     date: val.date, 
-                    licence_no :licence_no, 
-                    vehicle_no : vehicle_no,
-                    month : val.month,
-                    time : val.time 
+                    licence_no : newLicenceNo, 
+                    vehicle_no : newVehicleNo,
+                    vehicle_payment : newVehiclePayment,
+                    driver_payment : newDriverPayment 
                 } : val;
             }))
         })
@@ -121,15 +130,15 @@ export default function TransportList(){
 
     <th>Dname</th>
 
-    <th>Date</th>
+    <th>Vehicle maintaince Payment</th>
 
-    <th>Licence No</th>
+    <th>Date</th>
 
     <th>vehicle No</th>
 
-    <th>Month</th>
+    <th>Licence No</th>
 
-    <th>Time</th>
+    <th>driver Payment</th>
 
     
 
@@ -149,12 +158,7 @@ export default function TransportList(){
                             return val
                         } else if (val.vehicle_no.toLowerCase().includes(searchTerm.toLowerCase())){
                             return val                         
-                        } else if (val.time.toLowerCase().includes(searchTerm.toLowerCase())){
-                        return val
-                        
-                        } else if (val.month.toLowerCase().includes(searchTerm.toLowerCase())){
-                        return val
-                    }
+                        }
 
                     }).map((val, key) => {
                     return(
@@ -163,11 +167,11 @@ export default function TransportList(){
                                 {""}
                                 <h5> {val.did} </h5>
                                 <h5> {val.dname} </h5>
+                                <h5> {val.vehicle_payment} </h5>
                                 <h5> {val.date} </h5>
                                 <h5> {val.licence_no} </h5>
                                 <h5> {val.vehicle_no} </h5>
-                                <h5> {val.month} </h5>
-                                <h5> {val.time} </h5>
+                                <h5> {val.driver_payment} </h5> 
                                 
                             </div >
                             

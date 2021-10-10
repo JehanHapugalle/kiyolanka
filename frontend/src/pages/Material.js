@@ -1,12 +1,13 @@
 import React ,{useState} from "react";
 import AddMaterials from "./AddMaterials";
+import Home from "./Home";
 import Materialstock from "./Materialstock";
+import Materialsused from "./Materialused";
+import MaterialAnalize from "./MaterialAnalize";
 
 export const Materials = () =>{
     return(
-        <div className="machinery">
-            <h1></h1>
-        </div>
+        <Home/>
     )
 }
 
@@ -24,15 +25,12 @@ export const MaterialTwo = () =>{
 }
 export const MaterialThree = () =>{
     return(
-        <div className="machinery">
-            <h1>MaterialStock</h1>
-        </div>
+        
+        <Materialsused/>
     )
 }
 export const MaterialFour = () =>{
     return(
-        <div className="machinery">
-            <h1>Usedmaterial</h1>
-        </div>
+       <MaterialAnalize/>
     )
 }

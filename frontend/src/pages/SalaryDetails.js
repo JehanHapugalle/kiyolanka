@@ -50,7 +50,7 @@ export default function SalaryDetails(){
                         _id: _id,
                         SalaryEmpId: val.SalaryEmpId, 
                         SalaryEmpName: val.SalaryEmpName,
-                        SalaryEmpStatus: val.SalaryEmpStatus,
+                        SalaryEmpMonth: val.SalaryEmpMonth,
     
                        BasicSalary :BasicSalary, 
                        SalaryBonus: SalaryBonus,
@@ -59,6 +59,15 @@ export default function SalaryDetails(){
                 }))
             })
         };
+
+         function calcSal(x, y){
+             return x+y;
+         }
+
+         function calcEpf(x){ 
+             return x *8/100;
+             
+         }
         function ConfirmDelete(id)
         {
             var x = window.confirm("Are you sure you want to delete this salary employee?");
@@ -114,17 +123,23 @@ export default function SalaryDetails(){
 
     <th>Acc No</th>
 
-    <th>Status</th>
+    <th>Month</th>
 
     <th>Bonus</th>
 
     <th>Basic Sal</th>
 
+    <th>Net Sal</th>
+
+    <th>EPF </th>
+
+   
     
 
 </tr>
 
 </table>
+<div class = "saldata" >
                     {salaries.filter((val) => {
                         if (searchTerm == "") {
                             return val
@@ -132,21 +147,23 @@ export default function SalaryDetails(){
                             return val
                         } else if (val.SalaryEmpName.toLowerCase().includes(searchTerm.toLowerCase())){
                             return val
-                        } else if (val.SalaryEmpStatus.toLowerCase().includes(searchTerm.toLowerCase())){
+                        } else if (val.SalaryEmpMonth.toLowerCase().includes(searchTerm.toLowerCase())){
                             return val
                     
                         } 
                     }).map((val, key) => {
                         return(
-                            <div className = "displayContainer" style={{width: "100%"}} key = {key}>
-                                <div className = "row" style={{width: "80%"}}>
+                            <div className = "saldisplayContainer" style={{width: "100%"}} key = {key}>
+                                <div className = "salrow" style={{width: "80%"}}>
                                     {""}
                                     <h5> {val.SalaryEmpId} </h5>
                                 <h5> {val.SalaryEmpName} </h5>
                                 <h5> {val.SalaryEmpACCno} </h5>
-                                <h5> {val.SalaryEmpStatus} </h5>
+                                <h5> {val.SalaryEmpMonth} </h5>
                                 <h5> {val.SalaryBonus} </h5> 
                                 <h5> {val.BasicSalary} </h5>
+                                <h5> {calcSal(val.BasicSalary,val.SalaryBonus)} </h5>
+                                <h5> {calcEpf(val.BasicSalary)} </h5>
 
                                 </div>
                                     <button onClick = {() =>{
@@ -162,6 +179,7 @@ export default function SalaryDetails(){
 
             </div>
 
+        </div>
         </div>
     );
 }

@@ -9,7 +9,6 @@ import * as BiIcons from 'react-icons/bi';
 
 export const SidebarData = [
 
-
   {
     title: 'Home',
     path: '/home',
@@ -88,11 +87,6 @@ export const SidebarData = [
       {
         title: 'Expenses',
         path: '/machine/expenses',
-        icon: <AiIcons.AiFillCaretRight/>
-      },
-      {
-        title: 'Analaysis',
-        path: '/machine/analysis1',
         icon: <AiIcons.AiFillCaretRight/>
       }
     ]
@@ -204,11 +198,19 @@ export const SidebarData = [
         path: '/sales/saleshistory',
         icon: <AiIcons.AiFillCaretRight/>
       },
+
       {
         title: 'Analysis',
         path: '/sales/analysis5',
         icon: <AiIcons.AiFillCaretRight/>
       }
+
+      // {
+      //   title: 'Analysis',
+      //   path: '/sales/analaysis5',
+      //   icon: <AiIcons.AiFillCaretRight/>
+      // }
+
     ]
   },
   {

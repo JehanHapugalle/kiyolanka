@@ -4,9 +4,11 @@ const Schema = mongoose.Schema;
 
 const attendanceSchema = new Schema({
 
+    month : {
+        type : String,
+    },
     week : {
         type : String,
-        required : true
     },
     eid : {
         type : String,
@@ -18,35 +20,27 @@ const attendanceSchema = new Schema({
     },
     monday : {
         type : Boolean,
-        required : true
     },
     tuesday : {
         type : Boolean,
-        required : true
     },
     wednesday : {
-        type : Boolean,
-        required : true
+        type : Boolean
     },
 	thursday : {
         type : Boolean,
-        required : true
     },
     friday : {
         type : Boolean,
-        required : true
     },
     saturday : {
         type : Boolean,
-        required : true
     },
     sunday : {
         type : Boolean,
-        required : true
     },
     total : {
         type : Number,
-        required : true
     }
 })
 
