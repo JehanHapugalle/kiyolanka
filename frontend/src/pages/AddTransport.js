@@ -37,7 +37,7 @@ import Logo from './image/logo.jpeg'
     }
     return(
         
-        <div className="container">
+        <div className="Tcontainer">
             <div class="imag" >
 
 

@@ -89,11 +89,6 @@ export const SidebarData = [
         title: 'Expenses',
         path: '/machine/expenses',
         icon: <AiIcons.AiFillCaretRight/>
-      },
-      {
-        title: 'Analaysis',
-        path: '/machine/analysis1',
-        icon: <AiIcons.AiFillCaretRight/>
       }
     ]
   },

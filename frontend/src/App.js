@@ -2,12 +2,14 @@ import './App.css';
 import Sidebar from './components/Sidebar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import { Machinery,MachineryOne,MachineryTwo,MachineryThree,MachineryFour} from './pages/Machinery';
+import { Machinery,MachineryOne,MachineryTwo,MachineryThree} from './pages/Machinery';
 import { Salary,SalaryOne,SalaryTwo,SalaryThree} from './pages/SalaryEmployee';
 import { Transport,TransportOne,TransportTwo,TransportThree,} from './pages/Transport';
 import { Materials,MaterialOne,MaterialTwo,MaterialThree,MaterialFour} from './pages/Material';
 import { Supplier, SupplierOne, SupplierTwo, SupplierThree, SupplierFour} from './pages/Supplier';
 import React, { useState } from 'react';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -20,12 +22,15 @@ import { Sale, SaleOne, SaleTwo, SaleThree, SaleFour } from './pages/Sale';
 
 
 
+
+
 function App() {
     
   return (
 
       <Router>
       <Sidebar/>
+      
      
         <switch>
 
@@ -34,7 +39,7 @@ function App() {
          <Route path='/machine/addmachine' exact component={MachineryOne} />
          <Route path='/machine/viewmachine' exact component={MachineryTwo} />
          <Route path='/machine/expenses' exact component={MachineryThree} />
-         <Route path='/machine/analysis1' exact component={MachineryFour} />
+        
 
          
          <Route path='/transport' exact component={Transport} />
@@ -55,6 +60,10 @@ function App() {
          <Route path='/supplier/viewsupplier' exact component={SupplierTwo} />
          <Route path='/supplier/payment' exact component={SupplierThree} />
          <Route path='/supplier/analysis2' exact component={SupplierFour} />
+
+ 
+   
+       
          
 
         
@@ -83,9 +92,9 @@ function App() {
         </switch>
         
       </Router>
+      );
+    };
       
       
-  );
-}
-
+  
 export default App;

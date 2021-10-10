@@ -1,7 +1,9 @@
 import React ,{useState} from "react";
 import AddMachine from "./AddMachine";
 import ViewMachine from "./ViewMachine";
+import ExpenseForm from "./ExpenseForm";
 import Home from "./Home";
+
 
 
 export const Machinery = () =>{
@@ -22,15 +24,7 @@ export const MachineryTwo = () =>{
 }
 export const MachineryThree = () =>{
     return(
-        <div className="machinery">
-            <h1>expenses</h1>
-        </div>
-    )
+        <ExpenseForm/>
+    )    
 }
-export const MachineryFour = () =>{
-    return(
-        <div className="machinery">
-            <h1>analysis</h1>
-        </div>
-    )
-}
+
