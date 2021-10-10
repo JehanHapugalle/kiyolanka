@@ -3,7 +3,7 @@ import Header from './components/Header';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import { Machinery,MachineryOne,MachineryTwo,MachineryThree,MachineryFour} from './pages/Machinery';
-import { Salary,SalaryOne,SalaryTwo,SalaryThree} from './pages/SalaryEmployee';
+import { Salary,SalaryOne,SalaryTwo,SalaryThree,} from './pages/SalaryEmployee';
 import { Transport,TransportOne,TransportTwo,TransportThree,} from './pages/Transport';
 import { Materials,MaterialOne,MaterialTwo,MaterialThree,MaterialFour} from './pages/Material';
 import { Supplier, SupplierOne, SupplierTwo, SupplierThree, SupplierFour} from './pages/Supplier';
@@ -14,6 +14,19 @@ import { Sale, SaleOne, SaleTwo, SaleThree, SaleFour } from './pages/Sale';
 import Login from './pages/Login';
 
 function App() {
+    
+      
+
+
+
+    
+
+
+
+
+
+
+  
     return (
       <>
       <Router>
@@ -29,6 +42,11 @@ function App() {
          <Route path='/machine/viewmachine' exact component={MachineryTwo} />
          <Route path='/machine/expenses' exact component={MachineryThree} />
          <Route path='/machine/analysis1' exact component={MachineryFour} />
+   
+
+
+
+         
 
          <Route path='/transport' exact component={Transport} />
          <Route path='/transport/addtransport' exact component={TransportOne} />
@@ -41,6 +59,12 @@ function App() {
          <Route path='/materials/usedmaterials' exact component={MaterialThree} />
          <Route path='/materials/analaysis3' exact component={MaterialFour} />
 
+
+ 
+   
+
+
+         
          <Route path='/home' exact component={Home} />
          <Route path='/supplier' exact component={Supplier} />
          <Route path='/supplier/addsupplier' exact component={SupplierOne} />
@@ -52,6 +76,12 @@ function App() {
          <Route path='/salary/addemployees' exact component={SalaryOne} />
          <Route path='/salary/salarydetails' exact component={SalaryTwo} />
          <Route path='/salary/analysis' exact component={SalaryThree} />
+         
+
+
+           
+
+    
 
          <Route path='/stock' exact component={Product} />
          <Route path='/stock/addstock' exact component={ProductOne} />
