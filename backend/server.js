@@ -28,6 +28,7 @@ mongoose.connection.once('open', () => {
 });
 
 const employeeRouter = require("./routes/employees.js");
+const attendanceRouter = require("./routes/attendance.js");
 const machineRouter = require("./routes/machine.js");
 const productRouter = require("./routes/product.js");
 const salaryRouter = require("./routes/salary.js");
@@ -36,8 +37,11 @@ const materialRouter = require("./routes/materials.js");
 const transportRouter = require("./routes/transports.js");
 const saleRouter = require("./routes/sales.js");
 const calculationsaleRouter = require("./routes/calculationsale.js");
+const usedmaterialsRouter=require("./routes/usedmaterials.js");
+
 
 app.use("/employee", employeeRouter);
+app.use("/attendance", attendanceRouter);
 app.use("/machine", machineRouter);
 app.use("/product", productRouter);
 app.use("/salary", salaryRouter);
@@ -46,6 +50,7 @@ app.use("/material", materialRouter);
 app.use("/transport", transportRouter);
 app.use("/sale", saleRouter);
 app.use("/cal", calculationsaleRouter);
+app.use("/usedmaterial", usedmaterialsRouter);
 
 app.route('/').get((req, res) => {
     res.send('FactoryManagement System API');

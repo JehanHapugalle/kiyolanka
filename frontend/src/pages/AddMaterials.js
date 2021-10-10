@@ -4,7 +4,7 @@ import './addmaterialstyle.css'
 import Logo from './image/logo.jpeg'
 
 
-  export default function AddMaterials(){
+  export default function AddMaterials(){ 
     const[mid, setmid]=useState("");
     const[type, settype]= useState("");
     const[uprice, setuprice]= useState("");

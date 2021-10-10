@@ -5,30 +5,28 @@
     align-items: center;
 }
 
+.eimage{
+    margin-top: 50px;
+    margin-left: -10px;
+}
+
 .addemployee{
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
     justify-content: center;
-    margin-right: -50px;
-    margin-top: 50px;
+    margin-right: 10px;
+    margin-top: 30px;
 }
 
-.add{
-    margin-top: 35px;
-    margin-right: -150px;
+.addsub{
+    margin-top: 40px;
+    margin-bottom: 126px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
 
-.form{
-  align-items: left;
-  justify-content: left;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
 form{
-    margin-top: 220px;
     margin-bottom: 230px;
     margin-left: 10px;
     background-color:white;
@@ -88,13 +86,16 @@ form{
     margin-top:10px;
     margin-bottom:25px;
     margin-left:72px;
-    padding-top: 2px;
+    padding-top: 4px;
     padding-bottom: 4px;
-    padding-left:10px;
+    padding-left:15px;
     border: none;
     border-radius: 7px;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
     margin-right: 30px;
+    color: #75c500;
+    padding-right: 47px;
+    font-size: 11px;
   }
 
   #date_joined{
@@ -104,6 +105,7 @@ form{
     padding-top: 2px;
     padding-bottom: 4px;
     padding-left:10px;
+    padding-right: 17px;
     border-radius: 7px;
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
@@ -113,6 +115,7 @@ form{
     margin-top:10px;
     border-radius: 7px;
     margin-bottom:25px;
+    padding-right: 17px;
     padding-left:10px;
     margin-left:23px;
     padding-top: 2px;
@@ -136,6 +139,7 @@ form{
 
   #address{
     margin-top:10px;
+    margin-bottom:30px;
     border-radius: 7px;
     margin-left:60px;
     padding-top: 2px;
@@ -146,9 +150,8 @@ form{
     margin-right: 30px;
   }
 
-  button{
+  button {
       margin-top: 35px;
-      margin-left: 135px;
       background-color: #75c500;
       border: 3px solid #333333;
       padding-left:15px;

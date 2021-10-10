@@ -5,7 +5,7 @@
      const SalaryEmpId = req.body.SalaryEmpId;
      const SalaryEmpName = req.body.SalaryEmpName;
      const SalaryEmpACCno = req.body.SalaryEmpACCno;
-     const  SalaryEmpStatus = req.body. SalaryEmpStatus;
+     const  SalaryEmpMonth = req.body. SalaryEmpMonth;
      const  BasicSalary = req.body. BasicSalary;
      const  SalaryBonus = req.body. SalaryBonus;
 
@@ -13,7 +13,7 @@
         SalaryEmpId,
         SalaryEmpName,
         SalaryEmpACCno,
-         SalaryEmpStatus,
+         SalaryEmpMonth,
          BasicSalary,
          SalaryBonus
 
