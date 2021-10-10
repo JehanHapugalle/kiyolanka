@@ -24,12 +24,12 @@ const transportSchema = new Schema({
         type : String,
         required : true
     },
-    month : {
-        type : String,
+    vehicle_payment : {
+        type : Number,
         required : true
     },
-    time : {
-        type : String,
+    driver_payment : {
+        type : Number,
         required : true
     }
 })

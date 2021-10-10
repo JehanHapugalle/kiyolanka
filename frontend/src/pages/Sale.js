@@ -2,6 +2,7 @@ import React ,{useState} from "react";
 import AddSale from "./AddSale.js";
 import SalesHistory from "./SalesHistory.js";
 import Home from "./Home.js";
+import AddCal from "./AddCalSale.js";
 
 export const Sale = () =>{
     return(
@@ -10,9 +11,7 @@ export const Sale = () =>{
 }
 export const SaleOne = () =>{
     return(
-        <div className="sale">
-            <h1>CalculateBill</h1>
-        </div>
+        <AddCal/>
     )
 }
 export const  SaleTwo= () =>{
@@ -25,12 +24,12 @@ export const SaleThree = () =>{
         <SalesHistory/>
     )
 }
-export const SaleFour = () =>{
-    return(
-        <div className="sale">
-            <h1>analysis</h1>
-        </div>
-    )
-}
+// export const SaleFour = () =>{
+//     return(
+//         <div className="sale">
+//             <h1>analysis</h1>
+//         </div>
+//     )
+// }
 
 

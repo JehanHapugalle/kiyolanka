@@ -23,6 +23,10 @@ const saleSchema = new Schema({
     s_amount : {
         type : String,
         required : true
+    },
+    s_date : {
+        type : Date,
+        required : true
     }
 	
 })
@@ -30,3 +34,4 @@ const saleSchema = new Schema({
 const Sale = mongoose.model("sale", saleSchema);
 
 module.exports = Sale;
+

@@ -1,27 +1,11 @@
-.salcontainer{
+.tracontainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
    
 }
-.salrow{
-    display: flex;
-    padding-top: 10px;
-    margin-left: 1px;
-    height: 60px;
-    flex: 1 1 100%;
 
-}
-
-.salrow th{
-    margin-left: 58px;
-    text-align: center;
-    
-    /* flex: 2 2 50%; */
-    /* background-color: hotpink; */
-    
-}
 .Btn{
     margin-top: 10px;
     margin-left: 200px;
@@ -45,48 +29,36 @@
   border-color: #333333;
   border-style: solid;
     border-radius: 25px;
-    padding-left:50px;
+    padding-left:10px;
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
     color: white;
 
 }
-.salrow h5{
-    margin-left: -10px;
+.trarow h5{
+    margin-left: 20px;
     text-align: center;
-    padding-left: 30%;
+    padding-left: 2%;
     flex: 1 1 100%;
-    /* background-color: indigo; */
 }
 
-.saldisplayContainer{
+.tradisplayContainer{
     display: flex;
     flex-direction: row;
     margin-right: -50px;
     background-color: gainsboro;
-    width: 100% ;
-    margin-top: 10px;
-    height:50px;
+    margin-top: 50px;
+    width: 100%;
+  
 }
-.saldisplayContainer button{
+.tradisplayContainer button{
     margin-top: 1px;
     margin-bottom: 20px;
-    margin-left: 5px;
-    /* margin-right: -20%; */
+    margin-left: 30px;
+
 }
-.sal button{
-    background-color: #75c500;
-    border-color: #333333;
-    border-style: solid;
-    padding-left:15px;
-    padding-right: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    color: white;
-    cursor:pointer;
-}
-.list{
+.tralist{
     margin-bottom: 230px;
     margin-left: 10px;
     background-color:white;
@@ -94,12 +66,13 @@
     border-radius: 20px;
     padding-top: 30px;
     padding-bottom: 30px;
+    padding-right: 50%;
     transform: scale(2);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: flex;
     flex-direction: column;
 }
-.salary{
+.transport{
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
@@ -107,11 +80,11 @@
     margin-top: 50px;
 }
 
-.salretrieve{
+.traretrieve{
     margin-top: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    margin-bottom: 250px;
+    margin-bottom: 350px;
     margin-left: 30px;
 }
 .imag{
@@ -120,20 +93,16 @@
   
   }
 
-  .saldata{
-      overflow: auto;
-      height:300px;
+  .trarow th{
 
-  }
-  
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #333333;
-  }
+    margin-left:100px;
+    text-align: center;
+    column-span: 500px;
+    padding-left: -30px;
 
-  ::-webkit-scrollbar-thumb {
-    background: rgb(102, 102, 102);
-  }
-    
+}
+
+.trabutton-area{
+    margin-left: 1700px;
+}
+

@@ -1,29 +1,29 @@
-.salecontainer{
+.Ancontainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 2 2 50%;
+    
 }
 
-.sale{
+.Matemployeelist{
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
     justify-content: center;
     margin-right: -50px;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
-.saleadd{
-    margin-top: 35px;
+.retrieve{
+    margin-top: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     margin-bottom: 200px;
     margin-left: 30px;
 }
 
-.salesearch {
+.search {
     margin-top: 10px;
     margin-left: 50px;
     margin-bottom: 30px;
@@ -31,7 +31,7 @@
     font-size: 11px;
 }
 
-.salelist{
+.list{
     margin-bottom: 230px;
     margin-left: 10px;
     background-color:white;
@@ -44,36 +44,32 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: flex;
     flex-direction: column;
-    
 }
 
-.salerow{
+.ANrow{
     display: flex;
     padding-top: 10px;
     margin-left: 20px;
     margin-left: 30px;
     height: 60px;
 }
-.salerow th{
-    padding-right: -10px;
-    margin-left: 85px;
-    margin-right: 15px;
-    text-align: center; 
-}
-.salerow h5{
-    margin-left: 65px;
-    padding-left: 2px;
+
+.ANrow h5{
+    margin-left: 30px;
+    margin-left: 20px;
     text-align: center;
-    flex: 2 2 50%;
+    flex: 1 1 100%;
 }
 
-.saledisplayContainer{
+.displayMContainer{
     display: flex;
-    background-color: gainsboro;
     flex-direction: row;
+    background-color: gainsboro;
+    margin-top: 10px;
+    height: 50px;
 }
 
-.saledisplayContainer button{
+.displayContainer button{
     margin-top: 1px;
     margin-bottom: 20px;
     margin-left: 40px;
@@ -90,23 +86,52 @@ button{
     color: white;
     cursor:pointer;
 }
-th{
 
-    margin-left: 60px;
+.UMatrow{
+    display: flex;
+    padding-top: 5px;
+    margin-left: 80px;
+    height: 60px;
+    font-size: 14px;
+    flex: 1 1 100%;
+   
+}
+
+.UMatrow th{
+
+    margin-left: 90px;
     text-align: center;
+    flex: 1 1 100%;
+    
 
 }
-.saleimag{
-    padding-top:50px;
-    padding-right: 70px;
 
+.imag{
+    padding-top:40px;
+    padding-right: 50px;
+    
+}
+
+.matbutton-area{
+    padding-left:15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 580px;
+}
+
+.Mator{
+    overflow: auto;
+    height: 180px;
+}
+::-webkit-scrollbar {
+    width: 10px;
   }
-  #s_date{
-    margin-bottom:15px;
-    border: none;
-    margin-top: 10px;
-    color: #75c500;
-    border-radius: 7px;
-    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 100px;
-}
+  
+  ::-webkit-scrollbar-track {
+    background: #333333;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(102, 102, 102);
+  }

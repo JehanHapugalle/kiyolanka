@@ -2,6 +2,8 @@ import React ,{useState} from "react";
 import AddSalaryEmployee from "./AddSalaryEmployee";
 import SalaryDetails from "./SalaryDetails";
 import Home from "./Home";
+import SalAnalysis from "./SalAnalysis";
+
 
 export const Salary = () =>{
     return(
@@ -14,6 +16,7 @@ export const  SalaryOne= () =>{
        <AddSalaryEmployee/>
     )
 }
+
 export const SalaryTwo = () =>{
     return(
         
@@ -22,8 +25,7 @@ export const SalaryTwo = () =>{
 }
 export const SalaryThree = () =>{
     return(
-        <div className="salary">
-            <h1>Analysis</h1>
-        </div>
+        <SalAnalysis/>
     )
 }
+
