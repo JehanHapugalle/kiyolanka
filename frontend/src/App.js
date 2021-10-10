@@ -14,7 +14,6 @@ import { Sale, SaleOne, SaleTwo, SaleThree, SaleFour } from './pages/Sale';
 import Login from './pages/Login';
 
 function App() {
-
     return (
       <>
       <Router>
@@ -42,12 +41,13 @@ function App() {
          <Route path='/materials/usedmaterials' exact component={MaterialThree} />
          <Route path='/materials/analaysis3' exact component={MaterialFour} />
 
+         <Route path='/home' exact component={Home} />
          <Route path='/supplier' exact component={Supplier} />
          <Route path='/supplier/addsupplier' exact component={SupplierOne} />
          <Route path='/supplier/viewsupplier' exact component={SupplierTwo} />
          <Route path='/supplier/payment' exact component={SupplierThree} />
          <Route path='/supplier/analysis2' exact component={SupplierFour} />
-         
+
          <Route path='/salary' exact component={Salary} />
          <Route path='/salary/addemployees' exact component={SalaryOne} />
          <Route path='/salary/salarydetails' exact component={SalaryTwo} />
