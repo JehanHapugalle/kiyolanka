@@ -1,10 +1,18 @@
-import React ,{useState, useEffect} from "react";
+import React ,{useState, useEffect, useRef} from "react";
 import axios from 'axios';
-import './ViewProductStyle.css'
+import './ProductAnalysisStyle.css'
 import Logo from './image/logo.jpeg'
+import '@progress/kendo-theme-default/dist/all.css';
+import { Button } from "@progress/kendo-react-buttons";
+import { PDFExport, savePDF } from "@progress/kendo-react-pdf";
 
-export default function Viewproduct(){
+export default function ProductAnalysis(){
 
+    const PDFExportComponent = useRef(null);
+    const handledExportWithComponent = (event) => {
+        PDFExportComponent.current.save();
+
+    };
     const [product, setproduct] = useState([]);
     const [searchTerm, setSearchTerm] = useState('')
     useEffect(() => {
@@ -59,6 +67,11 @@ export default function Viewproduct(){
         })
     };
 
+    function calcweight(x,y){
+
+        return x*y;
+    }
+
     function ConfirmDelete(id)
 
     {
@@ -84,22 +97,25 @@ export default function Viewproduct(){
     }
 
     return(
+        
+        <PDFExport ref={PDFExportComponent} margin={{top: 50, right: 50}}>
             
-        <div className="pcontainer">
-            <div class="pimag" >
+        <div className="pacontainer">
+            <div class="paimag" >
             <img src = {Logo} width = "150" alt="logo"/>
             </div>
-            <div class="viewproduct">
+            <div class="productanalysis">
                 <h1>Stock Managment</h1>
             </div>
             
-            <div class="pretrieve">
-                <h2>View Stock</h2>
+            <div class="panalysis">
+                <h2>Stock Analysis</h2>
             </div>
 
-            <div className="plist" style={{width: "45%"}}>
+            <div className="palist" style={{width: "45%"}}>
 
                 <div>
+                    <div style={{width: "100%"}}>
                     <input
                          type = "text" 
                          class = "search" 
@@ -109,23 +125,30 @@ export default function Viewproduct(){
                              setSearchTerm(event.target.value);
                          }}
                      />
-
+                         
+                        <Button className="probutton-area"  primary={true} onClick={handledExportWithComponent}>GENERATE REPORT</Button>
+                       
+                        </div>
                         <table>
-                        <tr className = "prow">
-                            <pth>PID</pth>
-                            <pth>NAME</pth>
-                            <pth>WEIGHT(kg)</pth>
-                            <pth>DATE</pth>
-                            <pth>NOP</pth>
+                        <tr className = "parow">
+                            <pa4th>PID</pa4th>
+                            <pa4th>NAME</pa4th>
+                            <pa4th>WEIGHT(kg)</pa4th>
+                            <pa4th>DATE</pa4th>
+                            <pa4th>NOP</pa4th>
+                            <pa4th>TOTAL WEIGHT(kg)</pa4th>
                         </tr>
                         </table>
-                    <div class= "pdata">
+                       
+                        <div class= "padata">
                     {product.filter((val) => {
                         if (searchTerm == "") {
                             return val
                         } else if (val.pid.toLowerCase().includes(searchTerm.toLowerCase())){
                             return val
                         } else if (val.pname.toLowerCase().includes(searchTerm.toLowerCase())){
+                            return val
+                        } else if (val.date.toLowerCase().includes(searchTerm.toLowerCase())){
                             return val
                         // } else if (val.weight.toLowerCase().includes(searchTerm.toLowerCase())){
                         //     return val
@@ -135,21 +158,22 @@ export default function Viewproduct(){
 
                     }).map((val) => {
                     return(
-                        <div className = "pdisplayContainer" style={{width: "100%"}}>
-                            <div className = "prow" style={{width: "80%"}}>
+                        <div className = "padisplayContainer" style={{width: "100%"}}>
+                            <div className = "parow" style={{width: "80%"}}>
                                 {""}
                                 <h5> {val.pid} </h5>
                                 <h5> {val.pname} </h5>
                                 <h5> {val.weight} </h5>
                                 <h5> {val.date} </h5>
                                 <h5> {val.nop} </h5>
+                                <h5> {calcweight(val.weight,val.nop)} </h5>
                             </div>
-                                <button className="PBtn" onClick = {() =>{
+                                {/* <button className="PBtn" onClick = {() =>{
                                     updateProduct(val._id)
                                 }}> Edit </button>
                                 <button className="PBtn2" onClick  = {() =>{
                                     ConfirmDelete(val._id)
-                                }}> Delete </button>
+                                }}> Delete </button> */}
                         </div>
                     )
                 })}
@@ -159,5 +183,6 @@ export default function Viewproduct(){
             </div>
 
         </div>
+        </PDFExport>
     );
 }
