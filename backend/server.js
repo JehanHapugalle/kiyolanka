@@ -41,6 +41,7 @@ const calculationsaleRouter = require("./routes/calculationsale.js");
 const usedmaterialsRouter=require("./routes/usedmaterials.js");
 
 
+
 app.use("/employee", employeeRouter);
 app.use("/attendance", attendanceRouter);
 app.use("/machine", machineRouter);
@@ -51,6 +52,7 @@ app.use("/supplier", supplierRouter);
 app.use("/material", materialRouter);
 app.use("/transport", transportRouter);
 app.use("/sale", saleRouter);
+;
 app.use("/cal", calculationsaleRouter);
 app.use("/usedmaterial", usedmaterialsRouter);
 
