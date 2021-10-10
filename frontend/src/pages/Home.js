@@ -1,5 +1,16 @@
 import React from 'react';
 
+// function Home (){
+//   return (
+//    <div className="Home">
+//      <div className ="Hlogo" style={{backgroundImage:`url(${BannerImage})`}}>
+//          <img src={Logo} width = "200"/>
+//          <h1 className="topic" 
+//          >Kiyo Lanka CoCo Products PVT LTD </h1>
+//          <h2 className="topic2">"We are a proudly family operated and owned business"</h2>
+//          <h2 className="topic2">with more than 30 years of experience</h2>
+//          <h2 className="topic2"> in the coco peat industry"</h2>
+//        </div>
 import Logo from './image/logo.jpeg'
 
 
@@ -66,6 +77,10 @@ function Home () {
 
       
 
+//    </div>
+//   )
+// }
+// export default Home;
 
 
 
