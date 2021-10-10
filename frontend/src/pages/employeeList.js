@@ -66,12 +66,35 @@ export default function EmployeeList(){
     };
 
     function calcYears(date) {
+
+        var year = Number(date.substr(0, 4));
+        var month = Number(date.substr(4, 2)) - 1;
+        var day = Number(date.substr(6, 2));
+        var today = new Date();
+        var noofyears = today.getFullYear() - year;
+        if (today.getMonth() < month || (today.getMonth() == month && today.getDate() < day)) 
+        {
+            noofyears--;
+        }
+        return noofyears;         
+    }
+
+    function ConfirmDelete(id)
+    {
+        var x = window.confirm("Are you sure you want to delete this employee?");
+        if (x)
+            deleteEmployee(id);
+        else
+            return;
+    }
+
         
         var today = new Date();
         var day = Number(date.substr(6, 2));
         var month = Number(date.substr(4, 2)) - 1;
         var year = Number(date.substr(0, 4));
         var noofyears = today.getFullYear() - year;
+
 
         if (today.getMonth() < month || (today.getMonth() == month && today.getDate() < day)) 
             noofyears--;
@@ -103,6 +126,21 @@ export default function EmployeeList(){
             
         <div className="container">
 
+
+        <div class="eimage" >
+            <img src = {Logo} width = "150" alt="logo"/>
+        </div>
+
+        <div class="employeelist">
+            <h1>Employee Management</h1>
+        </div>
+            
+        <div class="retrieve">
+            <h2>Employee List</h2>
+        </div>
+
+            <div className="list" style={{width: "45%"}}>
+
             <div class="eimage" >
                 <img src = {Logo} width = "150" alt="logo"/>
             </div>
@@ -117,6 +155,7 @@ export default function EmployeeList(){
 
             <div className="emplist" style={{width: "45%"}}>
 
+
                 <div>
 
                     <input type = "text" class = "search" placeholder = "Search" style={{width: "21%"}} 
@@ -124,6 +163,11 @@ export default function EmployeeList(){
                             setSearchTerm(event.target.value);
                         }}
                     />
+
+
+                    <table>
+                        <tr className = "row">
+
                     
                     <select class="empsearch" id="searchgender" style={{width: "19%"}}
                             onChange = {event => {
@@ -150,6 +194,7 @@ export default function EmployeeList(){
 
                     <table>
                         <tr className = "emprow">
+
                             <th>EID</th>
                             <th>Name</th>
                             <th>Gender</th>
@@ -160,7 +205,9 @@ export default function EmployeeList(){
                             <th>Address</th>
                         </tr>
                     </table>
+
                     <div class="listdata">  
+
                     {employees.filter((val) => {
                         if (searchTerm == "" && searchTermGender == "" && searchTermJobTitle == "")
                             return val
@@ -185,6 +232,17 @@ export default function EmployeeList(){
                                 </div>
 
                                     <button onClick = {() =>{
+
+                                            updateEmployee(val._id)
+                                        }}> Edit </button>
+                                        <button onClick  = {() =>{
+                                            ConfirmDelete(val._id)
+                                        }}> Delete </button>
+                            </div>
+                        )
+                    })}
+                    
+
                                         updateEmployee(val._id)
                                     }}> Edit </button>
 
@@ -196,6 +254,7 @@ export default function EmployeeList(){
                         )
                     })}
                     </div>
+
                 </div>
 
             </div>

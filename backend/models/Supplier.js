@@ -2,18 +2,19 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const supplierSchema = new Schema({
 
+
+
+    sid : { 
+        type : String,
+        required : true
+    },
+
     name : {
         type : String,
         required : true
     },
-    nic_no : {
-        type : Number,
-        required : true
-    },
-    address : {
-        type : String,
-        required : true
-    },
+    
+
     contact_no : {
         type : Number,
         required : true
@@ -22,16 +23,12 @@ const supplierSchema = new Schema({
         type : String,
         required : true
     },
-    date_of_birth : {
-        type : String,
+    supply_amount : {
+        type : Number,
         required : true
     },
-	supply_scale : {
-        type : String,
-        required : true
-    },
-    payment_type : {
-        type : String,
+	unit_price : {
+        type : Number,
         required : true
     },
     bank : {

@@ -110,14 +110,10 @@ export const SidebarData = [
         icon: <AiIcons.AiFillCaretRight/>
       },
       
-      {
-        title: 'Payment',
-        path: '/supplier/payment',
-        icon: <AiIcons.AiFillCaretRight/>
-      },
+
       {
         title: 'Analaysis',
-        path: '/supplier/analaysis2',
+        path: '/supplier/analysis2',
         icon: <AiIcons.AiFillCaretRight/>
       },
     ]
@@ -148,7 +144,7 @@ export const SidebarData = [
       },
       {
         title: 'Analysis',
-        path: '/materials/analaysis3',
+        path: '/materials/analysis3',
         icon: <AiIcons.AiFillCaretRight/>
       }
     ]
@@ -173,7 +169,7 @@ export const SidebarData = [
       },
       {
         title: 'Analysis',
-        path: '/stock/analaysis4',
+        path: '/stock/analysis4',
         icon: <AiIcons.AiFillCaretRight/>
       }
     ]
@@ -202,11 +198,19 @@ export const SidebarData = [
         path: '/sales/saleshistory',
         icon: <AiIcons.AiFillCaretRight/>
       },
+
+      {
+        title: 'Analysis',
+        path: '/sales/analysis5',
+        icon: <AiIcons.AiFillCaretRight/>
+      }
+
       // {
       //   title: 'Analysis',
       //   path: '/sales/analaysis5',
       //   icon: <AiIcons.AiFillCaretRight/>
       // }
+
     ]
   },
   {
