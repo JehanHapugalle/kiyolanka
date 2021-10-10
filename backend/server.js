@@ -36,6 +36,9 @@ const supplierRouter = require("./routes/suppliers.js");
 const materialRouter = require("./routes/materials.js");
 const transportRouter = require("./routes/transports.js");
 const saleRouter = require("./routes/sales.js");
+const calculationsaleRouter = require("./routes/calculationsale.js");
+const usedmaterialsRouter=require("./routes/usedmaterials.js");
+
 
 app.use("/employee", employeeRouter);
 app.use("/attendance", attendanceRouter);
@@ -46,6 +49,8 @@ app.use("/supplier", supplierRouter);
 app.use("/material", materialRouter);
 app.use("/transport", transportRouter);
 app.use("/sale", saleRouter);
+app.use("/cal", calculationsaleRouter);
+app.use("/usedmaterial", usedmaterialsRouter);
 
 app.route('/').get((req, res) => {
     res.send('FactoryManagement System API');

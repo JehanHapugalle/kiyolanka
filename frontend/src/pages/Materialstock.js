@@ -135,8 +135,8 @@ export default function Materialstock(){
                 </tr>
 
                 </table>
-
-                    {Materials.filter((val) => {
+  <div class="Matvor">
+                        {Materials.filter((val) => {
                         if (searchTerm == "") {
                             return val
                         } else if (val.type.toLowerCase().includes(searchTerm.toLowerCase())){
@@ -170,6 +170,7 @@ export default function Materialstock(){
                         )
                     })}
                 </div>
+                    </div>
 
             </div>
 

@@ -6,12 +6,16 @@
 
     height: 1200px;  
 
+.Hlogos{
+    width:100%;
+    height:1500px;    
     display:flex;
 
     justify-content: center;
 
     align-items:left ;
 
+    align-items: center;
     flex-direction: column;
 
     background-position: center;
@@ -23,6 +27,56 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
 
     padding-left: 50px;    
+}
+
+.himage{
+    margin-left: 210px;
+}
+
+.topic{
+        font-weight:bolder;
+        padding-top: 20px;
+        padding-left: 5px;
+        padding-bottom: 20px;
+        font-size: 40px;
+}
+
+.topic2{
+        margin-left: 30px;
+        padding-top: 10px;
+    
+    }
+}
+
+.topic3{
+    margin-left: 110px;
+    padding-top: 10px;
+}
+
+.topic4{
+    margin-left: 180px;
+    padding-top: 10px;
+}
+
+.logout{
+    margin-top: 100px;
+    margin-left: 0px;
+    padding-left:55px;
+    padding-right: 55px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 1.5pc;
+}
+
+   
+
+
+
+
+
+
+   
+
 
 }
 
