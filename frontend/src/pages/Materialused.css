@@ -1,0 +1,90 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.machine{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+    padding-right: 5%;
+    
+    
+}
+
+.form{
+    align-items: left;
+    justify-content: left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+.add{
+    padding-top:5px;
+    padding-right: 4.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+
+
+form{
+    margin-top: 90px;
+    margin-left: -50px;
+    background-color:white;
+    box-shadow: 02px 2px 10px rgb(102, 102, 102);
+    border-radius: 25px;
+    padding :20px;
+    transform: scale(2);
+    
+  }
+  #usedmonth{
+    border-radius: 7px;
+    margin-bottom:5px;
+    border: none;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-left: 195px;
+    color:#75c500;
+     
+  }
+
+  #usedamount{
+    margin-bottom:5px;
+    border-radius: 7px;
+      border: none;
+      box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+      margin-left: 105px;
+     
+  }
+  
+  #unit{
+    margin-bottom:5px;
+    border-radius: 7px;
+      border: none;
+      box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+      margin-left: 135px;
+     
+  }
+
+  
+  #usedtype{
+    border-radius: 7px;
+    margin-bottom:5px;
+    border: none;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-left: 195px;
+    color:#75c500;
+     
+  }
+
+
+ 
+  ::placeholder {
+    color: #75c500;
+    padding-left: 10px;
+    font-size: 10px;
+  }
