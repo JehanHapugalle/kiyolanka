@@ -3,23 +3,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+   
 }
-.trarow{
-    display: flex;
-    padding-top: 10px;
-    margin-left: 10px;
-    height: 60px;
-    /* /*padding-right: 50px;
-    padding-left: 1px;*/
-}
-.traBtn{
-    margin-top: 30px;
-    margin-left: 50px;
+
+.Btn{
+    margin-top: 10px;
+    margin-left: 200px;
   background-color: #75c500;
   border:none;
   border-color: #333333;
   border-style: solid;
-    border-radius: 35px;
+    border-radius: 25px;
     padding-left:15px;
     padding-right: 15px;
     padding-top: 5px;
@@ -27,7 +21,7 @@
     color: white;
 
 }
-.traBtn2{
+.Btn2{
     margin-top: 10px;
     margin-left: 50px;
   background-color: #75c500;
@@ -38,14 +32,15 @@
     padding-left:10px;
     padding-right: 10px;
     padding-top: 5px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     color: white;
 
 }
 .trarow h5{
     margin-left: 20px;
     text-align: center;
-    
+    padding-left: 2%;
+    flex: 1 1 100%;
 }
 
 .tradisplayContainer{
@@ -53,22 +48,15 @@
     flex-direction: row;
     margin-right: -50px;
     background-color: gainsboro;
+    margin-top: 50px;
+    width: 100%;
+  
 }
 .tradisplayContainer button{
     margin-top: 1px;
     margin-bottom: 20px;
     margin-left: 30px;
-}
-button{
-    background-color: #75c500;
-    border-color: #333333;
-    border-style: solid;
-    padding-left:45px;
-    padding-right: 25px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    color: white;
-    cursor:pointer;
+
 }
 .tralist{
     margin-bottom: 230px;
@@ -76,52 +64,45 @@ button{
     background-color:white;
     box-shadow: 02px 2px 10px rgb(102, 102, 102);
     border-radius: 20px;
-    padding-top: 40px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 50%;
     transform: scale(2);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: flex;
     flex-direction: column;
 }
 .transport{
-    font-size: 35px;
+    font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .traretrieve{
     margin-top: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    margin-bottom: 200px;
+    margin-bottom: 350px;
     margin-left: 30px;
 }
-th{
-
-    margin-left: 10px;
-
-    text-align: center;
-
-}
 .imag{
-
     padding-top:50px;
+    padding-right: 70px;  
+  
+  }
 
-    padding-right: 70px;
+  .trarow th{
 
-}
-.trasearch {
-
-    margin-top: 20px;
-
-    margin-left: 70px;
-
-    margin-bottom: 30px;
-
-    padding: 5px;
-
-    font-size: 11px;
+    margin-left:100px;
+    text-align: center;
+    column-span: 500px;
+    padding-left: -30px;
 
 }
+
+.trabutton-area{
+    margin-left: 1700px;
+}
+

@@ -8,8 +8,7 @@ import { Transport,TransportOne,TransportTwo,TransportThree,} from './pages/Tran
 import { Materials,MaterialOne,MaterialTwo,MaterialThree,MaterialFour} from './pages/Material';
 import { Supplier, SupplierOne, SupplierTwo, SupplierThree, SupplierFour} from './pages/Supplier';
 import React, { useState } from 'react';
-import { Salary,SalaryOne,SalaryTwo,SalaryThree, SalaryFour} from './pages/SalaryEmployee';
-import { Salary,SalaryOne,SalaryTwo,SalaryThree} from './pages/SalaryEmployee';
+
 
 
 
@@ -50,10 +49,14 @@ function App() {
          
 
          
-         <Route path='/transport' exact component={Transport} />
-         <Route path='/transport/addtransport' exact component={TransportOne} />
-         <Route path='/transport/maintenance' exact component={TransportTwo} />
-         <Route path='/transport/analysis6' exact component={TransportThree} />
+         
+          <Route path='/home' exact component={() => <Home authorized={false} />} />
+          <Route path='/transport' exact component={Transport} />
+          <Route path='/transport/addtransport' exact component={TransportOne} />
+          <Route path='/transport/maintenance' exact component={TransportTwo} />
+          <Route path='/transport/analysis6' exact component={TransportThree} />
+
+
         
 
 
