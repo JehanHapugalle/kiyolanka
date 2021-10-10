@@ -1,11 +1,11 @@
-.pcontainer{
+.pacontainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.viewproduct{
+.productanalysis{
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
@@ -15,7 +15,7 @@
     padding-top: 10px;
 }
 
-.pretrieve{
+.panalysis{
     margin-top: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
@@ -23,7 +23,7 @@
     margin-left: 30px;
 }
 
-.plist{
+.palist{
     margin-bottom: 230px;
     margin-left: 10px;
     background-color:white;
@@ -36,40 +36,40 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: flex;
     flex-direction: column;
-} 
+}
 
-.prow{
+.parow{
     display: flex;
     padding-top: 10px;
     margin-left: 60px;
     height: 60px;
     flex: 1 1 100%;
+   
 }
 
-pth{
+pa4th{
     margin-left: 125px;
     text-align: center;
+    /* background-color: blue;  */
 }
 
-.prow h5{
+.parow h5{
     margin-left: 20px;
     text-align: center;
     padding-left: 50px;
     flex: 1 1 100%;
 }
 
-.pdisplayContainer{
+.padisplayContainer{
     display: flex;
     flex-direction: row;
     margin-right: -50px;
     background-color: gainsboro;
     margin-top: 10px;
     height: 50px;
-    margin-left: -10px;
-    padding-right: 20px;
 }
 
-.pdisplayContainer button{
+.padisplayContainer button{
     margin-top: 1px;
     margin-bottom: 20px;
     margin-left: 30px;
@@ -139,24 +139,29 @@ pth{
     color: white; */
 
 }
-.pimag{
+.paimag{
     padding-top:50px;
     padding-right: 70px;
   }
 
-  .pdata{
-      overflow: auto;
-      height:300px;
+.probutton-area{
+  margin-left: 675px;
+  /* padding-left: 20px; */
   }
 
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #333333;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: rgb(102, 102, 102);
-  }
+  .padata{
+    overflow: auto;
+    height:300px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #333333;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(102, 102, 102);
+}

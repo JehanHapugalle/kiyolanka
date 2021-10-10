@@ -87,7 +87,7 @@ function App() {
          <Route path='/stock' exact component={Product} />
          <Route path='/stock/addstock' exact component={ProductOne} />
          <Route path='/stock/viewstock' exact component={ProductTwo} />
-         <Route path='/stock/analysis4' exact component={ProductThree} />
+         <Route path='/stock/analaysis4' exact component={ProductThree} />
 
          <Route path='/employee' exact component={Employee} />
          <Route path='/employee/employeelist' exact component={EmployeeOne} />
