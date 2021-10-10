@@ -1,0 +1,141 @@
+
+.exform{
+    margin-top: 90px;
+    margin-left: -50px;
+    background-color:white;
+    box-shadow: 02px 2px 10px rgb(255, 255, 255);
+    border-radius: 25px;
+    padding :20px;
+    transform: scale(1);
+}
+
+#submit{
+    margin-left: 20px;
+    margin-top: 10px;
+    background-color: #75c500;
+    border:none;
+    border-color: #333333;
+    border-style: solid;
+    border-radius: 25px;
+      padding-left:10px;
+      padding-right: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color: white;
+}
+.imag{
+    padding-top:50px;
+    padding-right: 70px;
+    margin-left: 890px;
+}
+#date{
+   margin-right: 500px;
+}
+.form-inner {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	transition: 0.4s;
+	border-radius: 8px;
+    
+}
+.total-expense{
+    margin-left: 1000px;
+    font-size: 20px;
+    margin-top: 50px;
+}
+.Ex-topic{
+    margin-left: 850px;
+}
+.imag{
+    margin-top: 10px;
+    margin-right:1000px;
+    padding-top:50px;
+    padding-right: 70px;
+}
+.machineEx{
+    margin-top: 70px;
+    margin-right: 100px;
+}
+
+.Eprice{
+    margin-right: 500px;
+}
+.Edate{
+    margin-right: 200px;
+}
+.desc{
+    margin-left: 300px;
+
+}
+.total-expense{
+    margin-bottom:5px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 01px 0.5px 02px rgb(114, 129, 102);
+    background: #75c500;
+    margin-left: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #050702;
+    
+}
+.button-area{
+    margin-left: 500px;
+
+}
+.body { 
+    font-family: Roboto, sans-serif;
+ }
+.MEretrieve{
+    margin-bottom: 250px;
+}
+.Msearch{
+    margin-bottom: 2000px;
+}
+.Mrow h5{
+    margin-left: 20px;
+    text-align: center;
+    padding-left: 48px;
+    font-size:12px;
+    flex:1 1 100%;
+
+   
+}
+.EdisplayContainer{
+    display: flex;
+    flex-direction: row;
+    margin-right: -50px;
+    background-color: gainsboro;
+}
+.Mcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex:1 1 100%;
+}
+.BtnEx{
+    margin-top: 5px;
+    margin-left: 80px;
+   background-color: #75c500;
+   border:none;
+   border-color: #333333;
+   border-style: solid;
+    border-radius: 25px;
+    padding-left:10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+   
+
+}
+.EdisplayContainer button{
+    margin-top: 1px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+}
+
+
