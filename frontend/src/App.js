@@ -15,6 +15,10 @@ import { Sale, SaleOne, SaleTwo, SaleThree} from './pages/Sale';
 
 
 
+import {Product,ProductOne,ProductTwo,ProductThree} from './pages/Product';
+
+import { Employee, EmployeeOne, EmployeeTwo, EmployeeThree} from './pages/Employee';
+
 import { Sale, SaleOne, SaleTwo, SaleThree, SaleFour } from './pages/Sale';
 import Login from './pages/Login';
 
@@ -36,6 +40,13 @@ function App() {
     return (
       <>
       <Router>
+
+ 
+      
+     
+
+
+      <Sidebar/>
       <Header/>
      
         <switch>
@@ -52,7 +63,22 @@ function App() {
 
 
 
+   
+
+
          
+
+         
+         
+          <Route path='/home' exact component={() => <Home authorized={false} />} />
+          <Route path='/transport' exact component={Transport} />
+          <Route path='/transport/addtransport' exact component={TransportOne} />
+          <Route path='/transport/maintenance' exact component={TransportTwo} />
+          <Route path='/transport/analysis6' exact component={TransportThree} />
+
+
+        
+
 
          <Route path='/transport' exact component={Transport} />
          <Route path='/transport/addtransport' exact component={TransportOne} />

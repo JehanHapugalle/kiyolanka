@@ -7,8 +7,8 @@ router.route("/add").post((req,res)=>{
     const date= req.body.date;
     const licence_no = req.body.licence_no;
     const vehicle_no = req.body.vehicle_no;
-    const month = req.body.month;
-    const time = req.body.time;
+    const vehicle_payment = req.body.vehicle_payment;
+    const driver_payment = req.body.driver_payment;
 
     const newTransport = new Transport({
         did,
@@ -16,8 +16,8 @@ router.route("/add").post((req,res)=>{
         date,
         licence_no,
         vehicle_no,
-        month,
-        time
+        vehicle_payment,
+        driver_payment
     })
 
     newTransport.save().then(()=>{
@@ -39,21 +39,24 @@ router.route("/update/:id").put(async(req,res)=>{
 
     let userId = req.params.id;
 
-    const {did, dname, licence_no, vehicle_no} = req.body;
+    const { dname, licence_no, vehicle_no,vehicle_payment,driver_payment} = req.body;
 
-    console.log(did, dname, licence_no, vehicle_no,  userId)
+    console.log( dname, licence_no, vehicle_no,vehicle_payment,driver_payment, userId)
 
     try{
 
         await Transport.findById(userId, (error, updateTransport) => {
-
-            updateTransport.did = (did);
 
             updateTransport.dname = (dname);
 
             updateTransport.licence_no = (licence_no);
 
             updateTransport.vehicle_no = (vehicle_no);
+
+            updateTransport.vehicle_payment = (vehicle_payment);
+
+            updateTransport.driver_payment = (driver_payment);
+
 
             updateTransport.save();
 
