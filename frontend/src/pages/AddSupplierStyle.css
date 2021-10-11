@@ -53,15 +53,21 @@
     border: none;
     border-radius: 7px;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 70px;
+    margin-left: 45px;
+    padding-top: 1px;
+    padding-bottom: 3px;
   }
 
   #name{
-    margin-bottom: 5px;
+    margin-bottom: 1px;
     border-radius: 7px;
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
     margin-left: 10px;
+    padding-left: -50px;
+    padding-right: -50px;
+    padding-top: 1px;
+    padding-bottom: 3px;
   }
   
   #contact_no{
@@ -70,6 +76,9 @@
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
     margin-left: 40px;
+    margin-top: -100px;
+    padding-top: 1px;
+    padding-bottom: 3px;
   }
 
   #email{
@@ -78,16 +87,19 @@
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
     margin-left: 82px;
-     
+    padding-top: 1px;
+    padding-bottom: 3px;
   }
 
   #supply_amount{
-    margin: bottom 5px;
+    margin-bottom: 5px;
     border: none;
     border-radius: 7px;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
     margin-left: 20px;
     color: #75c500;
+    padding-top: 1px;
+    padding-bottom: 3px;
   }
 
   #unit_price{
@@ -97,6 +109,8 @@
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
     margin-left: 55px;
     margin-top: 10px;
+    padding-top: 1px;
+    padding-bottom: 3px;
   }
 
   #bank{
@@ -106,6 +120,8 @@
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
     margin-left: 90px;
     margin-top: 10px;
+    padding-top: 1px;
+    padding-bottom: 3px;
     
   }
 
@@ -115,11 +131,13 @@
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
     margin-left: 43px;
+    padding-top: 1px;
+    padding-bottom: 3px;
   }
 
 
   .sup-submit-button{
-      margin-top: 100px;
+      margin-top: 150px;
       margin-left: 100px;
       background-color: #75c500;
       border:none;

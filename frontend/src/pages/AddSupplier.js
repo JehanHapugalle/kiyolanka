@@ -67,7 +67,7 @@ import Logo from './image/logo.jpeg'
         <div style={{width:"50%"}}>
 
     <div class="form-group">
-    <label  for="SID">SID</label>
+    <label  for="SID">Supplier ID</label>
     <input type="text" class="form-control" id="sid" placeholder="Enter Supplier ID" pattern="[S][0-9]{4}" onChange={(e)=>{
         setsid(e.target.value);
         }} required/>
@@ -91,7 +91,7 @@ import Logo from './image/logo.jpeg'
     
     <div class="form-group">
     <label  for="Email">Email</label>
-    <input type="text" class="form-control" id="email" placeholder="Enter Email" onChange={(e)=>{
+    <input type="email" class="form-control" id="email" placeholder="Enter Email" onChange={(e)=>{
         setemail(e.target.value);
         }} required/>
     </div>
