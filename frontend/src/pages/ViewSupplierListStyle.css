@@ -14,18 +14,19 @@
     margin-top: 50px;
 }
 
-.supretrieve{
+.supsretrieve{
     margin-top: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     margin-bottom: 200px;
-    margin-top:10px;
+    margin-top:100px;
     margin-left: 30px;
+    margin-bottom: 250px;
 }
 
 .suplist{
     margin-bottom: 230px;
-    margin-top:10px;
+    margin-top:150px;
     margin-left: 10px;
     background-color:white;
     box-shadow: 02px 2px 10px rgb(102, 102, 102);
@@ -57,7 +58,7 @@
 }
 
 .suprow h5{
-    margin-left: 10px;
+    margin-left: 15px;
     text-align: center;
     padding-left: -100px;
     column-span: 20px;
@@ -108,10 +109,10 @@
 }
 
 th{
-    margin-left: 15px;
+    margin-left: 25px;
     text-align: center;
     column-span: 500px;
-    padding-left: -30px;
+    padding-left: -20px;
 }
 
 .imag{
@@ -119,3 +120,18 @@ th{
     padding-right: 70px;
     padding-left: 90px;
 }
+.supAdata{
+    overflow: auto;
+    height:300px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #333333;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(102, 102, 102);
+}
+
+ 

@@ -118,7 +118,7 @@ export default function SupplierList(){
                 <h1>Supplier Management</h1>
             </div>
             
-            <div class="supretrieve">
+            <div class="supsretrieve">
                 <h2>Supplier List</h2>
             </div>
 
@@ -147,7 +147,7 @@ export default function SupplierList(){
                         <th>Acc No</th>
                     </tr>
                 </table>
-
+<div class="supAdata">
                 {suppliers.filter((val) => {
                         if (searchTerm == "") {
                             return val
@@ -183,6 +183,7 @@ export default function SupplierList(){
                         </div>
                     )
                 })}
+                </div>
 
                </div>
 
