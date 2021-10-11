@@ -24,8 +24,7 @@ const materialSchema = new Schema({
     receivedamount : {
         type : String,
         required : true
-    },
-   
+    }
 })
 
 const Material = mongoose.model("material", materialSchema);

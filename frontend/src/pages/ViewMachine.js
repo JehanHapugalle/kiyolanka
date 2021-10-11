@@ -85,7 +85,7 @@ export default function Viewmachine(){
 
     return(
             
-        <div className="container">
+        <div className="Mcontainer">
         <div class="imag" >
           <img src = {Logo} width = "150" alt="logo"/></div>
             <div class="machine">
@@ -110,7 +110,7 @@ export default function Viewmachine(){
 
                <table>
 
-                <tr className = "Mrow">
+                <tr className = "MVrow">
 
                 <th>MID</th>
 

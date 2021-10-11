@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex: 2 2 50%;
 }
 
 .sale{
@@ -43,6 +44,7 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: flex;
     flex-direction: column;
+    
 }
 
 .salerow{
@@ -52,11 +54,17 @@
     margin-left: 30px;
     height: 60px;
 }
-
+.salerow th{
+    padding-right: -10px;
+    margin-left: 85px;
+    margin-right: 15px;
+    text-align: center; 
+}
 .salerow h5{
     margin-left: 65px;
     padding-left: 2px;
     text-align: center;
+    flex: 2 2 50%;
 }
 
 .saledisplayContainer{
@@ -93,3 +101,12 @@ th{
     padding-right: 70px;
 
   }
+  #s_date{
+    margin-bottom:15px;
+    border: none;
+    margin-top: 10px;
+    color: #75c500;
+    border-radius: 7px;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-left: 100px;
+}

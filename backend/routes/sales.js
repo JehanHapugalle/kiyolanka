@@ -7,13 +7,15 @@ router.route("/add").post((req,res)=>{
     const ssale_id = req.body.ssale_id;
     const s_email = req.body.s_email;
     const s_amount = req.body.s_amount;
+    const s_date = req.body.s_date;
 
     const newSale = new Sale({
         scus_name,
         scon_number,
         ssale_id,
         s_email,
-        s_amount
+        s_amount,
+        s_date
     })
 
     newSale.save().then(()=>{

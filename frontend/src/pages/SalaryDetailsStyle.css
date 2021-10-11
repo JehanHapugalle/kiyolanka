@@ -8,14 +8,19 @@
 .salrow{
     display: flex;
     padding-top: 10px;
-    margin-left: 30px;
+    margin-left: 1px;
     height: 60px;
+    flex: 1 1 100%;
 
 }
 
-th{
-    margin-left: 50px;
+.salrow th{
+    margin-left: 58px;
     text-align: center;
+    
+    /* flex: 2 2 50%; */
+    /* background-color: hotpink; */
+    
 }
 .Btn{
     margin-top: 10px;
@@ -40,31 +45,37 @@ th{
   border-color: #333333;
   border-style: solid;
     border-radius: 25px;
-    padding-left:10px;
+    padding-left:50px;
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
     color: white;
 
 }
-.row h5{
-    margin-left: 30px;
+.salrow h5{
+    margin-left: -10px;
     text-align: center;
-    padding-left: 3%;
+    padding-left: 30%;
+    flex: 1 1 100%;
+    /* background-color: indigo; */
 }
 
-.displayContainer{
+.saldisplayContainer{
     display: flex;
     flex-direction: row;
     margin-right: -50px;
     background-color: gainsboro;
+    width: 100% ;
+    margin-top: 10px;
+    height:50px;
 }
-.displayContainer button{
+.saldisplayContainer button{
     margin-top: 1px;
     margin-bottom: 20px;
-    margin-left: 10px;
+    margin-left: 5px;
+    /* margin-right: -20%; */
 }
-button{
+.sal button{
     background-color: #75c500;
     border-color: #333333;
     border-style: solid;
@@ -107,5 +118,22 @@ button{
     padding-top:50px;
     padding-right: 70px;  
   
+  }
+
+  .saldata{
+      overflow: auto;
+      height:300px;
+
+  }
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #333333;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(102, 102, 102);
   }
     

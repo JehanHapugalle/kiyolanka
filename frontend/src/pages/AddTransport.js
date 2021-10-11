@@ -10,8 +10,8 @@ import Logo from './image/logo.jpeg'
     const[date, setdate]= useState("");
     const[licence_no, setlicence_no]= useState("");
     const[vehicle_no, setvehicle_no]= useState("");
-    const[month, setmonth]= useState("");
-    const[time, settime]= useState("");
+    const[vehicle_payment, setvehicle_payment]= useState("");
+    const[driver_payment, setdriver_payment]= useState("");
 
     function sendData(e){
        e.preventDefault();
@@ -23,21 +23,22 @@ import Logo from './image/logo.jpeg'
             date,
             licence_no,
             vehicle_no,
-            month,
-            time
+            vehicle_payment,
+            driver_payment
         }
         console.log(newTransport);
         axios.post("http://localhost:4000/transport/add",newTransport).then(()=>{
            alert("Transport Added")
            
-    }).catch((err)=>{
+        }).catch((err)=>{
+            
         alert(err)
     })
 
     }
     return(
         
-        <div className="container">
+        <div className="Tcontainer">
             <div class="imag" >
 
 
@@ -53,8 +54,8 @@ import Logo from './image/logo.jpeg'
     
             
 
-            <form className="Tform" onSubmit={sendData} style={{width:"40%",display:"flex"}}>
-        <div style={{width:"50%"}}>
+            <form className="Tform" onSubmit={sendData} style={{width:"45%",display:"flex"}}>
+        <div style={{width:"60%"}}>
       
       <div class="form-group">
         
@@ -81,9 +82,9 @@ import Logo from './image/logo.jpeg'
 
     
 <div class="form-group">
-    <label  for="Licence Number">Licence Number:</label>
-    <input type="text" class="form-control" id="licence_no" placeholder="Enter Licence Number" onChange={(e)=>{
-        setlicence_no(e.target.value);
+    <label  for="VehicleNumber">vehicle Number:</label>
+    <input type="text" class="form-control" id="vehicle_no" placeholder="Enter Vehicle Number" onChange={(e)=>{
+        setvehicle_no(e.target.value);
         }}required/>
     </div>
     </div>
@@ -92,23 +93,23 @@ import Logo from './image/logo.jpeg'
    
     
     <div class="form-group">
-    <label  for="Vehicle Number">Vehicle Number:</label>
-    <input type="text" class="form-control" id="vehicle_no" placeholder="Enter Vehicle Number" onChange={(e)=>{
-        setvehicle_no(e.target.value);
+    <label  for="VehiclePayment">Vehicle Payment:</label>
+    <input type="number" class="form-control" id="vehicle_payment" placeholder="Enter vehicle payment" onChange={(e)=>{
+        setvehicle_payment(e.target.value);
         }}required/>
     </div>
 
     <div class="form-group">
-    <label  for="Month">Month:</label>
-    <input type="text " class="form-control" id="month" placeholder="Enter month"  onChange={(e)=>{
-        setmonth(e.target.value);
+    <label  for="LicenceNumber">Licence Number:</label>
+    <input type="text " class="form-control" id="licence_no" placeholder="Enter licence Number"  onChange={(e)=>{
+        setlicence_no(e.target.value);
         }}required/>
     </div>
 
     <div class="form-group">
-    <label  for="Time">Time:</label>
-    <input type="text" class="form-control" id="time" placeholder="Enter Time" onChange={(e)=>{
-        settime(e.target.value);
+    <label  for="DriverPayment">Driver Payment:</label>
+    <input type="number" class="form-control" id="driver_payment" placeholder="Enter driver payment" onChange={(e)=>{
+        setdriver_payment(e.target.value);
         }}required/>
         
     

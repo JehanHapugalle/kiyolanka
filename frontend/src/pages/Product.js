@@ -2,6 +2,7 @@ import React ,{useState} from "react";
 import AddProduct from "./AddProduct.js";
 import Viewproduct from "./ViewProduct.js";
 import Home from "./Home";
+import ProductAnalysis from "./ProductAnalysis.js";
 
 export const Product = () =>{
     return(
@@ -21,9 +22,7 @@ export const ProductTwo = () =>{
 }
 export const ProductThree = () =>{
     return(
-        <div className="product">
-            <h1>analysis</h1>
-        </div>
+        <ProductAnalysis/>
     )
 }
 
