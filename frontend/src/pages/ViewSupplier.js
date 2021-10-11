@@ -19,11 +19,8 @@ export default function SupplierList(){
     }, [])
 
     const update = (_id) => {
-        const newAddress = prompt("Enter New Address: ")
-        if (newAddress === null) {
-           return; 
-        }
 
+    
         const newContact = prompt("Enter New Contact: ")
         if (newContact === null) {
             return; 
@@ -34,13 +31,13 @@ export default function SupplierList(){
               return; 
         }
 
-        const newSupplyScale = prompt("Enter New Supply Scale: ")
-        if (newSupplyScale === null) {
+        const newSupplyAmount = prompt("Enter New Supplied Amount: ")
+        if (newSupplyAmount === null) {
             return; 
         }
 
-        const newPaymentType = prompt("Enter New Payment Type: ")
-        if (newPaymentType === null) {
+        const newUnitPrice = prompt("Enter Unit Price: ")
+        if (newUnitPrice === null) {
             return; 
         }
 
@@ -50,19 +47,21 @@ export default function SupplierList(){
         }
 
         const newAccountNo = prompt("Enter New Account No: ")
-        if (newAddress === null) {
+        if (newAccountNo === null) {
             return; 
         }
 
         axios.put(`http://localhost:4000/supplier/update/${_id}`, 
             {
-                newAddress : newAddress,
+
                 newContact : newContact,
                 newEmail : newEmail,
-                newSupplyScale : newSupplyScale,
-                newPaymentType : newPaymentType,
+                newSupplyAmount : newSupplyAmount,
+                newUnitPrice : newUnitPrice,
                 newBank : newBank,
                 newAccountNo : newAccountNo,
+                _id : _id 
+
         
             }).then (() => {
             alert("Supplier Updated")
@@ -70,17 +69,16 @@ export default function SupplierList(){
                 return val._id == _id ? 
                 {
                     _id: _id,
+                    sid : val.sid, 
                     name : val.name, 
-                    nic_no : val.nic_no, 
-                    address : newAddress, 
+                    
                     contact_no : newContact, 
                     email : newEmail,
-                    date_of_birth : val.date_of_birth,
-                    supply_scale : newSupplyScale, 
-                    payment_type : newPaymentType,
+                    supply_amount : newSupplyAmount,
+                    unit_price : newUnitPrice, 
                     bank : newBank,
                     account_no : newAccountNo
-                } : val
+                } : val;
             }))
         })
     };
@@ -138,14 +136,13 @@ export default function SupplierList(){
 
                 <table>
                     <tr className = "suprow">
+                        <th>SID</th>
                         <th>Name</th>
-                        <th>NIC No</th>
-                        <th>Address</th>
+
                         <th>Con No</th>
                         <th>Email</th>
-                        <th>DOB</th>
-                        <th>Sup Scale</th>
-                        <th>Pay Type</th>
+                        <th>Supply Amount</th>
+                        <th>Unit Price</th>
                         <th>Bank</th>
                         <th>Acc No</th>
                     </tr>
@@ -154,11 +151,9 @@ export default function SupplierList(){
                 {suppliers.filter((val) => {
                         if (searchTerm == "") {
                             return val
+                        } else if (val.sid.toLowerCase().includes(searchTerm.toLowerCase())){
+                            return val
                         } else if (val.name.toLowerCase().includes(searchTerm.toLowerCase())){
-                            return val
-                        } else if (val.address.toLowerCase().includes(searchTerm.toLowerCase())){
-                            return val
-                        } else if (val.payment_type.toLowerCase().includes(searchTerm.toLowerCase())){
                             return val
                         } else if (val.bank.toLowerCase().includes(searchTerm.toLowerCase())){
                             return val        
@@ -169,14 +164,13 @@ export default function SupplierList(){
                         <div className = "supdisplayContainer" style={{width: "100%"}} key = {key}>
                             <div className = "suprow h5" style={{width: "80%"}}>
                                 {""}
+                                <h5> {val.sid} </h5>
                                 <h5> {val.name} </h5>
-                                <h5> {val.nic_no} </h5>
-                                <h5> {val.address} </h5>
+
                                 <h5> {val.contact_no} </h5>
                                 <h5> {val.email} </h5>
-                                <h5> {val.date_of_birth} </h5>
-                                <h5> {val.supply_scale} </h5>
-                                <h5> {val.payment_type} </h5>
+                                <h5> {val.supply_amount} </h5>
+                                <h5> {val.unit_price} </h5>
                                 <h5> {val.bank} </h5>
                                 <h5> {val.account_no} </h5>
                             </div>

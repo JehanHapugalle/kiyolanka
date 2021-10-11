@@ -66,7 +66,7 @@ import Logo from './image/logo.jpeg'
     <div class="pform-group">
 
     <label  for="Weight">Weight</label>
-    <input type="text" class="pform-control" id="weight" placeholder="Enter Product Weight" required onChange={(e)=>{
+    <input type="number" class="pform-control" id="weight" placeholder="Enter Product Weight" required onChange={(e)=>{
         setWeight(e.target.value);
         }}/>
     </div>

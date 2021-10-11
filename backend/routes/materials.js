@@ -8,6 +8,7 @@ router.route("/add").post((req,res)=>{
     const uprice = req.body.uprice;
     const date_received = req.body.date_received;
     const receivedamount = req.body.receivedamount;
+   
 
 
     const newMaterial = new Material({
@@ -16,6 +17,7 @@ router.route("/add").post((req,res)=>{
         uprice,
         date_received,
         receivedamount
+       
     })
 
     newMaterial.save().then(()=>{
@@ -35,15 +37,15 @@ router.route("/").get((req,res)=>{
 
 router.route("/update/:id").put(async(req,res)=>{
     let userId = req.params.id;
-    const {mid, type, uprice, date_received, receivedamount, usedamount} = req.body;
+    const {mid, type, uprice, date_received, receivedamount } = req.body;
 
     const updateMaterial = {
         mid,
         type,
         uprice,
         date_received,
-        receivedamount,
-        usedamount
+        receivedamount
+        
         
     }
 

@@ -112,14 +112,14 @@ export default function Viewproduct(){
 
                         <table>
                         <tr className = "prow">
-                            <th>PID</th>
-                            <th>NAME</th>
-                            <th>WEIGHT</th>
-                            <th>DATE</th>
-                            <th>Nop</th>
+                            <pth>PID</pth>
+                            <pth>NAME</pth>
+                            <pth>WEIGHT(kg)</pth>
+                            <pth>DATE</pth>
+                            <pth>NOP</pth>
                         </tr>
                         </table>
-
+                    <div class= "pdata">
                     {product.filter((val) => {
                         if (searchTerm == "") {
                             return val
@@ -127,8 +127,8 @@ export default function Viewproduct(){
                             return val
                         } else if (val.pname.toLowerCase().includes(searchTerm.toLowerCase())){
                             return val
-                        } else if (val.weight.toLowerCase().includes(searchTerm.toLowerCase())){
-                            return val
+                        // } else if (val.weight.toLowerCase().includes(searchTerm.toLowerCase())){
+                        //     return val
                         // } else if (val.nop.includes(searchTerm)){
                         //     return val
                         } 
@@ -153,6 +153,7 @@ export default function Viewproduct(){
                         </div>
                     )
                 })}
+                </div>
                 </div>
 
             </div>
