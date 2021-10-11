@@ -177,6 +177,10 @@ form{
       cursor:pointer;
   }
 
+  .create{
+    margin-left: 145px;
+  }
+
   ::placeholder {
     color: #75c500;
     padding-left: 10px;

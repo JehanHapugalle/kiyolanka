@@ -7,11 +7,7 @@
 
 .eimage{
     margin-top: 50px;
-
-    margin-left: 25px;
-
     margin-left: -10px;
-
 }
 
 .attendance{
@@ -19,11 +15,7 @@
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
     justify-content: center;
-
-    margin-right: -50px;
-
     margin-right: 10px;
-
     margin-top: 30px;
 }
 
@@ -31,15 +23,6 @@
     margin-top: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-
-    margin-bottom: 280px;
-    margin-left: 30px;
-}
-
-.search {
-    margin-top: 10px;
-    margin-left: 50px;
-
     margin-bottom: 271px;
 }
 
@@ -50,20 +33,10 @@
 .attendsearch {
     margin-top: 10px;
     margin-left: 45px;
-
     margin-bottom: 30px;
     padding: 5px;
     font-size: 11px;
 }
-
-
-th{
-    margin-left: 42px;
-    text-align: center;
-}
-
-.list{
-    margin-bottom: 230px;
 
 .attendrow th{
     margin-left: 24px;
@@ -73,7 +46,6 @@ th{
 
 .attendlist{
     margin-bottom: 330px;
-
     margin-left: 10px;
     background-color:white;
     box-shadow: 02px 2px 10px rgb(102, 102, 102);
@@ -84,9 +56,6 @@ th{
     display: flex;
     flex-direction: column;
 }
-
-
-.row{
 
 .data{
   overflow: auto;
@@ -106,21 +75,11 @@ th{
 }
 
 .attendrow{
-
     display: flex;
     padding-top: 10px;
     margin-left: 19px;
     height: 60px;
 }
-
-
-.row h5{
-    margin-left: 30px;
-    padding-right: 17px;
-    text-align: center;
-}
-
-.displayContainer{
 
 .attendrow h5{
   margin-left: 10px;
@@ -130,44 +89,11 @@ th{
 }
 
 .displayattendContainer{
-
     display: flex;
     flex-direction: row;
     background-color: gainsboro;
     padding-top: 10px;
 }
-
-
-.displayContainer button{
-    margin-top: 1px;
-    margin-bottom: 20px;
-    margin-right: 40px;
-    margin-left: -20px;
-}
-
-button{
-    background-color: #75c500;
-    border: 3px solid #333333;
-    padding-left:15px;
-    padding-right: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    color: white;
-    cursor:pointer;
-}
-
-form{
-    margin-bottom: 230px;
-    margin-left: 10px;
-    background-color:white;
-    box-shadow: 02px 2px 10px rgb(102, 102, 102);
-    border-radius: 20px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 160px;
-    transform: scale(2);
-  }
-  
 
 .displayattendContainer button{
     margin-top: 1px;
@@ -189,7 +115,6 @@ form {
     transform: scale(2);
   }
     
-
   #eid{
     margin-top:10px;
     margin-bottom:25px;
@@ -213,7 +138,6 @@ form {
     border-radius: 7px;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
   }
-
 
   #month{
     margin-top:10px;
@@ -258,6 +182,9 @@ form {
     cursor:pointer;
 }
 
+.addattend{
+  margin-left: 155px;
+}
 
   ::placeholder {
     color: #75c500;
