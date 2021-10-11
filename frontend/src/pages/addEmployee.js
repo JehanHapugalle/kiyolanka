@@ -122,7 +122,7 @@ export default function AddEmployee(){
                         
                     </div>
                     
-                    <button type="submit">Create Employee</button>
+                    <button class="create" type="submit">Create Employee</button>
 
                 </div>
 

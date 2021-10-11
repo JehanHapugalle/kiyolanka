@@ -41,7 +41,6 @@ function App() {
          <Route path='/materials/usedmaterials' exact component={MaterialThree} />
          <Route path='/materials/analaysis3' exact component={MaterialFour} />
 
-         <Route path='/home' exact component={Home} />
          <Route path='/supplier' exact component={Supplier} />
          <Route path='/supplier/addsupplier' exact component={SupplierOne} />
          <Route path='/supplier/viewsupplier' exact component={SupplierTwo} />
