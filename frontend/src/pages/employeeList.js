@@ -10,6 +10,10 @@ export default function EmployeeList(){
     const [searchTermGender, setSearchTermGender] = useState('')
     const [searchTermJobTitle, setsearchTermJobTitle] = useState('')
 
+    employees.sort(function (a, b) {
+        return a.name.charAt(2).localeCompare(b.name.charAt(2)) 
+    });
+
     useEffect(() => {
         function getemployees() {
             axios.get("http://localhost:4000/employee/").then ((res) => {
@@ -66,35 +70,12 @@ export default function EmployeeList(){
     };
 
     function calcYears(date) {
-
-        var year = Number(date.substr(0, 4));
-        var month = Number(date.substr(4, 2)) - 1;
-        var day = Number(date.substr(6, 2));
-        var today = new Date();
-        var noofyears = today.getFullYear() - year;
-        if (today.getMonth() < month || (today.getMonth() == month && today.getDate() < day)) 
-        {
-            noofyears--;
-        }
-        return noofyears;         
-    }
-
-    function ConfirmDelete(id)
-    {
-        var x = window.confirm("Are you sure you want to delete this employee?");
-        if (x)
-            deleteEmployee(id);
-        else
-            return;
-    }
-
         
         var today = new Date();
         var day = Number(date.substr(6, 2));
         var month = Number(date.substr(4, 2)) - 1;
         var year = Number(date.substr(0, 4));
         var noofyears = today.getFullYear() - year;
-
 
         if (today.getMonth() < month || (today.getMonth() == month && today.getDate() < day)) 
             noofyears--;
@@ -126,21 +107,6 @@ export default function EmployeeList(){
             
         <div className="container">
 
-
-        <div class="eimage" >
-            <img src = {Logo} width = "150" alt="logo"/>
-        </div>
-
-        <div class="employeelist">
-            <h1>Employee Management</h1>
-        </div>
-            
-        <div class="retrieve">
-            <h2>Employee List</h2>
-        </div>
-
-            <div className="list" style={{width: "45%"}}>
-
             <div class="eimage" >
                 <img src = {Logo} width = "150" alt="logo"/>
             </div>
@@ -155,7 +121,6 @@ export default function EmployeeList(){
 
             <div className="emplist" style={{width: "45%"}}>
 
-
                 <div>
 
                     <input type = "text" class = "search" placeholder = "Search" style={{width: "21%"}} 
@@ -163,11 +128,6 @@ export default function EmployeeList(){
                             setSearchTerm(event.target.value);
                         }}
                     />
-
-
-                    <table>
-                        <tr className = "row">
-
                     
                     <select class="empsearch" id="searchgender" style={{width: "19%"}}
                             onChange = {event => {
@@ -194,7 +154,6 @@ export default function EmployeeList(){
 
                     <table>
                         <tr className = "emprow">
-
                             <th>EID</th>
                             <th>Name</th>
                             <th>Gender</th>
@@ -208,51 +167,41 @@ export default function EmployeeList(){
 
                     <div class="listdata">  
 
-                    {employees.filter((val) => {
-                        if (searchTerm == "" && searchTermGender == "" && searchTermJobTitle == "")
-                            return val
-                        else if ((val.eid.toLowerCase().includes(searchTerm.toLowerCase()) 
-                                    || (val.name.toLowerCase().includes(searchTerm.toLowerCase())))
-                                    && val.gender.includes(searchTermGender)
-                                    && val.job_title.includes(searchTermJobTitle))
-                            return val
-                    }).map((val, key) => {
-                        return(
-                            <div className = "displayempContainer" style={{width: "100%"}} key = {key}>
-                                <div className = "emprow" style={{width: "80%"}}>
-                                    {""}
-                                    <h5> {val.eid} </h5>
-                                    <h5> {val.name} </h5>
-                                    <h5> {val.gender} </h5>
-                                    <h5> {val.job_title} </h5>
-                                    <h5> {calcYears(val.date_joined)} </h5>
-                                    <h5> {calcYears(val.dob)} </h5>
-                                    <h5> {val.contact} </h5>
-                                    <h5> {val.address} </h5>
-                                </div>
+                        {employees.filter((val) => {
+                            if (searchTerm == "" && searchTermGender == "" && searchTermJobTitle == "")
+                                return val
+                            else if ((val.eid.toLowerCase().includes(searchTerm.toLowerCase()) 
+                                        || (val.name.toLowerCase().includes(searchTerm.toLowerCase())))
+                                        && val.gender.includes(searchTermGender)
+                                        && val.job_title.includes(searchTermJobTitle))
+                                return val
+                        }).map((val, key) => {
+                            return(
+                                <div className = "displayempContainer" style={{width: "100%"}} key = {key}>
+                                    <div className = "emprow" style={{width: "80%"}}>
+                                        {""}
+                                        <h5> {val.eid} </h5>
+                                        <h5> {val.name} </h5>
+                                        <h5> {val.gender} </h5>
+                                        <h5> {val.job_title} </h5>
+                                        <h5> {calcYears(val.date_joined)} </h5>
+                                        <h5> {calcYears(val.dob)} </h5>
+                                        <h5> {val.contact} </h5>
+                                        <h5> {val.address} </h5>
+                                    </div>
 
-                                    <button onClick = {() =>{
-
+                                        <button onClick = {() =>{
                                             updateEmployee(val._id)
                                         }}> Edit </button>
+
                                         <button onClick  = {() =>{
-                                            ConfirmDelete(val._id)
+                                            deleteEmployee(val._id)
                                         }}> Delete </button>
-                            </div>
-                        )
-                    })}
-                    
 
-                                        updateEmployee(val._id)
-                                    }}> Edit </button>
+                                </div>
+                            )
+                        })}
 
-                                    <button onClick  = {() =>{
-                                        deleteEmployee(val._id)
-                                    }}> Delete </button>
-
-                            </div>
-                        )
-                    })}
                     </div>
 
                 </div>
