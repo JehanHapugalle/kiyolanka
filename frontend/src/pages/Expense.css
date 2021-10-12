@@ -9,7 +9,7 @@
     transform: scale(1);
 }
 
-#submit{
+.button{
     margin-left: 20px;
     margin-top: 10px;
     background-color: #75c500;
@@ -17,10 +17,10 @@
     border-color: #333333;
     border-style: solid;
     border-radius: 25px;
-      padding-left:10px;
-      padding-right: 10px;
-      padding-top: 5px;
-      padding-bottom: 5px;
+      padding-left:40px;
+      padding-right: 40px;
+      padding-top: 20px;
+      padding-bottom: 20px;
       color: white;
 }
 .imag{
@@ -30,43 +30,49 @@
 }
 #date{
    margin-right: 500px;
+   
 }
 .form-inner {
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 	display: flex;
 	justify-content: center;
-	transition: 0.4s;
+	transition: 0.6s;
 	border-radius: 8px;
+    font-size: 30px;
+    flex:1 1 100%;
+    
     
 }
 .total-expense{
-    margin-left: 1000px;
+    /* margin-left: 500px; */
     font-size: 20px;
     margin-top: 50px;
+    /* margin-right: 700px; */
 }
 .Ex-topic{
     margin-left: 850px;
 }
-.imag{
+.Eimag{
     margin-top: 10px;
-    margin-right:1000px;
+    margin-right:200px;
     padding-top:50px;
-    padding-right: 70px;
+    
 }
 .machineEx{
     margin-top: 70px;
-    margin-right: 100px;
+    margin-right: 200px;
 }
 
 .Eprice{
     margin-right: 500px;
 }
 .Edate{
-    margin-right: 200px;
+    margin-right: 150px;
 }
 .desc{
     margin-left: 300px;
+    
 
 }
 .total-expense{
@@ -81,25 +87,31 @@
     color: #050702;
     
 }
-.button-area{
-    margin-left: 500px;
+.Ebutton-area{
+    margin-left: 700px;
 
 }
 .body { 
     font-family: Roboto, sans-serif;
  }
 .MEretrieve{
-    margin-bottom: 250px;
+    margin-bottom: 300px;
+    margin-right: 200px;
 }
 .Msearch{
     margin-bottom: 2000px;
 }
 .Mrow h5{
-    margin-left: 20px;
+    margin-left: 30px;
+    padding-right: 17px;
     text-align: center;
-    padding-left: 48px;
-    font-size:12px;
-    flex:1 1 100%;
+    flex: 1 1 100%;
+}
+.Mrow{
+    display: flex;
+    padding-top: 10px;
+    margin-left: 19px;
+    height: 60px;
 
    
 }
@@ -114,7 +126,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex:1 1 100%;
 }
 .BtnEx{
     margin-top: 5px;
@@ -126,8 +137,8 @@
     border-radius: 25px;
     padding-left:10px;
     padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 25px;
     color: white;
    
 
@@ -138,4 +149,53 @@
     margin-left: 10px;
 }
 
+.form-control{
+    color: #75c500;
+    padding-left: 10px;
+    font-size: 10px;
+}
+.form-groupEX{
+    font-size: 30px;
+}
+.form-controlEX{
+    font-size: 30px;
+}
+::placeholder{
+    font-size: 10px;
+}
+.Mrow th{
+    margin-right: 180px;
+    text-align: center;
+    flex: 2 2 50%;
+}
+.ExData{
 
+    overflow: auto;
+
+    height:300px;
+
+
+
+}
+
+
+
+::-webkit-scrollbar {
+
+  width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+  background: #333333;
+
+}
+
+
+
+::-webkit-scrollbar-thumb {
+
+  background: rgb(102, 102, 102);
+
+}

@@ -1,6 +1,7 @@
 import React ,{useState} from "react";
 import AddSupplier from "./AddSupplier";
 import ViewSupplier from "./ViewSupplier";
+import SupAnalysis from "./SupAnalysis";
 import Home from "./Home";
 import SupAnalysis from "./SupAnalysis"
 
@@ -25,13 +26,14 @@ export const SupplierTwo = () =>{
 }
 
 
+export const SupplierFour = () =>{
+
+
 export const SupplierThree = () =>{
+
     return(
        <SupAnalysis/>
     )
 }
-
-
-
 
 

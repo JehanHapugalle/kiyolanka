@@ -95,9 +95,9 @@ useEffect(() => {
     
   return( 
 
-  <PDFExport ref={pdfExportComponent}margin={{top: 50, right: -380,bottom:-300}} >
+  <PDFExport ref={pdfExportComponent}margin={{top: 50, right: -450,bottom:-300}} >
     <div className="Mcontainer">
-    <div class="imag" >
+    <div class="Eimag" >
       <img src = {Logo} width = "150" alt="logo"/></div>
         <div class="machineEx">
               <h1>Machinery Managment</h1>
@@ -109,7 +109,7 @@ useEffect(() => {
 
         <div className="list" style={{width: "45%"}}>
         <div>
-        <div className="button-area">
+        <div className="Ebutton-area">
            <Button primary={true} onClick={handleExportWithComponent}>Generate</Button>
          </div>
                 <input className="Msearch"
@@ -122,11 +122,11 @@ useEffect(() => {
                     }}
                 />
                
-                 <table className = "Mrow">
+                 <table>
                  
         
 
-                <tr >
+                <tr className = "Mrow" >
 
                 <th >Descripton</th>
 
@@ -138,7 +138,7 @@ useEffect(() => {
                 </tr>
 
                 </table>
-          
+                <div className="ExData">
                 {expenses.filter((val) => {
                     if (searchTerm == "") {
                         return val
@@ -168,6 +168,7 @@ useEffect(() => {
                 )
                 
             })}
+            </div>
             
             </div>
            
@@ -186,26 +187,26 @@ useEffect(() => {
         
       <div className="form-inner">
       
-      <div class="form-group">
+      <div class="form-groupEX">
       <label  for="Desc">Description</label>
-      <input type="text" class="form-control"  id="desc" placeholder="Enter Description"  onChange={(e)=>{
+      <input type="text" class="form-controlEX"  id="desc" placeholder="Enter Description"  onChange={(e)=>{
         setDesc(e.target.value);}}
       useRef={desc}
         required/>
       </div>
 
      
-      <div class="form-group">
+      <div class="form-groupEX">
 
       <label  for="price">Amount</label>
-      <input type="number" class="form-control" id="price"placeholder="Enter price..."  onChange={(e)=>{
+      <input type="number" class="form-controlEX" id="price"placeholder="Enter price..."  onChange={(e)=>{
         setPrice(e.target.value);}}
       required/>
       </div>
       
-      <div class="form-group">
+      <div class="form-groupEX">
       <label  for="date">Date</label>
-      <input type="date" class="form-control" id="date"placeholder="Enter date"  onChange={(e)=>{
+      <input type="date" class="form-controlEX" id="date"placeholder="Enter date"  onChange={(e)=>{
         setDate(e.target.value);}}
      
         required/>

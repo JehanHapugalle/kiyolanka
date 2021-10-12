@@ -120,14 +120,15 @@ export default function Viewmachine(){
 
                 <th>STATUS</th>
 
-                <th>Date</th>
+                <th>DATE</th>
 
-                <th>Hours</th>
+                <th>HOURS</th>
 
 
                 </tr>
 
                 </table>
+                <div className="MachData">
                     {machines.filter((val) => {
                         if (searchTerm == "") {
                             return val
@@ -167,8 +168,11 @@ export default function Viewmachine(){
                                     ConfirmDelete(val._id)
                                 }}> Delete </button>
                         </div>
+                        
                     )
-                })}
+                    
+                   })}
+                </div>
                 </div>
 
             </div>

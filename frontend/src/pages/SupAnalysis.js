@@ -129,7 +129,7 @@ export default function SupplierList(){
             </div>
             
             <div class="suplistretrieve">
-                <h2>Supplier </h2>
+                <h2>Supplier Analysis</h2>
             </div>
             
             <div className="suplist" style={{width: "45%"}}>

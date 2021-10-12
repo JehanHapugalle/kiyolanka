@@ -111,7 +111,7 @@ import Logo from './image/logo.jpeg'
     </div>
     
     
-               <button type="submit" class="button">Submit</button>
+               <button type="submit" class="Vbutton">Submit</button>
              </div>
           </form>
        </div>

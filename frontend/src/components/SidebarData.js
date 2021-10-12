@@ -110,7 +110,6 @@ export const SidebarData = [
         icon: <AiIcons.AiFillCaretRight/>
       },
       
-
       {
         title: 'Analaysis',
         path: '/supplier/analysis2',
