@@ -1,9 +1,5 @@
 import React from 'react';
-
 import Logo from './image/logo.jpeg'
-
-
-
 import BannerImage from './image/homebg.jpg'
 import { useHistory } from "react-router-dom";
 import './Home.css'
@@ -30,17 +26,13 @@ function Home (){
             <h2 className="topic3">with more than 30 years of experience</h2>
             <h2 className="topic4"> in the coco peat industry"</h2>
           </div>
-          
           <div>
             <button onClick={logout} class = "logout"> Logout</button>
           </div>
-
         </div>
 
       </div>
     </>
   )
   }
-
-
-export default Home;
+  export default Home;

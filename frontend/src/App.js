@@ -1,28 +1,14 @@
-import './App.css';
-import Header from './components/Header';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import { Machinery,MachineryOne,MachineryTwo,MachineryThree} from './pages/Machinery';
-import { Salary,SalaryOne,SalaryTwo,SalaryThree,} from './pages/SalaryEmployee';
-import { Transport,TransportOne,TransportTwo,TransportThree,} from './pages/Transport';
-import { Materials,MaterialOne,MaterialTwo,MaterialThree,MaterialFour} from './pages/Material';
-import { Supplier, SupplierOne, SupplierTwo, SupplierFour} from './pages/Supplier';
-import React, { useState } from 'react';
 import {Product,ProductOne,ProductTwo,ProductThree} from './pages/Product';
 import { Employee, EmployeeOne, EmployeeTwo, EmployeeThree} from './pages/Employee';
 import { Sale, SaleOne, SaleTwo, SaleThree} from './pages/Sale';
-
-
 import Login from './pages/Login';
 
 function App() {
-
-
-  
+    
     return (
       <>
-      <Router>
-     
+      <Router>      
+
       <Header/>
      
         <switch>
@@ -34,13 +20,7 @@ function App() {
          <Route path='/machine/addmachine' exact component={MachineryOne} />
          <Route path='/machine/viewmachine' exact component={MachineryTwo} />
          <Route path='/machine/expenses' exact component={MachineryThree} />
-          
-          
-          <Route path='/transport' exact component={Transport} />
-          <Route path='/transport/addtransport' exact component={TransportOne} />
-          <Route path='/transport/maintenance' exact component={TransportTwo} />
-          <Route path='/transport/analysis6' exact component={TransportThree} />
-
+        
          <Route path='/transport' exact component={Transport} />
          <Route path='/transport/addtransport' exact component={TransportOne} />
          <Route path='/transport/maintenance' exact component={TransportTwo} />
@@ -51,19 +31,17 @@ function App() {
          <Route path='/materials/materialstock' exact component={MaterialTwo} />
          <Route path='/materials/usedmaterials' exact component={MaterialThree} />
          <Route path='/materials/analaysis3' exact component={MaterialFour} />
-   
          
          <Route path='/supplier' exact component={Supplier} />
          <Route path='/supplier/addsupplier' exact component={SupplierOne} />
          <Route path='/supplier/viewsupplier' exact component={SupplierTwo} />
-         <Route path='/supplier/analysis2' exact component={SupplierFour} />
+         <Route path='/supplier/analysis2' exact component={SupplierThree} />
 
          <Route path='/salary' exact component={Salary} />
          <Route path='/salary/addemployees' exact component={SalaryOne} />
          <Route path='/salary/salarydetails' exact component={SalaryTwo} />
          <Route path='/salary/analysis' exact component={SalaryThree} />
-          
-
+         
          <Route path='/stock' exact component={Product} />
          <Route path='/stock/addstock' exact component={ProductOne} />
          <Route path='/stock/viewstock' exact component={ProductTwo} />
@@ -81,11 +59,9 @@ function App() {
          
 
         </switch>
-      
+        
       </Router>
       </>
     );
 }
-  
-
 export default App;
