@@ -111,13 +111,8 @@ export const SidebarData = [
       },
       
       {
-        title: 'Payment',
-        path: '/supplier/payment',
-        icon: <AiIcons.AiFillCaretRight/>
-      },
-      {
         title: 'Analaysis',
-        path: '/supplier/analaysis2',
+        path: '/supplier/analysis2',
         icon: <AiIcons.AiFillCaretRight/>
       },
     ]

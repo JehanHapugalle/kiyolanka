@@ -4,10 +4,6 @@ import Logo from './image/logo.jpeg'
 
 
 
-
-
-
-
 import BannerImage from './image/homebg.jpg'
 import { useHistory } from "react-router-dom";
 import './Home.css'

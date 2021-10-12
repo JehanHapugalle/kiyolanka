@@ -1,6 +1,7 @@
 import React ,{useState} from "react";
 import AddSupplier from "./AddSupplier";
 import ViewSupplier from "./ViewSupplier";
+import SupAnalysis from "./SupAnalysis";
 import Home from "./Home";
 
 
@@ -22,18 +23,10 @@ export const SupplierTwo = () =>{
     )
 }
 
-export const SupplierThree = () =>{
+export const SupplierFour = () =>{
     return(
-        <div className="supplier">
-            <h1>payment</h1>
-        </div>
+       <SupAnalysis/>
     )
 }
 
-export const SupplierFour = () =>{
-    return(
-        <div className="supplier">
-            <h1>analysis</h1>
-        </div>
-    )
-}
+
