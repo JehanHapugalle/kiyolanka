@@ -182,6 +182,10 @@ form {
     cursor:pointer;
 }
 
+.addattend{
+  margin-left: 155px;
+}
+
   ::placeholder {
     color: #75c500;
     padding-left: 10px;

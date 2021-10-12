@@ -2,7 +2,9 @@ const router = require("express").Router();
 let Attendance = require("../models/Attendance");
 
 router.route("/add").post((req,res)=>{
+
     const month = req.body.month;
+
     const week = req.body.week;
     const eid = req.body.eid;
     const name = req.body.name;
@@ -16,7 +18,9 @@ router.route("/add").post((req,res)=>{
     const total = req.body.total;
 
     const newAttendance = new Attendance({
+
         month,
+
         week,
         eid,
         name,
@@ -47,6 +51,17 @@ router.route("/").get((req,res)=>{
 
 router.route("/update/:id").put(async(req,res)=>{
     let userId = req.params.id;
+
+    const {name, job_title, contact, address} = req.body;
+    console.log(name, job_title, contact, address, userId)
+    try{
+        await Employee.findById(userId, (error, updateEmployee) => {
+            updateEmployee.name = (name);
+            updateEmployee.job_title = (job_title);
+            updateEmployee.contact = (contact);
+            updateEmployee.address = (address);
+            updateEmployee.save();
+
     const {monday, tuesday, wednesday, thursday, friday, saturday, sunday, total} = req.body;
     console.log(monday, tuesday, wednesday, thursday, friday, saturday, sunday, total, userId)
     try{
@@ -60,11 +75,16 @@ router.route("/update/:id").put(async(req,res)=>{
             updateAttendance.sunday = (sunday);
             updateAttendance.total = (total);
             updateAttendance.save();
+
         });
     } catch (err) {
         console.log(err);
     }
+
+    res.send("Employee Updated");
+
     res.send("Attendance Updated");
+
 })
 
 router.route("/delete/:id").delete(async(req, res)=>{

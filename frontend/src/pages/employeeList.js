@@ -10,6 +10,10 @@ export default function EmployeeList(){
     const [searchTermGender, setSearchTermGender] = useState('')
     const [searchTermJobTitle, setsearchTermJobTitle] = useState('')
 
+    employees.sort(function (a, b) {
+        return a.name.charAt(2).localeCompare(b.name.charAt(2)) 
+    });
+
     useEffect(() => {
         function getemployees() {
             axios.get("http://localhost:4000/employee/").then ((res) => {
@@ -160,42 +164,46 @@ export default function EmployeeList(){
                             <th>Address</th>
                         </tr>
                     </table>
+
                     <div class="listdata">  
-                    {employees.filter((val) => {
-                        if (searchTerm == "" && searchTermGender == "" && searchTermJobTitle == "")
-                            return val
-                        else if ((val.eid.toLowerCase().includes(searchTerm.toLowerCase()) 
-                                    || (val.name.toLowerCase().includes(searchTerm.toLowerCase())))
-                                    && val.gender.includes(searchTermGender)
-                                    && val.job_title.includes(searchTermJobTitle))
-                            return val
-                    }).map((val, key) => {
-                        return(
-                            <div className = "displayempContainer" style={{width: "100%"}} key = {key}>
-                                <div className = "emprow" style={{width: "80%"}}>
-                                    {""}
-                                    <h5> {val.eid} </h5>
-                                    <h5> {val.name} </h5>
-                                    <h5> {val.gender} </h5>
-                                    <h5> {val.job_title} </h5>
-                                    <h5> {calcYears(val.date_joined)} </h5>
-                                    <h5> {calcYears(val.dob)} </h5>
-                                    <h5> {val.contact} </h5>
-                                    <h5> {val.address} </h5>
+
+                        {employees.filter((val) => {
+                            if (searchTerm == "" && searchTermGender == "" && searchTermJobTitle == "")
+                                return val
+                            else if ((val.eid.toLowerCase().includes(searchTerm.toLowerCase()) 
+                                        || (val.name.toLowerCase().includes(searchTerm.toLowerCase())))
+                                        && val.gender.includes(searchTermGender)
+                                        && val.job_title.includes(searchTermJobTitle))
+                                return val
+                        }).map((val, key) => {
+                            return(
+                                <div className = "displayempContainer" style={{width: "100%"}} key = {key}>
+                                    <div className = "emprow" style={{width: "80%"}}>
+                                        {""}
+                                        <h5> {val.eid} </h5>
+                                        <h5> {val.name} </h5>
+                                        <h5> {val.gender} </h5>
+                                        <h5> {val.job_title} </h5>
+                                        <h5> {calcYears(val.date_joined)} </h5>
+                                        <h5> {calcYears(val.dob)} </h5>
+                                        <h5> {val.contact} </h5>
+                                        <h5> {val.address} </h5>
+                                    </div>
+
+                                        <button onClick = {() =>{
+                                            updateEmployee(val._id)
+                                        }}> Edit </button>
+
+                                        <button onClick  = {() =>{
+                                            deleteEmployee(val._id)
+                                        }}> Delete </button>
+
                                 </div>
+                            )
+                        })}
 
-                                    <button onClick = {() =>{
-                                        updateEmployee(val._id)
-                                    }}> Edit </button>
-
-                                    <button onClick  = {() =>{
-                                        deleteEmployee(val._id)
-                                    }}> Delete </button>
-
-                            </div>
-                        )
-                    })}
                     </div>
+
                 </div>
 
             </div>

@@ -33,12 +33,13 @@
 
 
 .supform{
-    margin-top: 120px;
+    margin-top: 130px;
     margin-left: -50px;
     background-color:white;
     box-shadow: 02px 2px 10px rgb(102, 102, 102);
     border-radius: 25px;
-    padding :20px;
+    padding-right: 10px;
+    padding-left: 100px;
     transform: scale(2);
   }
 
@@ -46,36 +47,38 @@
     font-size: 11px;
   }
 
-  #name{
-    margin-bottom:10px;
-    border-radius: 7px;
-    border: none;
-    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 5px;
-  }
-
-  #nic_no{
-      margin-bottom:5px;
-    border: none;
-    border-radius: 7px;
-    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 55px;
-  }
-
-  #address{
-    border-radius: 7px;
+  #sid{
     margin-bottom:5px;
+    margin-top:-20px;
     border: none;
+    border-radius: 7px;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 50px;
+    margin-left: 45px;
+    padding-top: 1px;
+    padding-bottom: 3px;
   }
 
+  #name{
+    margin-bottom: 1px;
+    border-radius: 7px;
+    border: none;
+    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
+    margin-left: 10px;
+    padding-left: -50px;
+    padding-right: -50px;
+    padding-top: 1px;
+    padding-bottom: 3px;
+  }
+  
   #contact_no{
     border-radius: 7px;
     margin-bottom:5px;
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 27px;
+    margin-left: 40px;
+    margin-top: -100px;
+    padding-top: 1px;
+    padding-bottom: 3px;
   }
 
   #email{
@@ -83,45 +86,31 @@
     border-radius: 7px;
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 68px;
-     
+    margin-left: 82px;
+    padding-top: 1px;
+    padding-bottom: 3px;
   }
 
-  #date_of_birth{
-    margin: bottom 5px;
+  #supply_amount{
+    margin-bottom: 5px;
     border: none;
     border-radius: 7px;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
     margin-left: 20px;
     color: #75c500;
+    padding-top: 1px;
+    padding-bottom: 3px;
   }
 
-  #supply_scale{
-    border-radius: 7px;
-    margin: bottom 5px;
-    border: none;
-    box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 24px;
-    margin-top: 10px;
-    color: #75c500;
-  }
-
-  .select1{
-    text-emphasis-style: bold;
-    text-size-adjust: 100p;
-  }
-
-  .select2{
-    text-emphasis-style: bold;
-  }
-  
-  #payment_type{
+  #unit_price{
     border-radius: 10px;
     margin: bottom 5px;
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 13px;
+    margin-left: 55px;
     margin-top: 10px;
+    padding-top: 1px;
+    padding-bottom: 3px;
   }
 
   #bank{
@@ -129,8 +118,10 @@
     margin-bottom:5px;
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 75px;
+    margin-left: 90px;
     margin-top: 10px;
+    padding-top: 1px;
+    padding-bottom: 3px;
     
   }
 
@@ -139,13 +130,15 @@
     margin-bottom:-10px;
     border: none;
     box-shadow: 01px 0.5px 02px rgb(102, 102, 102);
-    margin-left: 28px;
+    margin-left: 43px;
+    padding-top: 1px;
+    padding-bottom: 3px;
   }
 
 
-  button{
-      margin-top: 15px;
-      margin-left: 185px;
+  .sup-submit-button{
+      margin-top: 150px;
+      margin-left: 100px;
       background-color: #75c500;
       border:none;
       border-color: #333333;

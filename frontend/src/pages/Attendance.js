@@ -64,6 +64,12 @@ export default function Attendance() {
     const [searchTermMonth, setsearchTermMonth] = useState('')
     const [searchTermWeek, setSearchTermWeek] = useState('')
 
+    attendance.sort(function (a, b) {
+        return a.name.charAt(2).localeCompare(b.name.charAt(2)) 
+        || a.month.localeCompare(b.month) 
+        || a.week.localeCompare(b.week)
+    });
+
     useEffect(() => {
         function getattendance(){
             axios.get("http://localhost:4000/attendance/").then ((res) => {
@@ -273,7 +279,8 @@ export default function Attendance() {
                         </tr>
                     </table>
 
-                    <div class="data">           
+                    <div class="data">
+
                         {attendance.filter((val) => {
                                 if (searchTermEmployee == "" && searchTermMonth == "" && searchTermWeek == "") 
                                     return val
@@ -371,7 +378,7 @@ export default function Attendance() {
                                     
                         </div>
                         
-                        <button type="submit" class="btn btn-primary">Add Employee</button>
+                        <button class="addattend" type="submit">Add Employee</button>
                 
                     </div>  
                         
